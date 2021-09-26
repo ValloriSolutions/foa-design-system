@@ -1,12 +1,17 @@
-import React, { FC, HTMLAttributes, ReactChild } from 'react';
+import React, { PropsWithChildren, ReactChild } from 'react';
 
 import { StyledCard } from './styles';
 
-export interface CardProps extends HTMLAttributes<HTMLDivElement> {
+export type CardProps = {
   color?: string;
   children: ReactChild;
-}
+};
 
-export const Card: FC<CardProps> = ({ children, color }): JSX.Element => {
+export const Card = ({
+  children,
+  color,
+}: PropsWithChildren<CardProps>): JSX.Element => {
   return <StyledCard color={color}>{children}</StyledCard>;
 };
+
+export default Card;

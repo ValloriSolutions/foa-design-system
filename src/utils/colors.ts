@@ -10,16 +10,13 @@ export const hexToRgba = (hex: string, alpha: number): string => {
   }
 };
 
-// find % of opacity between two colors
-export const getOpacity = (color1: string, color2: string): number => {
-  const color1Rgb = hexToRgba(color1, 1);
-  const color2Rgb = hexToRgba(color2, 1);
+export const rgbaToHex = (rgba: string): string => {
+  const r = parseInt(rgba.slice(5, 7), 10);
+  const g = parseInt(rgba.slice(9, 11), 10);
+  const b = parseInt(rgba.slice(13, 15), 10);
+  const a = parseInt(rgba.slice(17, 19), 10);
 
-  const color1Rgba = color1Rgb.split(', ');
-  const color2Rgba = color2Rgb.split(', ');
-
-  const opacity =
-    (parseInt(color2Rgba[3], 10) - parseInt(color1Rgba[3], 10)) / 100;
-
-  return opacity;
+  return `#${r.toString(16)}${g.toString(16)}${b.toString(16)}${a.toString(
+    16
+  )}`;
 };

@@ -1,22 +1,27 @@
 import React from 'react';
 import { Meta, Story } from '@storybook/react';
-import {Card, CardProps } from '../src/components/Card';
-import { hexToRgba } from '../src/utils/colors';
+import { Card, CardProps } from '../src';
 
-const meta: Meta = {
+export default {
   title: 'Card',
   component: Card,
+  argTypes: {
+    color: {
+      control: {
+        type: 'color',
+      },
+    },
+    children: {
+      control: {
+        type: 'text',
+      },
+    },
+  },
+  parameters: {
+    controls: { expanded: true },
+  },
+} as Meta;
+
+export const Template: Story<CardProps> = ({ color, children }) => {
+  return <h1>em breve</h1>;
 };
-
-export default meta;
-
-const Template: Story<CardProps> = args => <Card {...args} />;
-
-// By passing using the Args format for exported stories, you can control the props for a component for reuse in a test
-// https://storybook.js.org/docs/react/workflows/unit-testing
-export const Default = Template.bind({});
-
-Default.args = {
-  color: hexToRgba('#333333', 0.5),
-};
-

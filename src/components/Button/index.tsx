@@ -1,22 +1,35 @@
-import React from 'react';
-import StyledButton from './styles';
+import React, { ReactNode } from 'react';
+import { StyledButton } from './styles';
 
-export interface ButtonProps {
+export interface ButtonProps extends React.HTMLAttributes<HTMLElement> {
   variant?: 'primary' | 'secondary' | 'disabled';
   disabled?: boolean;
   onClick?: () => void;
-  size?: 'flex' | "fixed" | "full";
-  hasIcon?: boolean;
-  icon?: React.ReactNode;
-  children?: React.ReactNode;
+  size?: 'fluid' | 'full';
+  buttonWidth?: number;
+  icon?: ReactNode;
+  children?: ReactNode | undefined;
 }
 
-const Button: React.FC<ButtonProps> = ({ children }, ...props): JSX.Element => {
+export const Button: React.FC<ButtonProps> = ({
+  variant,
+  disabled,
+  onClick,
+  size,
+  buttonWidth,
+  icon,
+  children,
+}): JSX.Element => {
   return (
-    <StyledButton {...props}>
+    <StyledButton
+      variant={variant}
+      size={size}
+      icon={icon}
+      buttonWidth={buttonWidth}
+      disabled={disabled}
+      onClick={onClick}
+    >
       {children}
     </StyledButton>
-  )
+  );
 };
-
-export default Button;

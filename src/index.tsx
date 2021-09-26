@@ -1,15 +1,16 @@
-import React, { FC, HTMLAttributes, ReactChild } from 'react';
-import { getOpacity } from './utils/colors';
+import { Button, ButtonProps } from './components/Button';
+import { Card, CardProps } from './components/Card';
+import { Container, ContainerProps } from './components/Container';
+import { default as GlobalStyles } from './theme/globalStyles';
 
-export interface Props extends HTMLAttributes<HTMLDivElement> {
-  children?: ReactChild;
-}
-
-export const Thing: FC<Props> = ({ children }) => {
-  return (
-    <div>
-      {getOpacity('#333333', 'F7F7FF')}
-      {children}
-    </div>
-  );
+export {
+  GlobalStyles,
+  Button,
+  ButtonProps,
+  Card,
+  CardProps,
+  Container,
+  ContainerProps,
 };
+
+export * from './icons';

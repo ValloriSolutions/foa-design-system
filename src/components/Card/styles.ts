@@ -3,11 +3,14 @@ import borders from '../../theme/borders';
 
 import { CardProps } from './';
 
-export const StyledCard = styled.div`
-  display: "block";
-  width: 500;
-  height: 40;
-  margin-bottom: 20;
+export const StyledCard = styled.div<Omit<CardProps, 'text'>>`
+  display: block;
+  width: 500px;
+  height: 40px;
+  margin-bottom: 20px;
   border-radius: ${borders.radius.card};
-  background: ${(props: CardProps) => props.color};
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: ${({ color }): string | undefined => color};
 `;
