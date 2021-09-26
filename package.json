@@ -1,5 +1,5 @@
 {
-  "version": "0.1.0",
+  "version": "0.1.1",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
@@ -35,8 +35,8 @@
     "singleQuote": true,
     "trailingComma": "es5"
   },
-  "name": "foa-design-system",
-  "author": "Amanda Natallie",
+  "name": "@vallorisolutions/foa-design-system",
+  "author": "Vallori Solutions",
   "module": "dist/foa-design-system.esm.js",
   "size-limit": [
     {
@@ -81,5 +81,8 @@
     "@types/styled-components": "^5.1.14",
     "react-feather": "^2.0.9",
     "styled-components": "^5.3.1"
-  }
+  },
+  "description": "Design System for the FEMSA Orders App",
+  "repository": "https://github.com/ValloriSolutions/foa-design-system.git",
+  "private": false
 }
