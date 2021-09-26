@@ -8,13 +8,9 @@
 ### Maintain the system
  - 🚥 GitHub Actions for continuous integration
  - 📐 ESLint for JavaScript linting
- - ✅ Chromatic to catch visual bugs in components (by Storybook maintainers)
- - 🃏 Jest for unit testing components
- - 📦 npm for distributing the library
+ - 📦 yarn for distributing the library
  - 🛠 Auto for release management workflow
 ### Storybook addons
- - ♿ Accessibility to check for accessibility issues during development
  - 💥 Actions to QA click and tap interactions
  - 🎛 Controls to interactively adjust props to experiment with components
- - 📕 Docs for automatic documentation generation from stories
 
