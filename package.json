@@ -1,12 +1,18 @@
 {
   "version": "0.1.2",
+  "name": "@vallorisolutions/foa-design-system",
+  "author": "Vallori Solutions",
+  "description": "Design System for the FEMSA Orders App",
+  "repository": "https://github.com/ValloriSolutions/foa-design-system.git",
   "license": "MIT",
   "main": "dist/index.js",
+  "module": "dist/foa-design-system.esm.js",
   "typings": "dist/index.d.ts",
   "files": [
     "dist",
     "src"
   ],
+  "private": false,
   "engines": {
     "node": ">=10"
   },
@@ -14,7 +20,7 @@
     "start": "tsdx watch",
     "build": "tsdx build",
     "test": "tsdx test --passWithNoTests",
-    "lint": "eslint '*/**/*.{js,ts,tsx}' --quiet --fix",
+    "lint": "eslint . --quiet --fix",
     "prepare": "tsdx build",
     "size": "size-limit",
     "analyze": "size-limit --why",
@@ -35,9 +41,6 @@
     "singleQuote": true,
     "trailingComma": "es5"
   },
-  "name": "@vallorisolutions/foa-design-system",
-  "author": "Vallori Solutions",
-  "module": "dist/foa-design-system.esm.js",
   "size-limit": [
     {
       "path": "dist/foa-design-system.cjs.production.min.js",
@@ -81,8 +84,5 @@
     "@types/styled-components": "^5.1.14",
     "react-feather": "^2.0.9",
     "styled-components": "^5.3.1"
-  },
-  "description": "Design System for the FEMSA Orders App",
-  "repository": "https://github.com/ValloriSolutions/foa-design-system.git",
-  "private": false
+  }
 }
