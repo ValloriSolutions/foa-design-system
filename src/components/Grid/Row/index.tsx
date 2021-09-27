@@ -1,18 +1,18 @@
-import React, { PropsWithChildren } from 'react';
+import React, { ReactNode } from 'react';
 import { CSSObject } from 'styled-components';
 
 import { StyledRow } from './styles';
 
 export type RowProps = {
-  children: React.ReactNode;
+  children: ReactNode;
   fluid?: boolean;
   customStyles?: CSSObject;
 };
 
-export const Row = ({
+export const Row: React.FC<RowProps> = ({
   children,
   ...props
-}: PropsWithChildren<RowProps>): JSX.Element => {
+}): JSX.Element => {
   return <StyledRow {...props}>{children}</StyledRow>;
 };
 

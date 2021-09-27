@@ -1,20 +1,20 @@
-import React, { PropsWithChildren, ReactChild } from 'react';
+import React, { ReactNode } from 'react';
 import { CSSObject } from 'styled-components';
 import { breakpointsType } from '../../../utils/grid';
 
 import { StyledCol } from './styles';
 
 export type ColProps = {
-  children?: ReactChild;
+  children?: ReactNode;
   collapse?: keyof breakpointsType;
   size?: number;
   customStyles?: CSSObject;
 };
 
-export const Col = ({
+export const Col: React.FC<ColProps> = ({
   children,
   ...props
-}: PropsWithChildren<ColProps>): JSX.Element => {
+}): JSX.Element => {
   return <StyledCol {...props}>{children}</StyledCol>;
 };
 

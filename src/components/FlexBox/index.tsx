@@ -1,10 +1,10 @@
-import React from 'react';
+import React, { ReactNode } from 'react';
 import { CSSObject } from 'styled-components';
 
 import { StyledFlexBox } from './styles';
 
 export interface FlexBoxProps extends React.HTMLAttributes<HTMLElement> {
-  children: React.ReactNode;
+  children: ReactNode;
   isCard?: boolean;
   verticalAlign?: 'center' | 'flex-start' | 'flex-end' | false;
   horizontalAlign?: 'center' | 'flex-start' | 'flex-end' | false;

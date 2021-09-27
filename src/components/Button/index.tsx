@@ -8,7 +8,7 @@ export interface ButtonProps extends React.HTMLAttributes<HTMLElement> {
   size?: 'fluid' | 'full';
   buttonWidth?: number;
   icon?: ReactNode;
-  children?: ReactNode | undefined;
+  children?: ReactNode | string | undefined;
 }
 
 export const Button: React.FC<ButtonProps> = ({
