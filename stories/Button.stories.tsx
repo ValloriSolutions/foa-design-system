@@ -4,7 +4,7 @@ import { Button, ButtonProps } from '../src/components/Button';
 import { IconMail } from '../src/icons';
 
 export default {
-  title: 'Button',
+  title: 'Components/Button',
   component: Button,
   parameters: {
     controls: { expanded: true },

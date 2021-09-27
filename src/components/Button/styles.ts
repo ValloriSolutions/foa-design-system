@@ -6,7 +6,6 @@ import { ButtonProps } from './';
 export const StyledButton = styled.button<ButtonProps>`
   transition: all 0.2s ease-in-out;
   ${({ variant, disabled }): FlattenSimpleInterpolation => {
-    console.log(disabled);
     const style = disabled ? 'disabled' : 'primary' ?? variant;
     return css`
       background-color: ${colors.buttons[style].background};
