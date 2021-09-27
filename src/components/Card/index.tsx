@@ -1,17 +1,22 @@
-import React, { PropsWithChildren, ReactChild } from 'react';
+import React from 'react';
+import { FlexBoxProps } from '../FlexBox';
 
 import { StyledCard } from './styles';
 
-export type CardProps = {
-  color?: string;
-  children: ReactChild;
-};
+export interface CardProps extends FlexBoxProps {
+  noRound?: boolean;
+  bordered?: boolean;
+  noShadow?: boolean;
+}
 
-export const Card = ({
+export const Card: React.FC<CardProps> = ({
   children,
-  color,
-}: PropsWithChildren<CardProps>): JSX.Element => {
-  return <StyledCard color={color}>{children}</StyledCard>;
+  customStyles,
+  ...props
+}): JSX.Element => {
+  return (
+    <StyledCard isCard customStyles={customStyles} {...props}>
+      {children}
+    </StyledCard>
+  );
 };
-
-export default Card;

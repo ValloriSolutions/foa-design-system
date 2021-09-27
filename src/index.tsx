@@ -1,17 +1,8 @@
 import { Button, ButtonProps } from './components/Button';
 import { Card, CardProps } from './components/Card';
-import { Container, ContainerProps } from './components/Container';
-import { default as GlobalStyles } from './theme/globalStyles';
+import { FlexBox, FlexBoxProps } from './components/FlexBox';
 
-export {
-  GlobalStyles,
-  Button,
-  ButtonProps,
-  Card,
-  CardProps,
-  Container,
-  ContainerProps,
-};
+export { Button, ButtonProps, Card, CardProps, FlexBox, FlexBoxProps };
 
 export * from './icons';
 export * from './theme';

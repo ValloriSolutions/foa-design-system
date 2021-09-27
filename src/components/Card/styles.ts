@@ -1,16 +1,17 @@
 import styled from 'styled-components';
-import borders from '../../theme/borders';
+import { borders, colors } from '../../theme/';
+import { FlexBox } from '../FlexBox';
 
 import { CardProps } from './';
 
-export const StyledCard = styled.div<Omit<CardProps, 'text'>>`
-  display: block;
-  width: 500px;
-  height: 40px;
-  margin-bottom: 20px;
-  border-radius: ${borders.radius.card};
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: ${({ color }): string | undefined => color};
+export const StyledCard = styled(FlexBox)<CardProps>`
+  border-top: ${({ bordered }): string | undefined =>
+    bordered ? `1px solid ${colors.border.default}` : 'transparent'};
+  border-radius: ${({ noRound }): string | undefined =>
+    noRound ? '0' : borders.radius.card};
+  box-shadow: ${({ noShadow }): string | undefined =>
+    noShadow
+      ? 'none'
+      : '0 1px 3px 0 rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 2px 1px -1px rgba(0, 0, 0, 0.12)'};
+  background-color: ${colors.background.paper};
 `;
