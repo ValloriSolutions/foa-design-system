@@ -1,32 +1,56 @@
 import { createGlobalStyle } from 'styled-components';
 import colors from './colors';
-import fonts from './fonts';
+import { fontSizes, fontFaces, lineHeights } from './fonts';
 
 export default createGlobalStyle`
-  @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-  @import url('@import url("https://cdn.jsdelivr.net/gh/jgthms/minireset.css@master/minireset.min.css");');
+  ${fontFaces}
   * {
     margin: 0;
     padding: 0;
-    font-family: Poppins, Helvetica, Sans-Serif;
+    font-family: PoppinsLight, Helvetica, Sans-Serif;
     font-size: 15px;
     color: ${colors.text.primary};
   }
 
   body {
-     background: ${colors.background.paper};
+    width: 100vw;
+    height: 100vh;
+    max-width: 100vw;
+    max-height: 100vh;
+    overflow-x: hidden;
+    background: ${colors.background.default};
   }
 
-  h1 { font-size: ${fonts.fontSizes.h1} }
-  h2 { font-size: ${fonts.fontSizes.h2} }
-  h3 { font-size: ${fonts.fontSizes.h3} }
-  h4 { font-size: ${fonts.fontSizes.h4} }
-  h5 { font-size: ${fonts.fontSizes.h5} }
-  h6 { font-size: ${fonts.fontSizes.h6} }
-  p { font-size: ${fonts.fontSizes.p} }
+  h1 { 
+    font-size: ${fontSizes.h1} ;
+    font-family: PoppinsBlack, Helvetica, Sans-Serif; 
+  }
+  h2 { 
+    font-size: ${fontSizes.h2};
+    font-family: PoppinsExtraBold, Helvetica, Sans-Serif; 
+  }
+  h3 {
+    font-size: ${fontSizes.h3}; 
+    font-family: PoppinsMedium, Helvetica, Sans-Serif; 
+  }
+  h4 {
+     font-size: ${fontSizes.h4};
+     font-family: PoppinsMedium, Helvetica, Sans-Serif;  
+  }
+  h5 {
+     font-size: ${fontSizes.h5};
+     font-family: PoppinsMedium, Helvetica, Sans-Serif;  
+    }
+  h6 {
+     font-size: ${fontSizes.h6};
+     font-family: PoppinsMedium, Helvetica, Sans-Serif;  
+    }
+  p {
+     font-size: ${fontSizes.p} 
+    }
 
   h1, h2, h3, h4, h5, h6 {
-    line-height: ${fonts.lineHeights.heading};
+    line-height: ${lineHeights.heading};
   }
   a:disabled, button:disabled {
     cursor: not-allowed;
