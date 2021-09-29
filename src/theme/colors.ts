@@ -14,7 +14,10 @@ export const gray = {
   lighter: '#EDEDEf',
   lightest: '#F6F6FF',
 };
-
+export const box = {
+  DEFAULT_BOX_SHADOW: '0 3px 3px 0 rgba(0, 0, 0, 0.1)',
+  TAB_BAR_BOX_SHADOW: (color = gray.light): string => `0 2px 0 0 ${color}`,
+};
 export const palette = {
   colors: {
     red,
@@ -80,4 +83,5 @@ export default {
   yellow,
   ...palette,
   buttons,
+  box,
 };
