@@ -1,0 +1,52 @@
+import { FlexBox } from '../';
+import styled, {
+  css,
+  CSSObject,
+  FlattenSimpleInterpolation,
+} from 'styled-components';
+import { flexPosition } from '../../utils/mixins';
+import { borders, colors, spacing } from '../../theme';
+
+export interface DialogProps {
+  isOpen?: boolean;
+  width?: string;
+  alignItems?: 'center' | 'flex-start' | 'flex-end';
+  customStyles?: CSSObject;
+}
+
+export const StyledOverlay = styled(FlexBox)<DialogProps>`
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: all 0.3s ease;
+  opacity: ${({ isOpen }): string => (isOpen ? '1' : '0')};
+  visibility: ${({ isOpen }): string => (isOpen ? 'visible' : 'hidden')};
+  z-index: 99999;
+`;
+
+export const StyledDialogBox = styled.div<DialogProps>`
+  ${({ alignItems }): FlattenSimpleInterpolation => css`
+    ${flexPosition(alignItems || 'flex-start', 'space-between', 'column')};
+    text-align: center;
+  `}
+  width: ${({ width }): string => width ?? 'auto'};
+  min-height: 200px;
+  height: unset !important;
+  background-color: ${colors.background.paper};
+  border-radius: ${borders.radius.card};
+  padding: ${spacing.dialog};
+  ${({ customStyles }): CSSObject => customStyles || {}}
+`;
+
+export const StyledActions = styled.div`
+  width: 100%;
+  ${flexPosition('center', 'flex-end')};
+
+  button {
+    margin: 15px 5px 5px 5px;
+  }
+`;
