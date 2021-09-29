@@ -10,6 +10,10 @@ export default createGlobalStyle`
     font-family: PoppinsLight, Helvetica, Sans-Serif;
     font-size: 15px;
     color: ${colors.text.primary};
+
+    & svg {
+      fill: ${colors.text.primary};
+    }
   }
 
   body {

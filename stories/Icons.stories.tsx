@@ -16,3 +16,4 @@ export const Filter: Story<IconProps> = () => <Icons.IconFilter />;
 export const Print: Story<IconProps> = () => <Icons.IconPrint />;
 export const Search: Story<IconProps> = () => <Icons.IconSearch />;
 export const Ticket: Story<IconProps> = () => <Icons.IconTicket />;
+
