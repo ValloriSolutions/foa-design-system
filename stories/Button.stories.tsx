@@ -33,8 +33,8 @@ WithAction.args = {
   onClick: (): void => alert('I am clicked'),
 };
 
-export const WithButton = Template.bind({});
-WithButton.args = {
+export const WithIcon = Template.bind({});
+WithIcon.args = {
   variant: 'primary',
   children: (
     <>
@@ -42,6 +42,12 @@ WithButton.args = {
       Icon Button!
     </>
   ),
+};
+
+export const Small = Template.bind({});
+Small.args = {
+  children: 'I am a small story button',
+  small: true,
 };
 
 export const Disabled = Template.bind({});

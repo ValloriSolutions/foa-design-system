@@ -9,6 +9,7 @@ export interface ButtonProps extends React.HTMLAttributes<HTMLElement> {
   buttonWidth?: number;
   icon?: ReactNode;
   children?: ReactNode | string | undefined;
+  small?: boolean;
 }
 
 export const Button: React.FC<ButtonProps> = ({
@@ -19,6 +20,7 @@ export const Button: React.FC<ButtonProps> = ({
   buttonWidth,
   icon,
   children,
+  ...rest
 }): JSX.Element => {
   return (
     <StyledButton
@@ -28,6 +30,7 @@ export const Button: React.FC<ButtonProps> = ({
       buttonWidth={buttonWidth}
       disabled={disabled}
       onClick={onClick}
+      {...rest}
     >
       {children}
     </StyledButton>

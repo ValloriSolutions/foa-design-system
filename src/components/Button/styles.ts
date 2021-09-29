@@ -31,5 +31,5 @@ export const StyledButton = styled.button<ButtonProps>`
   justify-content: center;
   align-items: center;
   border-radius: ${borders.radius.button};
-  padding: 13px 22px;
+  padding: ${({ small }): string => (small ? '0.5rem 1rem' : '1rem 2rem')};
 `;
