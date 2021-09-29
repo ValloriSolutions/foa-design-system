@@ -1,5 +1,5 @@
 {
-  "version": "0.1.10",
+  "version": "0.1.11",
   "name": "@vallorisolutions/foa-design-system",
   "author": "Vallori Solutions",
   "description": "Design System for the FEMSA Orders App",
@@ -86,6 +86,7 @@
   "dependencies": {
     "@types/styled-components": "^5.1.14",
     "react-feather": "^2.0.9",
+    "react-simple-snackbar": "^1.1.11",
     "styled-components": "^5.3.1"
   }
 }
