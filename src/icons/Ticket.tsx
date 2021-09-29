@@ -1,9 +1,9 @@
-import React from "react";
-import { palette } from "../theme/colors";
-import { IconProps } from "./types";
+import React from 'react';
+import { palette } from '../theme/colors';
+import { IconProps } from './types';
 
 export const IconTicket = ({
-  color = "inherit" ?? palette.colors.gray.darkest,
+  color = 'inherit' ?? palette.colors.gray.darkest,
 }: IconProps): JSX.Element => {
   return (
     <svg

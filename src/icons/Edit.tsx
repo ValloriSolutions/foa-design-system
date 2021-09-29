@@ -1,9 +1,9 @@
-import React from "react";
-import { palette } from "../theme/colors";
-import { IconProps } from "./types";
+import React from 'react';
+import { palette } from '../theme/colors';
+import { IconProps } from './types';
 
 export const IconEdit = ({
-  color = "inherit" ?? palette.colors.gray.darkest,
+  color = 'inherit' ?? palette.colors.gray.darkest,
 }: IconProps): JSX.Element => {
   return (
     <svg
@@ -21,7 +21,7 @@ export const IconEdit = ({
         height="22.1285"
         transform="rotate(0.871677 0.473633 0.259033)"
         fill={color}
-        fill-opacity="0.5"
+        fillOpacity="0.5"
       />
       <defs>
         <pattern

@@ -1,9 +1,9 @@
-import React from "react";
-import { palette } from "../theme/colors";
-import { IconProps } from "./types";
+import React from 'react';
+import { palette } from '../theme/colors';
+import { IconProps } from './types';
 
 export const IconBell = ({
-  color = "inherit" ?? palette.colors.gray.darkest,
+  color = 'inherit' ?? palette.colors.gray.darkest,
   badge = false,
 }: IconProps): JSX.Element => {
   return (
