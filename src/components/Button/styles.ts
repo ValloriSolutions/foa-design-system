@@ -1,5 +1,7 @@
 import styled, { css, FlattenSimpleInterpolation } from 'styled-components';
 import { borders, colors, spacing } from '../../theme';
+import { palette } from '../../theme/colors';
+import { fontSizes } from '../../theme/fonts';
 import { flexPosition } from '../../utils/mixins';
 
 import { ButtonProps } from './';
@@ -45,9 +47,37 @@ export const StyledButton = styled.button<ButtonProps>`
           background: none;
           color: ${colors.text.secondary};
           &:not(:last-of-type) {
-            border-bottom: 1px solid ${colors.colors.gray.lighter};
+            border-bottom: 1px solid ${palette.colors.gray.lighter};
           }
         `
       : '';
   }}
+`;
+
+export const StyledGhostButton = styled.button<ButtonProps>`
+  ${({ disabled }): FlattenSimpleInterpolation => css`
+  font-size: ${fontSizes.p};
+  text-decoration: underline;
+  min-height: 10px;
+  padding: 0 !important;
+  background-color: transparent;
+  color: ${disabled ? palette.text.disabled : palette.colors.red};
+  text-decoration-color: ${
+    disabled ? palette.text.disabled : palette.colors.red
+  };
+  &:hover {
+    background-color: transparent;
+    color: ${disabled ? palette.text.disabled : palette.text.secondary};
+    text-decoration-color: ${
+      disabled ? palette.text.disabled : palette.text.secondary
+    };
+  }
+  &:active {
+    background-color: transparent;
+    color: ${disabled ? palette.text.disabled : palette.colors.gray.darkest};
+    text-decoration-color: ${
+      disabled ? palette.text.disabled : palette.colors.gray.darkest
+    };
+  }
+}`};
 `;
