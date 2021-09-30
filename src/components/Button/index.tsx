@@ -1,4 +1,5 @@
 import React, { ReactNode } from 'react';
+import { CSSObject } from 'styled-components';
 import { StyledButton } from './styles';
 
 export interface ButtonProps extends React.HTMLAttributes<HTMLElement> {
@@ -10,6 +11,9 @@ export interface ButtonProps extends React.HTMLAttributes<HTMLElement> {
   icon?: ReactNode;
   children?: ReactNode | string | undefined;
   small?: boolean;
+  dropdownItem?: boolean;
+  forwardRef?: React.Ref<HTMLButtonElement>;
+  customStyles?: CSSObject;
 }
 
 export const Button: React.FC<ButtonProps> = ({

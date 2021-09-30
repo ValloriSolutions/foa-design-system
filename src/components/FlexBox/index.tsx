@@ -4,7 +4,7 @@ import { CSSObject } from 'styled-components';
 import { StyledFlexBox } from './styles';
 
 export interface FlexBoxProps extends React.HTMLAttributes<HTMLElement> {
-  children: ReactNode;
+  children?: ReactNode;
   isCard?: boolean;
   verticalAlign?: 'center' | 'flex-start' | 'flex-end' | false;
   horizontalAlign?: 'center' | 'flex-start' | 'flex-end' | false;

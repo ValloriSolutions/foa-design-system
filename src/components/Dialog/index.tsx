@@ -1,4 +1,4 @@
-import { FlexBoxProps } from 'components';
+import { FlexBoxProps } from '../';
 import { Typography } from '../Typography';
 import React, { useRef } from 'react';
 import { useOutsideAlerter } from '../../hooks/useOutsideAlerter';

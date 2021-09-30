@@ -3,6 +3,7 @@ import { Card, CardProps } from './Card';
 import { FlexBox, FlexBoxProps } from './FlexBox';
 import { Row, RowProps } from './Grid/Row';
 import { Col, ColProps } from './Grid/Col';
+import { Dropdown, DropdownProps } from './Dropdown';
 
 export {
   Button,
@@ -15,4 +16,6 @@ export {
   FlexBoxProps,
   Row,
   RowProps,
+  Dropdown,
+  DropdownProps,
 };

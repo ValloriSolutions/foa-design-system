@@ -1,20 +1,21 @@
 import styled, { css, FlattenSimpleInterpolation } from 'styled-components';
-import { borders, colors } from '../../theme';
+import { borders, colors, spacing } from '../../theme';
+import { flexPosition } from '../../utils/mixins';
 
 import { ButtonProps } from './';
 
 export const StyledButton = styled.button<ButtonProps>`
   transition: all 0.2s ease-in-out;
-  ${({ variant, disabled }): FlattenSimpleInterpolation => {
-    const style = disabled ? 'disabled' : 'primary' ?? variant;
+  ${({ variant, disabled, dropdownItem }): FlattenSimpleInterpolation => {
+    const style = disabled ? 'disabled' : variant ?? 'primary';
     return css`
       background-color: ${colors.buttons[style].background};
       color: ${colors.buttons[style].color};
-      border: ${colors.buttons[style].border};
+      border: ${!dropdownItem ? colors.buttons[style].border : '0'};
       &:hover {
         background-color: ${colors.buttons[style].hover.background};
         color: ${colors.buttons[style].hover.color};
-        border: ${colors.buttons[style].hover.border};
+        border: ${!dropdownItem ? colors.buttons[style].hover.border : '0'};
       }
       & svg {
         fill: ${colors.buttons[style].color};
@@ -31,6 +32,22 @@ export const StyledButton = styled.button<ButtonProps>`
   justify-content: center;
   align-items: center;
   border-radius: ${borders.radius.button};
-  padding: ${({ small }): string =>
-    small ? '0.35rem 1rem' : '0.813rem 1.375rem'};
+  padding: ${({ small }): string => (small ? '0.35rem 1rem' : spacing.button)};
+
+  ${({ dropdownItem }): FlattenSimpleInterpolation | string => {
+    return dropdownItem
+      ? css`
+          width: 100%;
+          text-align: center;
+          ${flexPosition('center', 'center')};
+          border-radius: 0;
+          border: 0;
+          background: none;
+          color: ${colors.text.secondary};
+          &:not(:last-of-type) {
+            border-bottom: 1px solid ${colors.colors.gray.lighter};
+          }
+        `
+      : '';
+  }}
 `;

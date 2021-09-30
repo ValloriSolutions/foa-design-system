@@ -9,6 +9,7 @@ export const radius = {
   input: '0.75rem',
   round: '50%',
   full: '100%',
+  dropdown: '0.813rem',
 };
 
 export default {
