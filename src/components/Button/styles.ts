@@ -18,8 +18,13 @@ export const StyledButton = styled.button<ButtonProps>`
         background-color: ${colors.buttons[style].hover.background};
         color: ${colors.buttons[style].hover.color};
         border: ${!dropdownItem ? colors.buttons[style].hover.border : '0'};
+        & svg,
+        & svg path {
+          fill: ${colors.buttons[style].hover.color};
+        }
       }
-      & svg {
+      & svg,
+      & svg path {
         fill: ${colors.buttons[style].color};
         max-height: 1.5rem;
       }
@@ -55,8 +60,8 @@ export const StyledButton = styled.button<ButtonProps>`
 `;
 
 export const StyledGhostButton = styled.button<ButtonProps>`
-  ${({ disabled }): FlattenSimpleInterpolation => css`
-  font-size: ${fontSizes.p};
+  ${({ disabled, active }): FlattenSimpleInterpolation => css`
+  font-size: ${fontSizes.small};
   text-decoration: underline;
   min-height: 10px;
   padding: 0 !important;
@@ -72,12 +77,16 @@ export const StyledGhostButton = styled.button<ButtonProps>`
       disabled ? palette.text.disabled : palette.text.secondary
     };
   }
-  &:active {
-    background-color: transparent;
-    color: ${disabled ? palette.text.disabled : palette.colors.gray.darkest};
-    text-decoration-color: ${
-      disabled ? palette.text.disabled : palette.colors.gray.darkest
-    };
+  ${
+    active &&
+    css`
+      background-color: transparent;
+      color: ${disabled ? palette.text.disabled : palette.colors.gray.darkest};
+      text-decoration-color: ${disabled
+        ? palette.text.disabled
+        : palette.colors.gray.darkest};
+    `
+  }
   }
 }`};
 `;

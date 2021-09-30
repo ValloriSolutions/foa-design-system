@@ -1,7 +1,7 @@
 import React from 'react';
 import { Meta, Story } from '@storybook/react';
 import { Button, ButtonProps } from '../src/components/Button';
-import { IconMail } from '../src/icons';
+import { IconBell, IconMail } from '../src/icons';
 
 export default {
   title: 'Components/Button',
@@ -32,6 +32,17 @@ WithAction.args = {
   children: 'I am a button with action',
   onClick: (): void => alert('I am clicked'),
 };
+export const SecondaryWithAction = Template.bind({});
+SecondaryWithAction.args = {
+  variant: 'secondary',
+  onClick: (): void => alert('I am clicked'),
+  children: (
+    <>
+      <IconBell />
+      Secondary Icon with Button!
+    </>
+  ),
+};
 
 export const WithIcon = Template.bind({});
 WithIcon.args = {
@@ -48,6 +59,17 @@ export const Small = Template.bind({});
 Small.args = {
   children: 'I am a small story button',
   small: true,
+};
+export const Ghost = Template.bind({});
+Ghost.args = {
+  children: 'I am a small story button',
+  ghost: true,
+};
+export const GhostActive = Template.bind({});
+GhostActive.args = {
+  children: 'I am a small story button',
+  ghost: true,
+  active: true,
 };
 
 export const Disabled = Template.bind({});
