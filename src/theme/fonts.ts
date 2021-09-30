@@ -34,6 +34,7 @@ import PoppinsSemiBoldItalicwoff2 from './fonts/Poppins-SemiBoldItalic.woff2';
 import PoppinsSemiBoldItalicwoff from './fonts/Poppins-SemiBoldItalic.woff';
 import PoppinsThinItalicwoff2 from './fonts/Poppins-ThinItalic.woff2';
 import PoppinsThinItalicwoff from './fonts/Poppins-ThinItalic.woff';
+import { pxToRem } from '../utils/grid';
 
 export const fontSizes = {
   h1: '3.24rem',
@@ -44,6 +45,7 @@ export const fontSizes = {
   h6: '1.125rem',
   p: '1rem',
   small: '0.875rem',
+  input: pxToRem(14),
 };
 
 export const fontWeights = {

@@ -1,11 +1,12 @@
 import { hexToRgba } from '../utils/colors';
+import { Box, Gray, Palette } from './types';
 
 export const red = '#F04343';
 export const green = '#64AA0B';
 export const yellow = '#F0CA43';
 export const white = '#ffffff';
 
-export const gray = {
+export const gray: Gray = {
   darkest: '#1E1C2f',
   darker: '#34323f',
   dark: '#4B495f',
@@ -14,11 +15,11 @@ export const gray = {
   lighter: '#EDEDEf',
   lightest: '#F6F6FF',
 };
-export const box = {
+export const box: Box = {
   DEFAULT_BOX_SHADOW: '0 3px 3px 0 rgba(0, 0, 0, 0.1)',
   TAB_BAR_BOX_SHADOW: (color = gray.light): string => `0 2px 0 0 ${color}`,
 };
-export const palette = {
+export const palette: Palette = {
   colors: {
     red,
     green,
