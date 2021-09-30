@@ -25,6 +25,7 @@ export interface Palette {
     paper: string;
     green: string;
     yellow: string;
+    red: string;
   };
   border: {
     default: string;

@@ -1,4 +1,5 @@
 import styled, { CSSObject } from 'styled-components';
+import { spacing } from '../..';
 import borders from '../../theme/borders';
 import { palette } from '../../theme/colors';
 import { fontSizes } from '../../theme/fonts';
@@ -15,7 +16,7 @@ export const StyledInput = styled.input<CustomStyledInputProps>`
   background-color: ${palette.colors.white};
   border-radius: ${borders.radius.input};
   width: 100%;
-  height: ${pxToRem(48)};
+  height: ${spacing.input};
   padding: ${pxToRem(15)} ${pxToRem(21)};
   border: solid 1.5px
     ${({ messageError }): string =>

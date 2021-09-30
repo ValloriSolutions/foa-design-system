@@ -37,6 +37,7 @@ export const palette: Palette = {
     default: gray.lighter,
     paper: gray.lightest,
     green: hexToRgba(green, 0.1),
+    red: hexToRgba(red, 0.1),
     yellow: hexToRgba(yellow, 0.1),
   },
   border: {
