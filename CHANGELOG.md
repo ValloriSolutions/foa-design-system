@@ -1,3 +1,24 @@
+# v0.1.19 (Thu Sep 30 2021)
+
+#### ⚠️ Pushed to `master`
+
+- Bug fixes ([@amanda-natallie](https://github.com/amanda-natallie))
+- Add Ghost button stories ([@amanda-natallie](https://github.com/amanda-natallie))
+- Add Select stories ([@amanda-natallie](https://github.com/amanda-natallie))
+- Add Ghost button ([@amanda-natallie](https://github.com/amanda-natallie))
+- Add Input Stories ([@amanda-natallie](https://github.com/amanda-natallie))
+- Add more icons ([@amanda-natallie](https://github.com/amanda-natallie))
+- Add theme types + fix theme props ([@amanda-natallie](https://github.com/amanda-natallie))
+- Add Dropdown stories ([@amanda-natallie](https://github.com/amanda-natallie))
+- Adds icons ([@amanda-natallie](https://github.com/amanda-natallie))
+- change button size ([@amanda-natallie](https://github.com/amanda-natallie))
+
+#### Authors: 1
+
+- Amanda Natallie ([@amanda-natallie](https://github.com/amanda-natallie))
+
+---
+
 # v0.1.17 (Tue Sep 28 2021)
 
 #### 🐛 Bug Fix
