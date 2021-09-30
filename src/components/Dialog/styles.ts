@@ -30,13 +30,13 @@ export const StyledOverlay = styled(FlexBox)<DialogProps>`
 
 export const StyledDialogBox = styled.div<DialogProps>`
   ${({ alignItems }): FlattenSimpleInterpolation => css`
-    ${flexPosition(alignItems || 'flex-start', 'space-between', 'column')};
-    text-align: center;
+    ${flexPosition(alignItems ?? 'center', 'space-between', 'column')};
+    text-align: ${!alignItems ? 'center' : 'left'};
   `}
   width: ${({ width }): string => width ?? 'auto'};
   min-height: 200px;
   height: unset !important;
-  background-color: ${colors.background.paper};
+  background-color: ${colors.text.white};
   border-radius: ${borders.radius.card};
   padding: ${spacing.dialog};
   ${({ customStyles }): CSSObject => customStyles || {}}

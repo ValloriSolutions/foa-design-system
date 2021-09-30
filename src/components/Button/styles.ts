@@ -20,12 +20,14 @@ export const StyledButton = styled.button<ButtonProps>`
         border: ${!dropdownItem ? colors.buttons[style].hover.border : '0'};
         & svg,
         & svg path {
-          fill: ${colors.buttons[style].hover.color};
+          fill: ${!dropdownItem
+            ? colors.buttons[style].hover.color
+            : colors.red};
         }
       }
       & svg,
       & svg path {
-        fill: ${colors.buttons[style].color};
+        fill: ${!dropdownItem ? colors.buttons[style].color : colors.red};
         max-height: 1.5rem;
       }
     `;
@@ -59,7 +61,7 @@ export const StyledButton = styled.button<ButtonProps>`
   }}
 `;
 
-export const StyledGhostButton = styled.button<ButtonProps>`
+export const StyledGhostButton = styled.button<Omit<ButtonProps, 'variant'>>`
   ${({ disabled, active }): FlattenSimpleInterpolation => css`
   font-size: ${fontSizes.small};
   text-decoration: underline;
