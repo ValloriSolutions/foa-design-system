@@ -35,6 +35,12 @@ export const Dashboard: Story<IconProps> = (args) => (
   <Icons.IconDashboard {...args} />
 );
 export const Edit: Story<IconProps> = (args) => <Icons.IconEdit {...args} />;
+export const EyeHide: Story<IconProps> = (args) => (
+  <Icons.IconEyeHide {...args} />
+);
+export const EyeShow: Story<IconProps> = (args) => (
+  <Icons.IconEyeShow {...args} />
+);
 export const Filter: Story<IconProps> = (args) => (
   <Icons.IconFilter {...args} />
 );
@@ -58,3 +64,6 @@ export const Ticket: Story<IconProps> = (args) => (
   <Icons.IconTicket {...args} />
 );
 export const Truck: Story<IconProps> = (args) => <Icons.IconTruck {...args} />;
+export const Warning: Story<IconProps> = (args) => (
+  <Icons.IconWarning {...args} />
+);

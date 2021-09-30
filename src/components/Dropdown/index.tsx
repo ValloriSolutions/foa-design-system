@@ -10,7 +10,7 @@ import {
   StyledPopupActions,
   StyledThreeDotsButton,
 } from './styles';
-import { colors } from '../..';
+import { colors } from '../../';
 
 export interface DropdownProps {
   text?: string;
