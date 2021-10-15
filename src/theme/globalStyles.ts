@@ -7,7 +7,7 @@ export default createGlobalStyle`
   * {
     margin: 0;
     padding: 0;
-    font-family: PoppinsLight, Helvetica, Sans-Serif;
+    font-family: 'PoppinsRegular', Helvetica, Sans-Serif;
     font-size: 15px;
     color: ${colors.text.primary};
 
@@ -54,7 +54,10 @@ export default createGlobalStyle`
     }
   small {
      font-size: ${fontSizes.small} 
-    }
+  }
+  p, blockquote, span, small, li {
+    font-family: PoppinsRegular, Helvetica, Sans-Serif;
+  }
 
   h1, h2, h3, h4, h5, h6 {
     line-height: ${lineHeights.heading};
