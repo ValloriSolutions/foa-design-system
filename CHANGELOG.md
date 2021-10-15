@@ -1,3 +1,19 @@
+# v0.2.1 (Fri Oct 15 2021)
+
+#### ⚠️ Pushed to `master`
+
+- Add more options to Global Styles ([@amanda-natallie](https://github.com/amanda-natallie))
+- add FEMSA brand & stories ([@amanda-natallie](https://github.com/amanda-natallie))
+- Add Sidebar components & stories ([@amanda-natallie](https://github.com/amanda-natallie))
+- Refactor Grid ([@amanda-natallie](https://github.com/amanda-natallie))
+- Add Avatar component & Stories ([@amanda-natallie](https://github.com/amanda-natallie))
+
+#### Authors: 1
+
+- Amanda Natallie ([@amanda-natallie](https://github.com/amanda-natallie))
+
+---
+
 # v0.1.19 (Thu Sep 30 2021)
 
 #### ⚠️ Pushed to `master`
