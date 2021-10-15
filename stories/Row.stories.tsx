@@ -7,13 +7,10 @@ import Col from '../src/components/Grid/Col';
 export default {
   component: Row,
   subcomponents: { Col },
-  title: 'Layout/Row',
+  title: 'Grid/Row',
 } as Meta;
 
-export const RowWithCols: Story<RowProps> = ({
-  children,
-  ...args
-}): JSX.Element => (
+export const RowWithCols: Story<RowProps> = ({ ...args }): JSX.Element => (
   <Row {...args}>
     <Default />
   </Row>

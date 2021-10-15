@@ -6,7 +6,7 @@ import Row from '../src/components/Grid/Row';
 
 export default {
   component: Col,
-  title: 'Layout/Col',
+  title: 'Grid/Col',
   argTypes: {
     children: {
       control: {
