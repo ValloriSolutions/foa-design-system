@@ -13,6 +13,7 @@ export default {
   },
 } as Meta;
 
+export const FEMSABrand: Story<IconProps> = () => <Icons.FEMSABrand />;
 export const ArrowLeft: Story<IconProps> = (args) => (
   <Icons.IconArrowLeft {...args} />
 );

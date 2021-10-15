@@ -10,6 +10,7 @@ export { IconDashboard } from './Dashboard';
 export { IconEdit } from './Edit';
 export { IconEyeHide } from './EyeHide';
 export { IconEyeShow } from './EyeShow';
+export { FEMSABrand } from './FEMSABrand';
 export { IconFilter } from './Filter';
 export { IconLock } from './Lock';
 export { IconMail } from './Mail';
