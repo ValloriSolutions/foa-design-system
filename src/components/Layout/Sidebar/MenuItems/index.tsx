@@ -1,6 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { StyledMenu, StyledMenuItem } from './styles';
 import { useHistory } from 'react-router-dom';
+import { Home } from 'react-feather';
+import Accordion from '../Accordion';
+import AccordionItem from '../AccordionItem';
 
 export interface DropdownItemProps {
   title: string;
@@ -20,31 +23,48 @@ export interface MenuItemsProps {
   menuItems: MenuItemProps[];
 }
 
-const Sidebar: React.FC<MenuItemsProps> = ({ menuItems }) => {
+const MenuItems: React.FC<MenuItemsProps> = ({ menuItems }): JSX.Element => {
   const history = useHistory();
+  const [activeAccordion, setActiveAccordion] = useState(0);
+
+  const handleClick = (selected: number) => (): void => {
+    setActiveAccordion(selected);
+  };
   return (
-    <StyledMenu>
+    <>
       {menuItems.map(
         ({ title, icon, path, isDropdown, dropdownItems, active }) => {
-          if (isDropdown) {
-            // @TODO: Implement dropdown
-            return null;
-          }
-
-          return (
-            <StyledMenuItem
-              active={active}
-              key={title}
-              onClick={(): void => history.push(path)}
+          isDropdown ? (
+            <Accordion
+              label="Accordion 1"
+              active={activeAccordion === 0}
+              icon={(color): React.ReactNode => <Home color={color} />}
+              onClick={handleClick(1)}
             >
-              {icon}
-              {title}
-            </StyledMenuItem>
+              {dropdownItems?.map((e: DropdownItemProps, index) => (
+                <AccordionItem
+                  key={index}
+                  label={e.title}
+                  action={(): void => history.push(e.path)}
+                />
+              ))}
+            </Accordion>
+          ) : (
+            <StyledMenu>
+              <StyledMenuItem
+                active={active}
+                key={title}
+                onClick={(): void => history.push(path)}
+              >
+                {icon}
+                {title}
+              </StyledMenuItem>
+            </StyledMenu>
           );
         }
       )}
-    </StyledMenu>
+    </>
   );
 };
 
-export default Sidebar;
+export default MenuItems;

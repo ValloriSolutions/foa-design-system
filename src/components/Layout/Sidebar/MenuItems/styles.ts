@@ -6,7 +6,7 @@ interface MenuItemProps {
   active?: boolean;
 }
 
-const ActiveHoverStyles = (): FlattenSimpleInterpolation => css`
+export const ActiveHoverStyles = (): FlattenSimpleInterpolation => css`
   border-left: 8px solid ${palette.colors.red};
   background-color: ${palette.background.red};
   color: ${palette.colors.red};
