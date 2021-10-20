@@ -1,3 +1,20 @@
+# v0.2.4 (Wed Oct 20 2021)
+
+#### ⚠️ Pushed to `master`
+
+- update yarn.lock (amanda.natallie.2@gmail.com)
+- Normalize organization + add LayoutWrapper (amanda.natallie.2@gmail.com)
+- adjust sidebar spacing (amanda.natallie.2@gmail.com)
+- Fix sidebar menu behavior (amanda.natallie.2@gmail.com)
+- Export Sidebar (amanda.natallie.2@gmail.com)
+- num funciona mas bó (amanda.natallie.2@gmail.com)
+
+#### Authors: 1
+
+- Amanda Natallie ([@amanda-natallie](https://github.com/amanda-natallie))
+
+---
+
 # v0.2.1 (Fri Oct 15 2021)
 
 #### ⚠️ Pushed to `master`
