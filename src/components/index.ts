@@ -1,36 +1,49 @@
 import { Button, ButtonProps } from './Button';
-import { Card, CardProps } from './Card';
-import { FlexBox, FlexBoxProps } from './FlexBox';
-import { Row, RowProps } from './Grid/Row';
-import { Col, ColProps } from './Grid/Col';
-import { Dropdown, DropdownProps } from './Dropdown';
-import { Sidebar, SidebarProps } from './Layout/Sidebar';
-import { MenuItems, MenuItemProps } from './Layout/Sidebar/MenuItems';
-import { Accordion, AccordionProps } from './Layout/Sidebar/Accordion';
+import { Card } from './Card';
+import { FlexBox } from './FlexBox';
+import { Row } from './Grid/Row';
+import { Col } from './Grid/Col';
+import { Dropdown } from './Dropdown';
+import { Sidebar } from './Layout/Sidebar';
+import { MenuItems } from './Layout/Sidebar/MenuItems';
+import { Header } from './Layout/Header';
+import { LayoutWrapper } from './Layout/';
+import { Accordion } from './Layout/Sidebar/Accordion';
+import { AccordionItem } from './Layout/Sidebar/AccordionItem';
 import {
-  AccordionItem,
+  MenuItemsProps,
+  AccordionProps,
+  DropdownProps,
+  ColProps,
+  RowProps,
+  FlexBoxProps,
+  CardProps,
   AccordionItemProps,
-} from './Layout/Sidebar/AccordionItem';
+} from '../types/layout';
 
 export {
   Accordion,
-  AccordionProps,
   AccordionItem,
-  AccordionItemProps,
   Button,
-  ButtonProps,
   Card,
-  CardProps,
   Col,
-  ColProps,
   FlexBox,
-  FlexBoxProps,
   Row,
-  RowProps,
   Dropdown,
-  DropdownProps,
   MenuItems,
-  MenuItemProps,
   Sidebar,
-  SidebarProps,
+  Header,
+  LayoutWrapper,
+};
+
+export {
+  AccordionProps,
+  AccordionItemProps,
+  ButtonProps,
+  CardProps,
+  ColProps,
+  FlexBoxProps,
+  RowProps,
+  DropdownProps,
+  MenuItemsProps,
 };

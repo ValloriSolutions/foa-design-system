@@ -1,14 +1,10 @@
 import React from 'react';
-import { FEMSABrand } from '../../..';
-import MenuItems, { MenuItemProps } from './MenuItems';
+import { FEMSABrand } from '../../../icons/FEMSABrand';
+import { MenuItemsProps } from '../../../types/layout';
+import MenuItems from './MenuItems';
 import { StyledSidebar } from './styles';
 
-export interface SidebarProps {
-  menuItems: MenuItemProps[];
-}
-
-export const Sidebar: React.FC<SidebarProps> = ({ menuItems }) => {
-  console.info('ueeeee MEnuitems', menuItems);
+export const Sidebar: React.FC<MenuItemsProps> = ({ menuItems }) => {
   return (
     <StyledSidebar>
       <FEMSABrand />

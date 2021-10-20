@@ -35,6 +35,7 @@ export const StyledMenu = styled.ul`
 `;
 
 export const StyledMenuItem = styled.li<MenuItemProps>`
+  font-size: ${pxToRem(14)};
   border-left: 6px solid transparent;
   transition: all 0.2s ease-in-out;
   cursor: pointer;
@@ -53,6 +54,7 @@ export const StyledMenuItem = styled.li<MenuItemProps>`
 
   & svg {
     margin-right: ${pxToRem(15)};
+    max-height: ${pxToRem(25)};
   }
   &:hover {
     ${ActiveHoverStyles()}

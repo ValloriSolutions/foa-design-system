@@ -1,6 +1,4 @@
 import React, { useCallback, useEffect, useRef, useState } from 'react';
-import { CSSObject } from 'styled-components';
-
 import { IconChevronDown, IconThreeDots } from '../../icons/';
 import { useOutsideAlerter } from '../../hooks/useOutsideAlerter';
 
@@ -11,15 +9,8 @@ import {
   StyledThreeDotsButton,
 } from './styles';
 import { colors } from '../../';
+import { DropdownProps } from '../../types/layout';
 
-export interface DropdownProps {
-  text?: string;
-  active?: boolean;
-  onClick?: () => void;
-  threeDots?: boolean;
-  disabled?: boolean;
-  customStyles?: CSSObject;
-}
 export const DropdownItem: React.FC<React.ComponentProps<typeof Button>> = ({
   customStyles,
   ...props

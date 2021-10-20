@@ -1,7 +1,6 @@
 import styled, { CSSObject } from 'styled-components';
+import { ColProps } from '../../../types/layout';
 import { respondTo } from '../../../utils/grid';
-
-import { ColProps } from './';
 
 export const StyledCol = styled.div<ColProps>`
   ${({ collapse }): string =>

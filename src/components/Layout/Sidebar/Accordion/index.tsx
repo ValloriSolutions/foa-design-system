@@ -1,18 +1,9 @@
 import React, { useCallback, useState } from 'react';
 import { ChevronDown } from 'react-feather';
+import { AccordionProps } from '../../../../types/layout';
 import { StyledMenuItem } from '../MenuItems/styles';
 
 import { LabelContainer, Label, Arrow, ContentContainer } from './styles';
-
-export interface AccordionProps {
-  isExpanded?: boolean;
-  active?: boolean;
-  disabled?: boolean;
-  label: string;
-  icon: React.ReactNode;
-  onClick?: React.DOMAttributes<HTMLLIElement>['onClick'];
-  children: React.ReactNode;
-}
 
 export const Accordion: React.FC<AccordionProps> = ({
   active,
@@ -52,9 +43,7 @@ export const Accordion: React.FC<AccordionProps> = ({
       <StyledMenuItem active={active} onClick={handleClick}>
         <LabelContainer>
           {icon}
-          <Label hasIcon={!!icon} disabled={disabled}>
-            {label}
-          </Label>
+          <Label disabled={disabled}>{label}</Label>
         </LabelContainer>
         <Arrow
           xmlns="http://www.w3.org/2000/svg"

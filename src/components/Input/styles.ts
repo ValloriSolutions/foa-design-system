@@ -20,7 +20,7 @@ export const StyledInput = styled.input<CustomStyledInputProps>`
   padding: ${pxToRem(15)} ${pxToRem(21)};
   border: solid 1.5px
     ${({ messageError }): string =>
-      messageError ? palette.colors.red : palette.colors.gray.light};
+      messageError ? palette.colors.red : palette.colors.gray.lighter};
 
   color: ${palette.text.secondary};
   font-size: ${fontSizes.input};

@@ -1,6 +1,5 @@
 import styled, { CSSObject } from 'styled-components';
-
-import { RowProps } from './';
+import { RowProps } from '../../../types/layout';
 
 export const StyledRow = styled.div<RowProps>`
   display: flex;

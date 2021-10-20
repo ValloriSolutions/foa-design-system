@@ -3,25 +3,7 @@ import { StyledMenuItem } from './styles';
 import { useHistory } from 'react-router-dom';
 import Accordion from '../Accordion';
 import { AccordionItem } from '../AccordionItem';
-
-export interface DropdownItemProps {
-  title: string;
-  path: string;
-  active?: boolean;
-}
-
-export interface MenuItemProps {
-  title: string;
-  icon: React.ReactNode;
-  path: string;
-  isDropdown?: boolean;
-  dropdownItems?: DropdownItemProps[];
-  active?: boolean;
-}
-
-export interface MenuItemsProps {
-  menuItems: MenuItemProps[];
-}
+import { MenuItemsProps } from '../../../../types/layout';
 
 export const MenuItems: React.FC<MenuItemsProps> = ({
   menuItems,

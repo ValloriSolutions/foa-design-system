@@ -5,7 +5,6 @@ import { pxToRem } from '../../../utils/grid';
 export const StyledSidebar = styled.div`
   width: ${pxToRem(280)};
   height: 100vh;
-  background-color: #f5f5f5;
   position: fixed;
   top: 0;
   left: 0;
@@ -15,6 +14,7 @@ export const StyledSidebar = styled.div`
   align-items: center;
   padding: 0;
   background: ${palette.colors.white};
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
 
   & > svg {
     margin-bottom: ${pxToRem(30)};

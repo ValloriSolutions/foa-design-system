@@ -1,12 +1,6 @@
 import React from 'react';
+import { AccordionItemProps } from '../../../../types/layout';
 import { StyledAccordionItem } from './styles';
-
-export interface AccordionItemProps {
-  action?: () => void;
-  disabled?: boolean;
-  active?: boolean;
-  label: string;
-}
 
 export const AccordionItem: React.FC<AccordionItemProps> = ({
   label,

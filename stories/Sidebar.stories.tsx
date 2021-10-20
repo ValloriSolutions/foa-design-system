@@ -1,7 +1,8 @@
 import React from 'react';
 import { Meta, Story } from '@storybook/react';
-import { Sidebar, SidebarProps } from '../src/components/Layout/Sidebar';
+import { Sidebar } from '../src/components/Layout/Sidebar';
 import { IconCredit, IconDashboard, IconTicket } from '../src';
+import { MenuItemsProps } from '../src/types/layout';
 
 export default {
   title: 'Layout/Sidebar',
@@ -11,7 +12,7 @@ export default {
   },
 } as Meta;
 
-export const Default: Story<SidebarProps> = () => {
+export const Default: Story<MenuItemsProps> = () => {
   return (
     <Sidebar
       menuItems={[

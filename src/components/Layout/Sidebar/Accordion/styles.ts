@@ -1,11 +1,11 @@
 import styled, { css, FlattenSimpleInterpolation } from 'styled-components';
 import { palette } from '../../../../theme/colors';
+import { pxToRem } from '../../../../utils/grid';
 
 interface CustomProps {
   active?: boolean;
   expanded?: boolean;
   disabled?: boolean;
-  hasIcon?: boolean;
 }
 
 export const LabelContainer = styled.div`
@@ -20,20 +20,16 @@ export const Icon = styled.img<CustomProps>`
 `;
 
 export const Label = styled.p<CustomProps>`
-  letter-spacing: normal;
+  font-size: ${pxToRem(14)};
   color: ${({ disabled }): string =>
     disabled ? palette.colors.gray.medium : palette.colors.gray.dark};
-  ${({ hasIcon }): FlattenSimpleInterpolation | false | undefined =>
-    hasIcon &&
-    css`
-      margin-left: 8px;
-    `}
 `;
 
 export const Arrow = styled.svg<CustomProps>`
+  position: absolute;
+  right: 0;
   transform: rotate(180deg);
   transition: transform 0.2s ease;
-  margin-left: 8px;
   margin-top: 2px;
   fill: none !important;
   &:hover {

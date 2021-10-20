@@ -1,13 +1,6 @@
 import React from 'react';
-import { FlexBoxProps } from '../FlexBox';
-
+import { CardProps } from '../../types/layout';
 import { StyledCard } from './styles';
-
-export interface CardProps extends FlexBoxProps {
-  noRound?: boolean;
-  bordered?: boolean;
-  noShadow?: boolean;
-}
 
 export const Card: React.FC<CardProps> = ({
   children,

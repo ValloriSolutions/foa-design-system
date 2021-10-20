@@ -37,12 +37,12 @@ import PoppinsThinItalicwoff from './fonts/Poppins-ThinItalic.woff';
 import { pxToRem } from '../utils/grid';
 
 export const fontSizes = {
-  h1: '3.24rem',
-  h2: '2.5rem',
-  h3: '2.25rem',
-  h4: '1.875rem',
-  h5: '1.5rem',
-  h6: '1.125rem',
+  h1: pxToRem(24 * 1.75),
+  h2: pxToRem(22 * 1.75),
+  h3: pxToRem(18 * 1.75),
+  h4: pxToRem(16 * 1.75),
+  h5: pxToRem(14 * 1.75),
+  h6: pxToRem(10 * 1.75),
   p: '1rem',
   small: '0.875rem',
   input: pxToRem(14),

@@ -1,7 +1,7 @@
 import styled, { CSSObject } from 'styled-components';
 import { spacing } from '../../theme';
+import { FlexBoxProps } from '../../types/layout';
 import { flexPosition } from '../../utils/mixins';
-import { FlexBoxProps } from './';
 
 export const StyledFlexBox = styled.div<FlexBoxProps>`
   ${(props): string =>

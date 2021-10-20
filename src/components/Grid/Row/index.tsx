@@ -1,13 +1,6 @@
-import React, { ReactNode } from 'react';
-import { CSSObject } from 'styled-components';
-
+import React from 'react';
+import { RowProps } from '../../../types/layout';
 import { StyledRow } from './styles';
-
-export type RowProps = {
-  children: ReactNode;
-  fluid?: boolean;
-  customStyles?: CSSObject;
-};
 
 export const Row: React.FC<RowProps> = ({
   children,
