@@ -16,15 +16,15 @@ export const Header: React.FC<HeaderProps> = ({
 }) => {
   return (
     <StyledHeader>
-      <Col size={4}>
+      <Col size={5}>
         <Input
-          placeholder="Search"
+          placeholder="Digite o Número da Requisição"
           value={searchTerm}
           onChange={onChange}
           customIcon={<IconSearch color={palette.colors.gray.light} />}
         />
       </Col>
-      <Col size={6} />
+      <Col size={4} />
       <Col>
         <Toolbar
           messages={messages}
