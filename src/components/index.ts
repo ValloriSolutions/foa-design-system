@@ -4,6 +4,7 @@ import { FlexBox, FlexBoxProps } from './FlexBox';
 import { Row, RowProps } from './Grid/Row';
 import { Col, ColProps } from './Grid/Col';
 import { Dropdown, DropdownProps } from './Dropdown';
+import { Sidebar, SidebarProps } from './Layout/Sidebar';
 
 export {
   Button,
@@ -18,4 +19,6 @@ export {
   RowProps,
   Dropdown,
   DropdownProps,
+  Sidebar,
+  SidebarProps,
 };
