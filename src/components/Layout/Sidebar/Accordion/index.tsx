@@ -1,38 +1,33 @@
 import React, { useCallback, useState } from 'react';
-import { ArrowUp } from 'react-feather';
-import { palette } from '../../../../theme/colors';
+import { ChevronDown } from 'react-feather';
 import { StyledMenuItem } from '../MenuItems/styles';
 
 import { LabelContainer, Label, Arrow, ContentContainer } from './styles';
 
-interface Props {
+export interface AccordionProps {
+  isExpanded?: boolean;
   active?: boolean;
   disabled?: boolean;
   label: string;
-  icon?: (color: string) => React.ReactNode;
-  onClick?: React.DOMAttributes<HTMLButtonElement>['onClick'];
-  single?: boolean;
+  icon: React.ReactNode;
+  onClick?: React.DOMAttributes<HTMLLIElement>['onClick'];
   children: React.ReactNode;
 }
 
-const Accordion = ({
+export const Accordion: React.FC<AccordionProps> = ({
   active,
+  isExpanded,
   disabled,
   label,
   icon,
   onClick,
-  single,
   children,
-}: Props): JSX.Element => {
+}): JSX.Element => {
   const [expanded, setExpanded] = useState(false);
-  const [hover, setHover] = useState(false);
-
-  const getIconColor: () => string = () =>
-    active || hover ? palette.colors.red : palette.colors.gray.dark;
 
   const handleClick = useCallback(
-    (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
-      if (!active && onClick) {
+    (event: React.MouseEvent<HTMLLIElement, MouseEvent>) => {
+      if (!isExpanded && onClick) {
         onClick(event);
         if (!expanded) {
           setExpanded(true);
@@ -41,7 +36,7 @@ const Accordion = ({
         setExpanded((state) => !state);
       }
     },
-    [active, onClick, expanded]
+    [isExpanded, onClick, expanded]
   );
 
   const toggleExpanded = useCallback(
@@ -54,39 +49,24 @@ const Accordion = ({
 
   return (
     <>
-      <StyledMenuItem
-        as="button"
-        active={active}
-        onClick={handleClick}
-        onMouseEnter={(): void => setHover(true)}
-        onMouseLeave={(): void => setHover(false)}
-        disabled={disabled}
-      >
+      <StyledMenuItem active={active} onClick={handleClick}>
         <LabelContainer>
-          {icon?.(getIconColor())}
+          {icon}
           <Label hasIcon={!!icon} disabled={disabled}>
             {label}
           </Label>
         </LabelContainer>
-        {!single && (
-          <Arrow
-            expanded={expanded}
-            xmlns="http://www.w3.org/2000/svg"
-            width="16"
-            height="16"
-            fill="none"
-            viewBox="0 0 16 16"
-            onClick={toggleExpanded}
-          >
-            <ArrowUp
-              color={
-                disabled || hover
-                  ? palette.colors.gray.dark
-                  : palette.colors.red
-              }
-            />
-          </Arrow>
-        )}
+        <Arrow
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          fill="none"
+          viewBox="0 0 24 24"
+          expanded={expanded}
+          onClick={toggleExpanded}
+        >
+          <ChevronDown />
+        </Arrow>
       </StyledMenuItem>
       <ContentContainer expanded={expanded}>{children}</ContentContainer>
     </>

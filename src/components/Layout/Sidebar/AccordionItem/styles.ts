@@ -1,5 +1,5 @@
-import styled, { css, FlattenSimpleInterpolation } from 'styled-components';
-import { palette } from '../../../../theme/colors';
+import styled, { FlattenSimpleInterpolation } from 'styled-components';
+import { pxToRem } from '../../../../utils/grid';
 import { ActiveHoverStyles } from '../MenuItems/styles';
 
 interface CustomProps {
@@ -8,24 +8,17 @@ interface CustomProps {
 }
 
 export const StyledAccordionItem = styled.button<CustomProps>`
-  background-color: ${palette.colors.white};
-  color: ${palette.colors.gray.dark};
-  font-family: PoppinsMedium;
-  font-size: 8px;
-  min-height: 24px;
+  transition: all 0.2s ease-in-out;
+  border-left: 8px solid transparent;
   width: 100%;
-  border: 0;
-  padding-left: 56px;
+  padding: 0 ${pxToRem(18)};
+  height: ${pxToRem(67)};
   text-align: left;
   cursor: ${({ disabled }): string => (disabled ? 'not-allowed' : 'pointer')};
+  background-color: white;
   ${({ active }): FlattenSimpleInterpolation | false | undefined =>
     active && ActiveHoverStyles()}
-  ${({ disabled }): FlattenSimpleInterpolation | false | undefined =>
-    disabled &&
-    css`
-      color: ${palette.colors.gray.lighter};
-    `}
-&:hover {
+  &:hover {
     ${ActiveHoverStyles()}
   } ;
 `;

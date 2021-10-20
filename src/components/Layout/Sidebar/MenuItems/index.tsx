@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
-import { StyledMenu, StyledMenuItem } from './styles';
+import { StyledMenuItem } from './styles';
 import { useHistory } from 'react-router-dom';
-import { Home } from 'react-feather';
 import Accordion from '../Accordion';
-import AccordionItem from '../AccordionItem';
+import { AccordionItem } from '../AccordionItem';
 
 export interface DropdownItemProps {
   title: string;
   path: string;
+  active?: boolean;
 }
 
 export interface MenuItemProps {
@@ -23,7 +23,9 @@ export interface MenuItemsProps {
   menuItems: MenuItemProps[];
 }
 
-const MenuItems: React.FC<MenuItemsProps> = ({ menuItems }): JSX.Element => {
+export const MenuItems: React.FC<MenuItemsProps> = ({
+  menuItems,
+}): JSX.Element => {
   const history = useHistory();
   const [activeAccordion, setActiveAccordion] = useState(0);
 
@@ -32,37 +34,41 @@ const MenuItems: React.FC<MenuItemsProps> = ({ menuItems }): JSX.Element => {
   };
   return (
     <>
-      {menuItems.map(
-        ({ title, icon, path, isDropdown, dropdownItems, active }) => {
-          isDropdown ? (
+      {menuItems.map((menuItem, index) => {
+        if (menuItem.dropdownItems && menuItem.dropdownItems?.length > 0) {
+          return (
             <Accordion
-              label="Accordion 1"
-              active={activeAccordion === 0}
-              icon={(color): React.ReactNode => <Home color={color} />}
-              onClick={handleClick(1)}
+              key={index}
+              isExpanded={activeAccordion === index}
+              active={menuItem.active}
+              onClick={handleClick(index)}
+              label={menuItem.title}
+              icon={menuItem.icon}
             >
-              {dropdownItems?.map((e: DropdownItemProps, index) => (
+              {menuItem?.dropdownItems?.map((dropdownItem, index) => (
                 <AccordionItem
+                  active={dropdownItem.active}
+                  label={dropdownItem.title}
                   key={index}
-                  label={e.title}
-                  action={(): void => history.push(e.path)}
-                />
+                  action={(): void => history.push(dropdownItem.path)}
+                >
+                  {dropdownItem.title}
+                </AccordionItem>
               ))}
             </Accordion>
-          ) : (
-            <StyledMenu>
-              <StyledMenuItem
-                active={active}
-                key={title}
-                onClick={(): void => history.push(path)}
-              >
-                {icon}
-                {title}
-              </StyledMenuItem>
-            </StyledMenu>
           );
         }
-      )}
+        return (
+          <StyledMenuItem
+            active={menuItem.active}
+            key={index}
+            onClick={(): void => history.push(menuItem.path)}
+          >
+            {menuItem.icon}
+            {menuItem.title}
+          </StyledMenuItem>
+        );
+      })}
     </>
   );
 };

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Meta, Story } from '@storybook/react';
 import { Sidebar, SidebarProps } from '../src/components/Layout/Sidebar';
-import { IconCalendar, IconCredit, IconDashboard, IconTicket } from '../src';
+import { IconCredit, IconDashboard, IconTicket } from '../src';
 
 export default {
   title: 'Layout/Sidebar',
@@ -27,19 +27,14 @@ export const Default: Story<SidebarProps> = () => {
         },
         {
           title: 'Req. de Compra',
+          active: true,
           path: '/',
           icon: <IconCredit />,
-          active: true,
-        },
-        {
-          title: 'Dropdown',
-          path: '/',
-          icon: <IconCalendar />,
-          isDropdown: true,
           dropdownItems: [
             {
               title: 'Sub Item 1',
               path: '/',
+              active: true,
             },
             {
               title: 'Sub Item 2',

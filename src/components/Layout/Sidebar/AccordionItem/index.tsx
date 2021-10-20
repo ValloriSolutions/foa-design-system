@@ -1,14 +1,14 @@
 import React from 'react';
 import { StyledAccordionItem } from './styles';
 
-interface Props {
+export interface AccordionItemProps {
   action?: () => void;
   disabled?: boolean;
   active?: boolean;
   label: string;
 }
 
-const AccordionItem: React.FC<Props> = ({
+export const AccordionItem: React.FC<AccordionItemProps> = ({
   label,
   action,
   disabled,
@@ -18,5 +18,3 @@ const AccordionItem: React.FC<Props> = ({
     {label}
   </StyledAccordionItem>
 );
-
-export default AccordionItem;

@@ -5,8 +5,18 @@ import { Row, RowProps } from './Grid/Row';
 import { Col, ColProps } from './Grid/Col';
 import { Dropdown, DropdownProps } from './Dropdown';
 import { Sidebar, SidebarProps } from './Layout/Sidebar';
+import { MenuItems, MenuItemProps } from './Layout/Sidebar/MenuItems';
+import { Accordion, AccordionProps } from './Layout/Sidebar/Accordion';
+import {
+  AccordionItem,
+  AccordionItemProps,
+} from './Layout/Sidebar/AccordionItem';
 
 export {
+  Accordion,
+  AccordionProps,
+  AccordionItem,
+  AccordionItemProps,
   Button,
   ButtonProps,
   Card,
@@ -19,6 +29,8 @@ export {
   RowProps,
   Dropdown,
   DropdownProps,
+  MenuItems,
+  MenuItemProps,
   Sidebar,
   SidebarProps,
 };

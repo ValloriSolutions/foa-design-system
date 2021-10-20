@@ -20,11 +20,6 @@ export const Icon = styled.img<CustomProps>`
 `;
 
 export const Label = styled.p<CustomProps>`
-  font-family: PoppinsMedium;
-  font-size: 12px;
-  font-weight: 600;
-  font-stretch: normal;
-  font-style: normal;
   letter-spacing: normal;
   color: ${({ disabled }): string =>
     disabled ? palette.colors.gray.medium : palette.colors.gray.dark};
@@ -40,11 +35,18 @@ export const Arrow = styled.svg<CustomProps>`
   transition: transform 0.2s ease;
   margin-left: 8px;
   margin-top: 2px;
+  fill: none !important;
+  &:hover {
+    stroke: none;
+  }
   ${({ expanded }): FlattenSimpleInterpolation | false | undefined =>
     expanded &&
     css`
       transform: rotate(360deg);
     `}
+  & polyline {
+    fill: none;
+  }
 `;
 
 export const ContentContainer = styled.div<CustomProps>`

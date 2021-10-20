@@ -8,6 +8,7 @@ export interface SidebarProps {
 }
 
 export const Sidebar: React.FC<SidebarProps> = ({ menuItems }) => {
+  console.info('ueeeee MEnuitems', menuItems);
   return (
     <StyledSidebar>
       <FEMSABrand />
