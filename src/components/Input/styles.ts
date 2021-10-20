@@ -1,5 +1,5 @@
 import styled, { CSSObject } from 'styled-components';
-import { spacing } from '../..';
+import { spacing } from '../../theme/';
 import borders from '../../theme/borders';
 import { palette } from '../../theme/colors';
 import { fontSizes } from '../../theme/fonts';

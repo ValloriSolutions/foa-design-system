@@ -8,7 +8,7 @@ import {
   StyledPopupActions,
   StyledThreeDotsButton,
 } from './styles';
-import { colors } from '../../';
+import colors from '../../theme/colors';
 import { DropdownProps } from '../../types/layout';
 
 export const DropdownItem: React.FC<React.ComponentProps<typeof Button>> = ({

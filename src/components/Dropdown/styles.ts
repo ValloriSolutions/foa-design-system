@@ -4,7 +4,7 @@ import styled, {
   FlattenSimpleInterpolation,
 } from 'styled-components';
 import { DropdownProps } from '../../types/layout';
-import { borders } from '../../';
+import borders from '../../theme/borders';
 import colors, { box } from '../../theme/colors';
 import { pxToRem } from '../../utils/grid';
 
