@@ -3,7 +3,7 @@ import { palette } from '../../../theme/colors';
 import { pxToRem } from '../../../utils/grid';
 
 export const StyledSidebar = styled.div`
-  width: ${pxToRem(320)};
+  width: ${pxToRem(280)};
   height: 100vh;
   background-color: #f5f5f5;
   position: fixed;
@@ -17,7 +17,7 @@ export const StyledSidebar = styled.div`
   background: ${palette.colors.white};
 
   & > svg {
-    margin-bottom: ${pxToRem(62)};
+    margin-bottom: ${pxToRem(30)};
     margin-top: ${pxToRem(33)};
   }
 `;

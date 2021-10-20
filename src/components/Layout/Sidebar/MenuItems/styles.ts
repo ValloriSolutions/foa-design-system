@@ -7,7 +7,7 @@ interface MenuItemProps {
 }
 
 export const ActiveHoverStyles = (): FlattenSimpleInterpolation => css`
-  border-left: 8px solid ${palette.colors.red};
+  border-left: 6px solid ${palette.colors.red};
   background-color: ${palette.background.red};
   color: ${palette.colors.red};
   font-family: PoppinsBold;
@@ -35,16 +35,16 @@ export const StyledMenu = styled.ul`
 `;
 
 export const StyledMenuItem = styled.li<MenuItemProps>`
-  border-left: 8px solid transparent;
+  border-left: 6px solid transparent;
   transition: all 0.2s ease-in-out;
   cursor: pointer;
   margin: 0;
-  padding: 0 ${pxToRem(28)};
+  padding: 0 ${pxToRem(18)};
   display: flex;
   align-items: center;
   justify-content: flex-start;
   width: 100%;
-  height: ${pxToRem(67)};
+  height: ${pxToRem(60)};
   z-index: 1;
   position: relative;
   flex-wrap: wrap;
@@ -52,7 +52,7 @@ export const StyledMenuItem = styled.li<MenuItemProps>`
     active ? ActiveHoverStyles() : null}
 
   & svg {
-    margin-right: ${pxToRem(21)};
+    margin-right: ${pxToRem(15)};
   }
   &:hover {
     ${ActiveHoverStyles()}
