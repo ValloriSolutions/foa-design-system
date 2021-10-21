@@ -1,6 +1,7 @@
 import React from 'react';
 import { Meta, Story } from '@storybook/react';
 import {
+  Badge,
   Dropdown,
   IconThreeDots,
   Table,
@@ -27,7 +28,7 @@ export const Default: Story<TableProps> = () => {
         <TableRow>
           <TableCell component="th" />
           <TableCell component="th" orderBy={'name'}>
-            Restaurante
+            Fornecedor
           </TableCell>
           <TableCell component="th" order={'DESC'} orderBy={'cnpj'}>
             CNPJ
@@ -35,8 +36,8 @@ export const Default: Story<TableProps> = () => {
           <TableCell component="th" order={'ASC'} orderBy={'city'}>
             Cidade
           </TableCell>
-          <TableCell component="th">Originadores</TableCell>
-          <TableCell component="th">Horário de funcionamento</TableCell>
+          <TableCell component="th">Telefone</TableCell>
+          <TableCell component="th">Email</TableCell>
           <TableCell component="th" orderBy={'status'}>
             Status
           </TableCell>
@@ -49,9 +50,11 @@ export const Default: Story<TableProps> = () => {
           <TableCell>LebonTon Lorem Ipsum</TableCell>
           <TableCell>87.871.377/0001-02</TableCell>
           <TableCell>Porto Alegre</TableCell>
-          <TableCell>IFood, Uber Eats</TableCell>
-          <TableCell>seg a sex, 09h às 15h; seg a sex, 09h às 15h;</TableCell>
-          <TableCell>test</TableCell>
+          <TableCell>11 - 98459-8956</TableCell>
+          <TableCell>leblonton@ind.com</TableCell>
+          <TableCell>
+            <Badge variant="green" label="Aprovado" />
+          </TableCell>
           <TableCell actionCell>
             <IconThreeDots />
           </TableCell>
@@ -61,9 +64,11 @@ export const Default: Story<TableProps> = () => {
           <TableCell>LebonTon Lorem Ipsum</TableCell>
           <TableCell>87.871.377/0001-02</TableCell>
           <TableCell>Porto Alegre</TableCell>
-          <TableCell>IFood, Uber Eats</TableCell>
-          <TableCell>seg a sex, 09h às 15h; seg a sex, 09h às 15h;</TableCell>
-          <TableCell>test</TableCell>
+          <TableCell>45 - 95896-8956</TableCell>
+          <TableCell>email@example.com</TableCell>
+          <TableCell>
+            <Badge variant="red" label="Reprovado" />
+          </TableCell>
           <TableCell actionCell>
             <Dropdown threeDots>
               <DropdownItem onClick={(): void => undefined}>

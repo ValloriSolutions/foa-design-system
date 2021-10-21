@@ -1,11 +1,6 @@
 import React, { useState } from 'react';
+import { AvatarProps } from '../../types/layout';
 import Style from './styles';
-
-export interface AvatarProps {
-  size?: string;
-  imageUrl?: string;
-  alt?: string;
-}
 
 export const Avatar: React.FC<AvatarProps> = ({ size = 'md', ...rest }) => {
   const [showAlt, setShowAlt] = useState(false);

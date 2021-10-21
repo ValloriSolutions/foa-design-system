@@ -1,0 +1,30 @@
+import styled, {
+  css,
+  CSSObject,
+  FlattenSimpleInterpolation,
+} from 'styled-components';
+import { pxToRem } from '../../utils/grid';
+
+interface Props {
+  color: string;
+  bg: string;
+  customStyles?: CSSObject | FlattenSimpleInterpolation;
+}
+
+export const StyledBadge = styled.div<Props>`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: ${pxToRem(3)} ${pxToRem(35)};
+  border-radius: ${pxToRem(4)};
+  width: auto;
+  ${(props): FlattenSimpleInterpolation => css`
+    & > span {
+      font-size: ${pxToRem(13.2)};
+      font-weight: 500;
+      color: ${props.color};
+    }
+    background-color: ${props.bg};
+    ${props.customStyles || {}}
+  `}
+`;

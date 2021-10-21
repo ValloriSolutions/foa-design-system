@@ -1,23 +1,6 @@
-import React, { ReactNode } from 'react';
-import { CSSObject, FlattenSimpleInterpolation } from 'styled-components';
+import React from 'react';
+import { ButtonProps } from '../../types/layout';
 import { StyledButton, StyledGhostButton } from './styles';
-
-export interface ButtonProps extends React.HTMLAttributes<HTMLElement> {
-  variant?: 'primary' | 'secondary' | 'disabled';
-  disabled?: boolean;
-  onClick?: () => void;
-  size?: 'fluid' | 'full';
-  buttonWidth?: number;
-  icon?: ReactNode;
-  children?: ReactNode | string | undefined;
-  small?: boolean;
-  ghost?: boolean;
-  active?: boolean;
-  dropdownItem?: boolean;
-  forwardRef?: React.Ref<HTMLButtonElement>;
-  customStyles?: CSSObject | FlattenSimpleInterpolation;
-  iconButton?: boolean;
-}
 
 export const Button: React.FC<ButtonProps> = (props): JSX.Element => {
   return props.ghost ? (

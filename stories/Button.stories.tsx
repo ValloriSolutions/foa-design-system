@@ -1,7 +1,8 @@
 import React from 'react';
 import { Meta, Story } from '@storybook/react';
-import { Button, ButtonProps } from '../src/components/Button';
+import { Button } from '../src/components/Button';
 import { IconBell, IconMail } from '../src/icons';
+import { ButtonProps } from '../src/types/layout';
 
 export default {
   title: 'Components/Button',

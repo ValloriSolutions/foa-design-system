@@ -2,10 +2,9 @@ import styled, { css, FlattenSimpleInterpolation } from 'styled-components';
 import { borders, colors, spacing } from '../../theme';
 import { palette } from '../../theme/colors';
 import { fontSizes } from '../../theme/fonts';
+import { ButtonProps } from '../../types/layout';
 import { pxToRem } from '../../utils/grid';
 import { flexPosition } from '../../utils/mixins';
-
-import { ButtonProps } from './';
 
 export const StyledButton = styled.button<ButtonProps>`
   transition: all 0.2s ease-in-out;

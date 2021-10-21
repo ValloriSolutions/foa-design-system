@@ -18,28 +18,28 @@ export const Default: Story<MenuItemsProps> = () => {
       menuItems={[
         {
           title: 'Página Inicial',
-          onClick: () => alert('clicked!'),
+          onClick: (): void => alert('clicked!'),
           icon: <IconDashboard />,
         },
         {
           title: 'Tickets',
-          onClick: () => alert('clicked!'),
+          onClick: (): void => alert('clicked!'),
           icon: <IconTicket />,
         },
         {
           title: 'Req. de Compra',
           active: true,
-          onClick: () => alert('clicked!'),
+          onClick: (): void => alert('clicked!'),
           icon: <IconCredit />,
           dropdownItems: [
             {
               title: 'Sub Item 1',
-              onClick: () => alert('clicked!'),
+              onClick: (): void => alert('clicked!'),
               active: true,
             },
             {
               title: 'Sub Item 2',
-              onClick: () => alert('clicked!'),
+              onClick: (): void => alert('clicked!'),
             },
           ],
         },

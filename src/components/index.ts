@@ -1,4 +1,5 @@
-import { Button, ButtonProps } from './Button';
+import { Badge } from './Badge';
+import { Button } from './Button';
 import { Card } from './Card';
 import { FlexBox } from './FlexBox';
 import { Row } from './Grid/Row';
@@ -10,6 +11,14 @@ import { Header } from './Layout/Header';
 import { LayoutWrapper } from './Layout/';
 import { Accordion } from './Layout/Sidebar/Accordion';
 import { AccordionItem } from './Layout/Sidebar/AccordionItem';
+import { Table } from './Table';
+import { TableRow } from './Table/TableRow';
+import { TableCell } from './Table/TableCell';
+import { TableHead } from './Table/TableHead';
+import { TableBody } from './Table/TableBody';
+import { TableEmpty } from './Table/TableEmpty';
+import { Select } from './Select';
+
 import {
   MenuItemsProps,
   AccordionProps,
@@ -20,13 +29,10 @@ import {
   CardProps,
   AccordionItemProps,
   TableProps,
+  ButtonProps,
+  BadgeProps,
+  SelectProps,
 } from '../types/layout';
-import { Table } from './Table';
-import { TableRow } from './Table/TableRow';
-import { TableCell } from './Table/TableCell';
-import { TableHead } from './Table/TableHead';
-import { TableBody } from './Table/TableBody';
-import { TableEmpty } from './Table/TableEmpty';
 
 export {
   Accordion,
@@ -47,6 +53,8 @@ export {
   TableHead,
   TableBody,
   TableEmpty,
+  Badge,
+  Select,
 };
 
 export {
@@ -60,4 +68,6 @@ export {
   DropdownProps,
   MenuItemsProps,
   TableProps,
+  BadgeProps,
+  SelectProps,
 };

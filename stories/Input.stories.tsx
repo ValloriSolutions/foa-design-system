@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { Meta, Story } from '@storybook/react';
 import Input, { InputProps } from '../src/components/Input';
-import { Button } from '../src/components/Button';
 
 export default {
   title: 'Components/Input',

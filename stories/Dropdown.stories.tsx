@@ -1,10 +1,7 @@
 import React, { useState } from 'react';
 import { Meta, Story } from '@storybook/react';
-import {
-  Dropdown,
-  DropdownProps,
-  DropdownItem,
-} from '../src/components/Dropdown';
+import { Dropdown, DropdownItem } from '../src/components/Dropdown';
+import { DropdownProps } from '../src/types/layout';
 
 export default {
   title: 'Components/Dropdown',
@@ -38,11 +35,13 @@ export const ControlledThreeDots: Story<DropdownProps> = (): JSX.Element => {
 export const SelfControlled: Story<DropdownProps> = (): JSX.Element => {
   return (
     <Dropdown text="ações rápidas">
-      <DropdownItem onClick={(): void => alert('Editando restaurante...')}>
-        editar restaurantes
+      <DropdownItem onClick={(): void => alert('Editando ordem de serviço...')}>
+        editar ordem de serviço
       </DropdownItem>
-      <DropdownItem onClick={(): void => alert('Excluindo restaurante...')}>
-        excluir restaurantes
+      <DropdownItem
+        onClick={(): void => alert('Excluindo ordem de serviço...')}
+      >
+        excluir ordem de serviço
       </DropdownItem>
     </Dropdown>
   );

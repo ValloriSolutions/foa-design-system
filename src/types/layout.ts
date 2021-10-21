@@ -94,6 +94,53 @@ export interface TableProps {
   emptyComponent?: React.FC;
   cardCustomStyles?: CSSObject | FlattenSimpleInterpolation;
 }
+export interface BadgeProps extends StyledComponentProps {
+  variant?: 'red' | 'gray' | 'gray_red' | 'green';
+  label: string;
+}
 export interface StyledComponentProps {
   customStyles?: CSSObject | FlattenSimpleInterpolation;
+}
+
+export interface ButtonProps extends React.HTMLAttributes<HTMLElement> {
+  variant?: 'primary' | 'secondary' | 'disabled';
+  disabled?: boolean;
+  onClick?: () => void;
+  size?: 'fluid' | 'full';
+  buttonWidth?: number;
+  icon?: ReactNode;
+  children?: ReactNode | string | undefined;
+  small?: boolean;
+  ghost?: boolean;
+  active?: boolean;
+  dropdownItem?: boolean;
+  forwardRef?: React.Ref<HTMLButtonElement>;
+  customStyles?: CSSObject | FlattenSimpleInterpolation;
+  iconButton?: boolean;
+}
+
+export interface AvatarProps {
+  size?: string;
+  imageUrl?: string;
+  alt?: string;
+}
+
+export interface Options {
+  id: number | string;
+  name: string;
+}
+
+export interface SelectProps {
+  disabled?: boolean;
+  label: string;
+  placeholder: string;
+  value: number | string;
+  setValue: (value: number | string) => void;
+  options: Options[];
+  messageError?: string;
+  inputError?: boolean;
+  name?: string;
+  popupCustomStyles?: CSSObject;
+  bgWhenSelected?: boolean;
+  customStyles?: CSSObject;
 }

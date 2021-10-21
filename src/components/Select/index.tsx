@@ -1,5 +1,4 @@
 import React, { useCallback, useRef, useState } from 'react';
-import { CSSObject } from 'styled-components';
 
 import * as Icons from '../../icons';
 import { useOutsideAlerter } from '../../hooks/useOutsideAlerter';
@@ -9,26 +8,7 @@ import Input from '../Input';
 
 import { MenuItem } from './styles';
 import { palette } from '../../theme/colors';
-
-interface Options {
-  id: number | string;
-  name: string;
-}
-
-export interface SelectProps {
-  disabled?: boolean;
-  label: string;
-  placeholder: string;
-  value: number | string;
-  setValue: (value: number | string) => void;
-  options: Options[];
-  messageError?: string;
-  inputError?: boolean;
-  name?: string;
-  popupCustomStyles?: CSSObject;
-  bgWhenSelected?: boolean;
-  customStyles?: CSSObject;
-}
+import { Options, SelectProps } from '../../types/layout';
 
 export const Select: React.FC<SelectProps> = ({
   name,

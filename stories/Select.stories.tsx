@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Meta, Story } from '@storybook/react';
-import Select, { SelectProps } from '../src/components/Select';
+import Select from '../src/components/Select';
+import { SelectProps } from '../src/types/layout';
 
 export default {
   title: 'Components/Select',
@@ -9,7 +10,6 @@ export default {
     controls: { expanded: true },
   },
 } as Meta;
-type ev = React.ChangeEvent<HTMLSelectElement>;
 export const Default: Story<SelectProps> = () => {
   const [value, setValue] = useState<number | string>(0);
 

@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { rem } from 'polished';
-import { AvatarProps } from './';
+import { AvatarProps } from '../../types/layout';
 
 /* units */
 const sizeUnit = 16;
