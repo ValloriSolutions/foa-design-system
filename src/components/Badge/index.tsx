@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { palette } from '../../theme/colors';
 import { BadgeProps } from '../../types/layout';
 
@@ -19,6 +19,8 @@ export const Badge: React.FC<
         return palette.colors.red;
       case 'green':
         return palette.colors.green;
+      case 'red_gray':
+        return palette.colors.gray.medium;
       default:
         return palette.background.red;
     }
@@ -34,6 +36,8 @@ export const Badge: React.FC<
         return palette.colors.gray.light;
       case 'green':
         return palette.background.green;
+      case 'red_gray':
+        return palette.background.red;
       default:
         return palette.background.red;
     }

@@ -8,6 +8,7 @@ import { pxToRem } from '../../utils/grid';
 interface Props {
   color: string;
   bg: string;
+  bordered?: boolean;
   customStyles?: CSSObject | FlattenSimpleInterpolation;
 }
 
@@ -25,6 +26,7 @@ export const StyledBadge = styled.div<Props>`
       color: ${props.color};
     }
     background-color: ${props.bg};
+    border: ${props.bordered ? `1px solid ${props.color}` : 'none'};
     ${props.customStyles || {}}
   `}
 `;

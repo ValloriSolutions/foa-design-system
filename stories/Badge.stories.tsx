@@ -36,3 +36,15 @@ GrayRed.args = {
   label: 'Gray+Red Badge',
   variant: 'gray_red',
 };
+
+export const RedGray = Template.bind({});
+RedGray.args = {
+  label: 'Red+Gray Badge',
+  variant: 'red_gray',
+};
+export const Bordered = Template.bind({});
+Bordered.args = {
+  label: 'Bordered Green Badge',
+  variant: 'green',
+  bordered: true,
+};

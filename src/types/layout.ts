@@ -95,8 +95,9 @@ export interface TableProps {
   cardCustomStyles?: CSSObject | FlattenSimpleInterpolation;
 }
 export interface BadgeProps extends StyledComponentProps {
-  variant?: 'red' | 'gray' | 'gray_red' | 'green';
+  variant?: 'red' | 'gray' | 'gray_red' | 'green' | 'red_gray';
   label: string;
+  bordered?: boolean;
 }
 export interface StyledComponentProps {
   customStyles?: CSSObject | FlattenSimpleInterpolation;
