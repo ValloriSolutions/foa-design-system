@@ -2,6 +2,7 @@ import styled, { css, FlattenSimpleInterpolation } from 'styled-components';
 import { borders, colors, spacing } from '../../theme';
 import { palette } from '../../theme/colors';
 import { fontSizes } from '../../theme/fonts';
+import { pxToRem } from '../../utils/grid';
 import { flexPosition } from '../../utils/mixins';
 
 import { ButtonProps } from './';
@@ -59,6 +60,29 @@ export const StyledButton = styled.button<ButtonProps>`
         `
       : '';
   }}
+  ${({
+    iconButton,
+    disabled,
+  }): false | FlattenSimpleInterpolation | undefined =>
+    iconButton &&
+    css`
+      padding: ${pxToRem(4)} !important;
+      min-height: initial;
+      min-width: initial;
+      border-radius: 100%;
+      background-color: transparent;
+      border: 0 !important;
+      &:hover {
+        background-color: ${disabled
+          ? 'transparent'
+          : palette.colors.gray.lighter};
+      }
+      &:active {
+        background-color: ${disabled
+          ? 'transparent'
+          : palette.colors.gray.light};
+      }
+    `}
 `;
 
 export const StyledGhostButton = styled.button<Omit<ButtonProps, 'variant'>>`

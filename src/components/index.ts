@@ -19,7 +19,14 @@ import {
   FlexBoxProps,
   CardProps,
   AccordionItemProps,
+  TableProps,
 } from '../types/layout';
+import { Table } from './Table';
+import { TableRow } from './Table/TableRow';
+import { TableCell } from './Table/TableCell';
+import { TableHead } from './Table/TableHead';
+import { TableBody } from './Table/TableBody';
+import { TableEmpty } from './Table/TableEmpty';
 
 export {
   Accordion,
@@ -34,6 +41,12 @@ export {
   Sidebar,
   Header,
   LayoutWrapper,
+  Table,
+  TableRow,
+  TableCell,
+  TableHead,
+  TableBody,
+  TableEmpty,
 };
 
 export {
@@ -46,4 +59,5 @@ export {
   RowProps,
   DropdownProps,
   MenuItemsProps,
+  TableProps,
 };

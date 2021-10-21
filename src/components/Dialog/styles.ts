@@ -11,7 +11,7 @@ export interface DialogProps {
   isOpen?: boolean;
   width?: string;
   alignItems?: 'center' | 'flex-start' | 'flex-end';
-  customStyles?: CSSObject;
+  customStyles?: CSSObject | FlattenSimpleInterpolation;
 }
 
 export const StyledOverlay = styled(FlexBox)<DialogProps>`
@@ -39,7 +39,8 @@ export const StyledDialogBox = styled.div<DialogProps>`
   background-color: ${colors.text.white};
   border-radius: ${borders.radius.card};
   padding: ${spacing.dialog};
-  ${({ customStyles }): CSSObject => customStyles || {}}
+  ${({ customStyles }): CSSObject | FlattenSimpleInterpolation =>
+    customStyles || {}}
 `;
 
 export const StyledActions = styled.div`

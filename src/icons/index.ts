@@ -1,4 +1,7 @@
 export { IconArrowLeft } from './ArrowLeft';
+export { IconArrowDownOrder } from './ArrowDownOrder';
+export { IconArrowUpOrder } from './ArrowUpOrder';
+export { IconEmptyList } from './EmptyList';
 export { IconBell } from './Bell';
 export { IconCalendar } from './Calendar';
 export { IconCheck } from './Check';

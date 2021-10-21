@@ -1,5 +1,5 @@
 import { ChangeEvent, ReactNode } from 'react';
-import { CSSObject } from 'styled-components';
+import { CSSObject, FlattenSimpleInterpolation } from 'styled-components';
 import { breakpointsType } from '../utils/grid';
 import { NotificationProps, MessageProps, UserProps } from './entities';
 
@@ -73,7 +73,8 @@ export interface FlexBoxProps extends React.HTMLAttributes<HTMLElement> {
   fullWidth?: boolean;
   fullHeight?: boolean;
   fullScreen?: boolean;
-  customStyles?: CSSObject;
+  noPadding?: boolean;
+  customStyles?: CSSObject | FlattenSimpleInterpolation;
 }
 
 export interface CardProps extends FlexBoxProps {
@@ -86,4 +87,13 @@ export interface AccordionItemProps {
   disabled?: boolean;
   active?: boolean;
   label: string;
+}
+export interface TableProps {
+  topToolbar?: React.ReactNode;
+  bottomToolbar?: React.ReactNode;
+  emptyComponent?: React.FC;
+  cardCustomStyles?: CSSObject | FlattenSimpleInterpolation;
+}
+export interface StyledComponentProps {
+  customStyles?: CSSObject | FlattenSimpleInterpolation;
 }
