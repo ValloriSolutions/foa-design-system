@@ -1,7 +1,8 @@
-import React from 'react';
 import { Meta, Story } from '@storybook/react';
-import { Sidebar } from '../src/components/Layout/Sidebar';
+import React from 'react';
+
 import { IconCredit, IconDashboard, IconTicket } from '../src';
+import { Sidebar } from '../src/components/Layout/Sidebar';
 import { MenuItemsProps } from '../src/types/layout';
 
 export default {

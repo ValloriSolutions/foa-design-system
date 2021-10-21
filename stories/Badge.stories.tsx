@@ -1,5 +1,6 @@
-import React from 'react';
 import { Meta, Story } from '@storybook/react';
+import React from 'react';
+
 import { Badge } from '../src/components/Badge';
 import { BadgeProps } from '../src/types/layout';
 

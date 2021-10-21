@@ -1,14 +1,12 @@
 import React, { useCallback, useRef, useState } from 'react';
 
-import * as Icons from '../../icons';
 import { useOutsideAlerter } from '../../hooks/useOutsideAlerter';
-import { StyledArrow, StyledPopupActions } from '../Dropdown/styles';
-
-import Input from '../Input';
-
-import { MenuItem } from './styles';
+import * as Icons from '../../icons';
 import { palette } from '../../theme/colors';
 import { Options, SelectProps } from '../../types/layout';
+import { StyledArrow, StyledPopupActions } from '../Dropdown/styles';
+import Input from '../Input';
+import { MenuItem } from './styles';
 
 export const Select: React.FC<SelectProps> = ({
   name,

@@ -1,4 +1,5 @@
 import React from 'react';
+
 import { ColProps } from '../../../types/layout';
 import { StyledCol } from './styles';
 

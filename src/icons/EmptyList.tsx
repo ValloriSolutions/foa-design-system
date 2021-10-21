@@ -1,5 +1,6 @@
 /* eslint-disable max-len */
 import React from 'react';
+
 import { palette } from '../theme/colors';
 
 export const IconEmptyList: React.FC = () => {

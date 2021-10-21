@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
 import { Meta, Story } from '@storybook/react';
-import { Header } from '../src/components/Layout/Header';
+import React, { useState } from 'react';
+
 import { IconTicket } from '../src';
+import { Header } from '../src/components/Layout/Header';
 import { UserRole } from '../src/types/entities';
 import { HeaderProps } from '../src/types/layout';
 

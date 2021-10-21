@@ -1,9 +1,10 @@
-import React, { RefObject, useState } from 'react';
-import { CSSObject } from 'styled-components';
+import React, { useState } from 'react';
+import { css } from 'styled-components';
+
 import * as Icon from '../../icons/';
-
+import { palette } from '../../theme/colors';
+import { InputProps } from '../../types/layout';
 import { Typography } from '../Typography';
-
 import {
   StyledChip,
   StyledContainer,
@@ -12,42 +13,7 @@ import {
   StyledWrapperError,
 } from './styles';
 
-export interface InputProps {
-  id?: string;
-  name?: string;
-  label?: string;
-  maxLength?: number;
-  type?:
-    | 'password'
-    | 'Typography'
-    | 'none'
-    | 'tel'
-    | 'url'
-    | 'email'
-    | 'numeric'
-    | 'decimal'
-    | 'search'
-    | 'text'
-    | undefined;
-  value: string | string | number | readonly string[] | undefined;
-  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
-  onIconClick?: () => void;
-  placeholder: string;
-  disabled?: boolean;
-  checked?: boolean;
-  customIcon?: React.ReactNode;
-  showIconPassword?: boolean;
-  messageError?: string | null;
-  inputError?: boolean | null;
-  onClick?: () => void;
-  forwardRef?: RefObject<HTMLDivElement>;
-  readonly?: boolean;
-  customInputProps?: React.InputHTMLAttributes<HTMLInputElement>;
-  badge?: string | number;
-  customStyles?: CSSObject;
-}
-
-const Input: React.FC<InputProps> = ({
+export const Input: React.FC<InputProps> = ({
   id,
   name,
   type = 'Typography',
@@ -68,6 +34,7 @@ const Input: React.FC<InputProps> = ({
   readonly,
   customInputProps,
   badge,
+  label,
 }) => {
   const [showPassword, setShowPassword] = useState(false);
 
@@ -99,6 +66,17 @@ const Input: React.FC<InputProps> = ({
 
   return (
     <StyledContainer ref={forwardRef}>
+      <Typography
+        as="label"
+        htmlFor={id}
+        customStyles={css`
+          color: ${disabled
+            ? palette.colors.gray.light
+            : palette.colors.gray.darker};
+        `}
+      >
+        {label}
+      </Typography>
       <StyledInput
         id={id}
         name={name}

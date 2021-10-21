@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
 import { Meta, Story } from '@storybook/react';
+import React, { useState } from 'react';
+
 import Select from '../src/components/Select';
 import { SelectProps } from '../src/types/layout';
 

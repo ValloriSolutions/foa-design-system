@@ -3,6 +3,7 @@ import styled, {
   CSSObject,
   FlattenSimpleInterpolation,
 } from 'styled-components';
+
 import { palette } from '../../../theme/colors';
 import { StyledComponentProps } from '../../../types/layout';
 import { pxToRem } from '../../../utils/grid';

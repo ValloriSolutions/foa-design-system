@@ -1,4 +1,5 @@
 import styled, { css, FlattenSimpleInterpolation } from 'styled-components';
+
 import { borders, colors, spacing } from '../../theme';
 import { palette } from '../../theme/colors';
 import { fontSizes } from '../../theme/fonts';

@@ -2,6 +2,7 @@ import styled, {
   CSSObject,
   FlattenSimpleInterpolation,
 } from 'styled-components';
+
 import { StyledComponentProps } from '../../../types/layout';
 
 interface CustomProps extends StyledComponentProps {

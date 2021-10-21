@@ -1,6 +1,8 @@
-import React, { useState } from 'react';
 import { Meta, Story } from '@storybook/react';
-import Input, { InputProps } from '../src/components/Input';
+import React, { useState } from 'react';
+
+import Input from '../src/components/Input';
+import { InputProps } from '../src/types/layout';
 
 export default {
   title: 'Components/Input',
@@ -15,6 +17,7 @@ export const Default: Story<InputProps> = () => {
 
   return (
     <Input
+      label="Input"
       name="input"
       placeholder="text input"
       value={inputValue}
@@ -27,6 +30,7 @@ export const WithErrorMessage: Story<InputProps> = () => {
 
   return (
     <Input
+      label="Input"
       name="input"
       placeholder="text input"
       value={inputValue}
@@ -40,6 +44,7 @@ export const OnlyBorderError: Story<InputProps> = () => {
 
   return (
     <Input
+      label="Input"
       inputError
       name="input"
       placeholder="text input"
@@ -53,6 +58,7 @@ export const PasswordInput: Story<InputProps> = () => {
 
   return (
     <Input
+      label="Input"
       showIconPassword
       placeholder="Type your password"
       name="input"
@@ -68,6 +74,7 @@ export const Disabled: Story<InputProps> = () => {
 
   return (
     <Input
+      label="Input"
       placeholder="text input"
       name="input"
       value={inputValue}

@@ -2,6 +2,7 @@ import styled, {
   CSSObject,
   FlattenSimpleInterpolation,
 } from 'styled-components';
+
 import { spacing } from '../../theme';
 import { FlexBoxProps } from '../../types/layout';
 import { flexPosition } from '../../utils/mixins';

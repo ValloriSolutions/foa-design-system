@@ -1,6 +1,6 @@
 import React from 'react';
-import { palette } from '../theme/colors';
 
+import { palette } from '../theme/colors';
 import { IconProps } from './types';
 
 export const IconEyeHide = ({ color }: IconProps): JSX.Element => {

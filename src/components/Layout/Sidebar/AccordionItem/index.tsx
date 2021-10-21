@@ -1,4 +1,5 @@
 import React from 'react';
+
 import { AccordionItemProps } from '../../../../types/layout';
 import { StyledAccordionItem } from './styles';
 

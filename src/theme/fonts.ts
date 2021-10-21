@@ -1,40 +1,40 @@
-import PoppinsBoldwoff2 from './fonts/Poppins-Bold.woff2';
-import PoppinsBoldwoff from './fonts/Poppins-Bold.woff';
-import PoppinsBoldItalicwoff2 from './fonts/Poppins-BoldItalic.woff2';
-import PoppinsBoldItalicwoff from './fonts/Poppins-BoldItalic.woff';
-import PoppinsBlackItalicwoff2 from './fonts/Poppins-BlackItalic.woff2';
-import PoppinsBlackItalicwoff from './fonts/Poppins-BlackItalic.woff';
-import PoppinsExtraBoldwoff2 from './fonts/Poppins-ExtraBold.woff2';
-import PoppinsExtraBoldwoff from './fonts/Poppins-ExtraBold.woff';
-import PoppinsBlackwoff2 from './fonts/Poppins-Black.woff2';
-import PoppinsBlackwoff from './fonts/Poppins-Black.woff';
-import PoppinsExtraLightwoff2 from './fonts/Poppins-ExtraLight.woff2';
-import PoppinsExtraLightwoff from './fonts/Poppins-ExtraLight.woff';
-import PoppinsExtraBoldItalicwoff2 from './fonts/Poppins-ExtraBoldItalic.woff2';
-import PoppinsExtraBoldItalicwoff from './fonts/Poppins-ExtraBoldItalic.woff';
-import PoppinsExtraLightItalicwoff2 from './fonts/Poppins-ExtraLightItalic.woff2';
-import PoppinsExtraLightItalicwoff from './fonts/Poppins-ExtraLightItalic.woff';
-import PoppinsItalicwoff2 from './fonts/Poppins-Italic.woff2';
-import PoppinsItalicwoff from './fonts/Poppins-Italic.woff';
-import PoppinsLightwoff2 from './fonts/Poppins-Light.woff2';
-import PoppinsLightwoff from './fonts/Poppins-Light.woff';
-import PoppinsLightItalicwoff2 from './fonts/Poppins-LightItalic.woff2';
-import PoppinsLightItalicwoff from './fonts/Poppins-LightItalic.woff';
-import PoppinsMediumwoff2 from './fonts/Poppins-Medium.woff2';
-import PoppinsMediumwoff from './fonts/Poppins-Medium.woff';
-import PoppinsMediumItalicwoff2 from './fonts/Poppins-MediumItalic.woff2';
-import PoppinsMediumItalicwoff from './fonts/Poppins-MediumItalic.woff';
-import PoppinsRegularwoff2 from './fonts/Poppins-Regular.woff2';
-import PoppinsRegularwoff from './fonts/Poppins-Regular.woff';
-import PoppinsSemiBoldwoff2 from './fonts/Poppins-SemiBold.woff2';
-import PoppinsSemiBoldwoff from './fonts/Poppins-SemiBold.woff';
-import PoppinsThinwoff2 from './fonts/Poppins-Thin.woff2';
-import PoppinsThinwoff from './fonts/Poppins-Thin.woff';
-import PoppinsSemiBoldItalicwoff2 from './fonts/Poppins-SemiBoldItalic.woff2';
-import PoppinsSemiBoldItalicwoff from './fonts/Poppins-SemiBoldItalic.woff';
-import PoppinsThinItalicwoff2 from './fonts/Poppins-ThinItalic.woff2';
-import PoppinsThinItalicwoff from './fonts/Poppins-ThinItalic.woff';
 import { pxToRem } from '../utils/grid';
+import PoppinsBlackwoff from './fonts/Poppins-Black.woff';
+import PoppinsBlackwoff2 from './fonts/Poppins-Black.woff2';
+import PoppinsBlackItalicwoff from './fonts/Poppins-BlackItalic.woff';
+import PoppinsBlackItalicwoff2 from './fonts/Poppins-BlackItalic.woff2';
+import PoppinsBoldwoff from './fonts/Poppins-Bold.woff';
+import PoppinsBoldwoff2 from './fonts/Poppins-Bold.woff2';
+import PoppinsBoldItalicwoff from './fonts/Poppins-BoldItalic.woff';
+import PoppinsBoldItalicwoff2 from './fonts/Poppins-BoldItalic.woff2';
+import PoppinsExtraBoldwoff from './fonts/Poppins-ExtraBold.woff';
+import PoppinsExtraBoldwoff2 from './fonts/Poppins-ExtraBold.woff2';
+import PoppinsExtraBoldItalicwoff from './fonts/Poppins-ExtraBoldItalic.woff';
+import PoppinsExtraBoldItalicwoff2 from './fonts/Poppins-ExtraBoldItalic.woff2';
+import PoppinsExtraLightwoff from './fonts/Poppins-ExtraLight.woff';
+import PoppinsExtraLightwoff2 from './fonts/Poppins-ExtraLight.woff2';
+import PoppinsExtraLightItalicwoff from './fonts/Poppins-ExtraLightItalic.woff';
+import PoppinsExtraLightItalicwoff2 from './fonts/Poppins-ExtraLightItalic.woff2';
+import PoppinsItalicwoff from './fonts/Poppins-Italic.woff';
+import PoppinsItalicwoff2 from './fonts/Poppins-Italic.woff2';
+import PoppinsLightwoff from './fonts/Poppins-Light.woff';
+import PoppinsLightwoff2 from './fonts/Poppins-Light.woff2';
+import PoppinsLightItalicwoff from './fonts/Poppins-LightItalic.woff';
+import PoppinsLightItalicwoff2 from './fonts/Poppins-LightItalic.woff2';
+import PoppinsMediumwoff from './fonts/Poppins-Medium.woff';
+import PoppinsMediumwoff2 from './fonts/Poppins-Medium.woff2';
+import PoppinsMediumItalicwoff from './fonts/Poppins-MediumItalic.woff';
+import PoppinsMediumItalicwoff2 from './fonts/Poppins-MediumItalic.woff2';
+import PoppinsRegularwoff from './fonts/Poppins-Regular.woff';
+import PoppinsRegularwoff2 from './fonts/Poppins-Regular.woff2';
+import PoppinsSemiBoldwoff from './fonts/Poppins-SemiBold.woff';
+import PoppinsSemiBoldwoff2 from './fonts/Poppins-SemiBold.woff2';
+import PoppinsSemiBoldItalicwoff from './fonts/Poppins-SemiBoldItalic.woff';
+import PoppinsSemiBoldItalicwoff2 from './fonts/Poppins-SemiBoldItalic.woff2';
+import PoppinsThinwoff from './fonts/Poppins-Thin.woff';
+import PoppinsThinwoff2 from './fonts/Poppins-Thin.woff2';
+import PoppinsThinItalicwoff from './fonts/Poppins-ThinItalic.woff';
+import PoppinsThinItalicwoff2 from './fonts/Poppins-ThinItalic.woff2';
 
 export const fontSizes = {
   h1: pxToRem(52 - 10),
@@ -46,6 +46,7 @@ export const fontSizes = {
   p: '1rem',
   small: '0.875rem',
   input: pxToRem(14),
+  label: pxToRem(15),
 };
 
 export const fontWeights = {

@@ -1,9 +1,8 @@
 import React from 'react';
+
 import { palette } from '../../theme/colors';
 import { BadgeProps } from '../../types/layout';
-
 import { Typography } from '../Typography';
-
 import { StyledBadge } from './styles';
 
 export const Badge: React.FC<

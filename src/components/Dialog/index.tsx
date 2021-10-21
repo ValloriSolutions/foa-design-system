@@ -1,9 +1,10 @@
-import { FlexBoxProps } from '../';
-import { Typography } from '../Typography';
 import React, { useRef } from 'react';
+
+import { FlexBoxProps } from '../';
 import { useOutsideAlerter } from '../../hooks/useOutsideAlerter';
 import { Button } from '../Button';
-import { StyledOverlay, StyledDialogBox, StyledActions } from './styles';
+import { Typography } from '../Typography';
+import { StyledActions, StyledDialogBox, StyledOverlay } from './styles';
 
 export interface DialogProps extends FlexBoxProps {
   isOpen: boolean;

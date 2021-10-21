@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
-import { StyledMenuItem } from './styles';
+
+import { MenuItemsProps } from '../../../../types/layout';
 import Accordion from '../Accordion';
 import { AccordionItem } from '../AccordionItem';
-import { MenuItemsProps } from '../../../../types/layout';
+import { StyledMenuItem } from './styles';
 
 export const MenuItems: React.FC<MenuItemsProps> = ({
   menuItems,

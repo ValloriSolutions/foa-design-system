@@ -1,12 +1,11 @@
 import React from 'react';
 import { css } from 'styled-components';
-import { StyledComponentProps } from '../../../types/layout';
 
 import { IconEmptyList } from '../../../icons';
-
+import { StyledComponentProps } from '../../../types/layout';
+import { pxToRem } from '../../../utils/grid';
 import { FlexBox } from '../../FlexBox';
 import { Typography } from '../../Typography';
-import { pxToRem } from '../../../utils/grid';
 
 interface Props extends StyledComponentProps {
   title: string;

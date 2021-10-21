@@ -1,15 +1,15 @@
 import React, { useCallback, useEffect, useRef, useState } from 'react';
-import { IconChevronDown, IconThreeDots } from '../../icons/';
-import { useOutsideAlerter } from '../../hooks/useOutsideAlerter';
 
+import { useOutsideAlerter } from '../../hooks/useOutsideAlerter';
+import { IconChevronDown, IconThreeDots } from '../../icons/';
+import colors from '../../theme/colors';
+import { DropdownProps } from '../../types/layout';
 import { Button } from '../Button';
 import {
   StyledArrow,
   StyledPopupActions,
   StyledThreeDotsButton,
 } from './styles';
-import colors from '../../theme/colors';
-import { DropdownProps } from '../../types/layout';
 
 export const DropdownItem: React.FC<React.ComponentProps<typeof Button>> = ({
   customStyles,

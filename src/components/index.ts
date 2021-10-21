@@ -1,78 +1,85 @@
+import {
+  AccordionItemProps,
+  AccordionProps,
+  BadgeProps,
+  ButtonProps,
+  CardProps,
+  ColProps,
+  DropdownProps,
+  FlexBoxProps,
+  InputProps,
+  MenuItemsProps,
+  RowProps,
+  SelectProps,
+  StepBarProps,
+  TableProps,
+  TypographyProps,
+} from '../types/layout';
 import { Badge } from './Badge';
 import { Button } from './Button';
 import { Card } from './Card';
-import { FlexBox } from './FlexBox';
-import { Row } from './Grid/Row';
-import { Col } from './Grid/Col';
 import { Dropdown, DropdownItem } from './Dropdown';
-import { Sidebar } from './Layout/Sidebar';
-import { MenuItems } from './Layout/Sidebar/MenuItems';
-import { Header } from './Layout/Header';
+import { FlexBox } from './FlexBox';
+import { Col } from './Grid/Col';
+import { Row } from './Grid/Row';
+import { Input } from './Input';
 import { LayoutWrapper } from './Layout/';
+import { Header } from './Layout/Header';
+import { Sidebar } from './Layout/Sidebar';
 import { Accordion } from './Layout/Sidebar/Accordion';
 import { AccordionItem } from './Layout/Sidebar/AccordionItem';
-import { Table } from './Table';
-import { TableRow } from './Table/TableRow';
-import { TableCell } from './Table/TableCell';
-import { TableHead } from './Table/TableHead';
-import { TableBody } from './Table/TableBody';
-import { TableEmpty } from './Table/TableEmpty';
+import { MenuItems } from './Layout/Sidebar/MenuItems';
 import { Select } from './Select';
+import { StepBar } from './StepBar';
+import { Table } from './Table';
+import { TableBody } from './Table/TableBody';
+import { TableCell } from './Table/TableCell';
+import { TableEmpty } from './Table/TableEmpty';
+import { TableHead } from './Table/TableHead';
+import { TableRow } from './Table/TableRow';
 import { Typography } from './Typography';
-
-import {
-  MenuItemsProps,
-  AccordionProps,
-  DropdownProps,
-  ColProps,
-  RowProps,
-  FlexBoxProps,
-  CardProps,
-  AccordionItemProps,
-  TableProps,
-  ButtonProps,
-  BadgeProps,
-  SelectProps,
-  TypographyProps,
-} from '../types/layout';
 
 export {
   Accordion,
   AccordionItem,
+  Badge,
   Button,
   Card,
   Col,
-  FlexBox,
-  Row,
   Dropdown,
   DropdownItem,
-  MenuItems,
-  Sidebar,
+  FlexBox,
   Header,
+  Input,
   LayoutWrapper,
-  Table,
-  TableRow,
-  TableCell,
-  TableHead,
-  TableBody,
-  TableEmpty,
-  Badge,
+  MenuItems,
+  Row,
   Select,
+  Sidebar,
+  StepBar,
+  Table,
+  TableBody,
+  TableCell,
+  TableEmpty,
+  TableHead,
+  TableRow,
   Typography,
 };
 
 export {
   AccordionProps,
   AccordionItemProps,
+  BadgeProps,
   ButtonProps,
   CardProps,
   ColProps,
-  FlexBoxProps,
-  RowProps,
   DropdownProps,
+  FlexBoxProps,
+  InputProps,
   MenuItemsProps,
-  TableProps,
-  BadgeProps,
+  RowProps,
   SelectProps,
+  StepBarProps,
+  TableProps,
   TypographyProps,
 };

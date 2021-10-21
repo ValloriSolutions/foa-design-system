@@ -1,9 +1,9 @@
 import React, { useCallback, useState } from 'react';
 import { ChevronDown } from 'react-feather';
+
 import { AccordionProps } from '../../../../types/layout';
 import { StyledMenuItem } from '../MenuItems/styles';
-
-import { LabelContainer, Label, Arrow, ContentContainer } from './styles';
+import { Arrow, ContentContainer, Label, LabelContainer } from './styles';
 
 export const Accordion: React.FC<AccordionProps> = ({
   active,

@@ -1,5 +1,6 @@
-import React from 'react';
 import { Meta, Story } from '@storybook/react';
+import React from 'react';
+
 import { Avatar } from '../src/components/Avatar';
 import { AvatarProps } from '../src/types/layout';
 

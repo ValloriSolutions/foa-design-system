@@ -1,7 +1,8 @@
 import styled from 'styled-components';
-import { Row } from '../../Grid/Row';
-import { pxToRem } from '../../../utils/grid';
+
 import { palette } from '../../../theme/colors';
+import { pxToRem } from '../../../utils/grid';
+import { Row } from '../../Grid/Row';
 
 export const StyledHeader = styled(Row)`
   width: calc(100vw - ${pxToRem(280)});

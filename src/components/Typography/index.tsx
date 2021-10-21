@@ -1,4 +1,5 @@
 import React from 'react';
+
 import { TypographyProps } from '../../types/layout';
 import StyledTypography from './styles';
 

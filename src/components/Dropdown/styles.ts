@@ -3,9 +3,10 @@ import styled, {
   CSSObject,
   FlattenSimpleInterpolation,
 } from 'styled-components';
-import { DropdownProps } from '../../types/layout';
+
 import borders from '../../theme/borders';
 import colors, { box } from '../../theme/colors';
+import { DropdownProps } from '../../types/layout';
 import { pxToRem } from '../../utils/grid';
 
 export const StyledThreeDotsButton = styled.button<DropdownProps>`

@@ -1,7 +1,9 @@
-import { ChangeEvent, ReactNode } from 'react';
+/* eslint-disable @typescript-eslint/no-explicit-any */
+import { ChangeEvent, ReactNode, RefObject } from 'react';
 import { CSSObject, FlattenSimpleInterpolation } from 'styled-components';
+
 import { breakpointsType } from '../utils/grid';
-import { NotificationProps, MessageProps, UserProps } from './entities';
+import { MessageProps, NotificationProps, UserProps } from './entities';
 
 export interface DropdownItemProps {
   title: string;
@@ -146,9 +148,59 @@ export interface SelectProps {
   customStyles?: CSSObject;
 }
 
-export interface TypographyProps {
+export interface TypographyProps extends StyledComponentProps {
   variant?: 'primary' | 'secondary' | 'disabled' | 'white';
-  as: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'p' | 'span' | 'small';
-  customStyles?: CSSObject;
+  as:
+    | 'h1'
+    | 'h2'
+    | 'h3'
+    | 'h4'
+    | 'h5'
+    | 'h6'
+    | 'p'
+    | 'span'
+    | 'small'
+    | 'label';
   children: React.ReactNode | string;
+  [key: string]: any;
+}
+
+export interface StepBarProps {
+  currentStep: number;
+  total: number;
+}
+
+export interface InputProps {
+  id?: string;
+  name?: string;
+  label?: string;
+  maxLength?: number;
+  type?:
+    | 'password'
+    | 'Typography'
+    | 'none'
+    | 'tel'
+    | 'url'
+    | 'email'
+    | 'numeric'
+    | 'decimal'
+    | 'search'
+    | 'text'
+    | undefined;
+  value: string | string | number | readonly string[] | undefined;
+  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  onIconClick?: () => void;
+  placeholder: string;
+  disabled?: boolean;
+  checked?: boolean;
+  customIcon?: React.ReactNode;
+  showIconPassword?: boolean;
+  messageError?: string | null;
+  inputError?: boolean | null;
+  onClick?: () => void;
+  forwardRef?: RefObject<HTMLDivElement>;
+  readonly?: boolean;
+  customInputProps?: React.InputHTMLAttributes<HTMLInputElement>;
+  badge?: string | number;
+  customStyles?: CSSObject;
 }

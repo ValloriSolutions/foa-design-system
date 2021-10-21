@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
 import { Meta, Story } from '@storybook/react';
+import React, { useState } from 'react';
+
 import { Dropdown, DropdownItem } from '../src/components/Dropdown';
 import { DropdownProps } from '../src/types/layout';
 

@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
 import { Meta, Story } from '@storybook/react';
-import LayoutWrapper from '../src/components/Layout/';
+import React, { useState } from 'react';
+
 import {
   Badge,
   Dropdown,
@@ -16,6 +16,7 @@ import {
   TableRow,
   Typography,
 } from '../src';
+import LayoutWrapper from '../src/components/Layout/';
 import { UserRole } from '../src/types/entities';
 import { LayoutProps } from '../src/types/layout';
 

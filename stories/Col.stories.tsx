@@ -1,7 +1,8 @@
-import React, { CSSProperties } from 'react';
 import { Meta, Story } from '@storybook/react';
-import { Col } from '../src/components/Grid/Col';
+import React, { CSSProperties } from 'react';
+
 import { colors, ColProps } from '../src';
+import { Col } from '../src/components/Grid/Col';
 import Row from '../src/components/Grid/Row';
 
 export default {

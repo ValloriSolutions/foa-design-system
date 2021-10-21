@@ -1,14 +1,11 @@
 import React from 'react';
-
 import { css } from 'styled-components';
 
-import { Typography } from '../../Typography';
-
-import { Button } from '../../Button';
-
-import { StyledTableCellTd, StyledTableCellTh } from './styles';
-import { StyledComponentProps } from '../../../types/layout';
 import { IconArrowDownOrder, IconArrowUpOrder } from '../../../icons';
+import { StyledComponentProps } from '../../../types/layout';
+import { Button } from '../../Button';
+import { Typography } from '../../Typography';
+import { StyledTableCellTd, StyledTableCellTh } from './styles';
 
 interface Props extends StyledComponentProps {
   component?: 'th' | 'td';
@@ -72,17 +69,17 @@ export const TableCell: React.FC<Props> = ({
     <SelectedTableCell width={width} actionCell={actionCell} colSpan={colSpan}>
       {checkbox}
       {children && (
-        <Typography
-          as="p"
-          customStyles={{
+        <div
+          style={{
             display: 'flex',
-            justifyContent: 'flex-start',
-            alignItems: 'center',
+            flexDirection: component === 'th' ? 'row' : 'column',
+            justifyContent: component === 'th' ? 'flex-start' : 'center',
+            alignItems: component === 'th' ? 'center' : 'flex-start',
           }}
         >
           {children}
           {orderBy && renderOrderDirection(order, () => orderByCb(orderBy))}
-        </Typography>
+        </div>
       )}
     </SelectedTableCell>
   );

@@ -1,5 +1,6 @@
-import React from 'react';
 import { Meta, Story } from '@storybook/react';
+import React from 'react';
+
 import {
   Badge,
   Dropdown,
@@ -10,9 +11,9 @@ import {
   TableHead,
   TableRow,
 } from '../src/';
-import { TableProps } from '../src/types/layout';
 import { DropdownItem } from '../src/components/Dropdown';
 import { Typography } from '../src/components/Typography';
+import { TableProps } from '../src/types/layout';
 
 export default {
   title: 'Components/Table',

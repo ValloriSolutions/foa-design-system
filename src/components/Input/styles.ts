@@ -1,4 +1,5 @@
 import styled, { CSSObject } from 'styled-components';
+
 import { spacing } from '../../theme/';
 import borders from '../../theme/borders';
 import { palette } from '../../theme/colors';
@@ -74,7 +75,7 @@ export const StyledIconContainer = styled.button<CustomStyledInputProps>`
   height: ${pxToRem(48)};
   position: absolute;
   right: 0;
-  top: 0;
+  top: ${pxToRem(35)};
   width: 47px;
   background: transparent;
   border: none;

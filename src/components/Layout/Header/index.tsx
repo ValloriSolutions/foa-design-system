@@ -1,11 +1,12 @@
 import React from 'react';
-import { Col } from '../../Grid/Col';
+
 import { IconSearch } from '../../../icons/Search';
+import { palette } from '../../../theme/colors';
+import { HeaderProps } from '../../../types/layout';
+import { Col } from '../../Grid/Col';
 import Input from '../../Input';
 import { StyledHeader } from './styles';
 import Toolbar from './Toolbar';
-import { HeaderProps } from '../../../types/layout';
-import { palette } from '../../../theme/colors';
 
 export const Header: React.FC<HeaderProps> = ({
   searchTerm,

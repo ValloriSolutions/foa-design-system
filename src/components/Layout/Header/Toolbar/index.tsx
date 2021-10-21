@@ -1,4 +1,5 @@
 import React from 'react';
+
 import { IconBell, IconMail } from '../../../../icons';
 import {
   MessageProps,

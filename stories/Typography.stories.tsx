@@ -1,5 +1,6 @@
-import React from 'react';
 import { Meta, Story } from '@storybook/react';
+import React from 'react';
+
 import { Typography } from '../src/components/Typography';
 import { TypographyProps } from '../src/types/layout';
 

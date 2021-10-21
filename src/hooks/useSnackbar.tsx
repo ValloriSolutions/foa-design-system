@@ -1,6 +1,7 @@
-import { Typography } from '../components/Typography';
 import React from 'react';
 import { useSnackbar as useSnackbarDefault } from 'react-simple-snackbar';
+
+import { Typography } from '../components/Typography';
 import { borders, colors } from '../theme';
 
 interface optionsInterface {

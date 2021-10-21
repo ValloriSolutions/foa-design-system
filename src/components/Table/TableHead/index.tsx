@@ -1,6 +1,6 @@
 import React from 'react';
-import { StyledComponentProps } from '../../../types/layout';
 
+import { StyledComponentProps } from '../../../types/layout';
 import { StyledTableHead } from './styles';
 
 type Props = StyledComponentProps;

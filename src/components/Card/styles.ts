@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+
 import { borders, colors } from '../../theme/';
 import { CardProps } from '../../types/layout';
 import { FlexBox } from '../FlexBox';

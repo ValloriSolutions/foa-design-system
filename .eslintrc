@@ -18,11 +18,17 @@
     "plugin:prettier/recommended"
   ],
   "rules": {
-    "prettier/prettier": "error",
+    "prettier/prettier": [
+      "error",
+      {
+        "endOfLine": "auto"
+      }
+    ],
     "@typescript-eslint/no-explicit-any": "warn",
     "@typescript-eslint/explicit-function-return-type": "warn",
     "@typescript-eslint/consistent-type-definitions": "off",
-    "react/prop-types": "off"
+    "react/prop-types": "off",
+    "simple-import-sort/sort": "error"
   },
-  "plugins": ["prettier", "@typescript-eslint"]
+  "plugins": ["prettier", "@typescript-eslint", "simple-import-sort"]
 }

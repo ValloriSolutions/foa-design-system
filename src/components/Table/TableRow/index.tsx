@@ -1,6 +1,6 @@
 import React from 'react';
-import { StyledComponentProps } from '../../../types/layout';
 
+import { StyledComponentProps } from '../../../types/layout';
 import { StyledTableRow } from './styles';
 
 interface Props extends StyledComponentProps {

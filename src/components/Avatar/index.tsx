@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+
 import { AvatarProps } from '../../types/layout';
 import Style from './styles';
 

@@ -1,6 +1,6 @@
 import React from 'react';
-import { StyledComponentProps } from '../../../types/layout';
 
+import { StyledComponentProps } from '../../../types/layout';
 import { StyledTableBody } from './styles';
 
 export const TableBody: React.FC<StyledComponentProps> = ({

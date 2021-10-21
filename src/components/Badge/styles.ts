@@ -3,6 +3,7 @@ import styled, {
   CSSObject,
   FlattenSimpleInterpolation,
 } from 'styled-components';
+
 import { pxToRem } from '../../utils/grid';
 
 interface Props {

@@ -1,4 +1,5 @@
 import React from 'react';
+
 import { FlexBoxProps } from '../../types/layout';
 import { StyledFlexBox } from './styles';
 

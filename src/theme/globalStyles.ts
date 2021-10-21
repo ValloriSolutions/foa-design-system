@@ -1,6 +1,8 @@
 import { createGlobalStyle } from 'styled-components';
+
+import { pxToRem } from '../utils/grid';
 import colors from './colors';
-import { fontSizes, fontFaces, lineHeights } from './fonts';
+import { fontFaces, fontSizes, lineHeights } from './fonts';
 
 export default createGlobalStyle`
 #root {
@@ -64,8 +66,15 @@ export default createGlobalStyle`
   small {
      font-size: ${fontSizes.small} 
   }
-  p, blockquote, span, small, li, button {
+  p, blockquote, span, small, li, button, label, a {
     font-family: 'Poppins', Helvetica, Sans-Serif;
+  }
+  label {
+    display: inline-block;
+    font-size: ${fontSizes.label};
+    font-weight: 700;
+    margin-left: ${pxToRem(10)};
+    margin-bottom: ${pxToRem(10)};
   }
 
   h1, h2, h3, h4, h5, h6 {

@@ -1,4 +1,5 @@
 import React from 'react';
+
 import { palette } from '../theme/colors';
 import { IconProps } from './types';
 

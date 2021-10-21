@@ -1,11 +1,12 @@
-import { FlexBox } from '../';
 import styled, {
   css,
   CSSObject,
   FlattenSimpleInterpolation,
 } from 'styled-components';
-import { flexPosition } from '../../utils/mixins';
+
+import { FlexBox } from '../';
 import { borders, colors, spacing } from '../../theme';
+import { flexPosition } from '../../utils/mixins';
 
 export interface DialogProps {
   isOpen?: boolean;
