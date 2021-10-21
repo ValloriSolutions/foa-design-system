@@ -16,8 +16,9 @@ export const Table: React.FC<TableProps> = ({
   emptyComponent,
   cardCustomStyles,
 }) => (
-  <FlexBox>
+  <FlexBox fullWidth>
     <Card
+      fullWidth
       customStyles={css`
         border-radius: ${pxToRem(3)};
         align-items: flex-start;

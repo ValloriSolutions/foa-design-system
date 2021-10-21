@@ -4,7 +4,7 @@ import { Card } from './Card';
 import { FlexBox } from './FlexBox';
 import { Row } from './Grid/Row';
 import { Col } from './Grid/Col';
-import { Dropdown } from './Dropdown';
+import { Dropdown, DropdownItem } from './Dropdown';
 import { Sidebar } from './Layout/Sidebar';
 import { MenuItems } from './Layout/Sidebar/MenuItems';
 import { Header } from './Layout/Header';
@@ -45,6 +45,7 @@ export {
   FlexBox,
   Row,
   Dropdown,
+  DropdownItem,
   MenuItems,
   Sidebar,
   Header,
