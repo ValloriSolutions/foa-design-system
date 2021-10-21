@@ -10,7 +10,7 @@ export const gray: Gray = {
   darkest: '#1E1C2f',
   darker: '#34323f',
   dark: '#4B495f',
-  medium: '#61606f',
+  medium: '#757575',
   light: '#C9C9Cf',
   lighter: '#EDEDEf',
   lightest: '#F6F6FF',

@@ -19,7 +19,7 @@ export const Badge: React.FC<
       case 'green':
         return palette.colors.green;
       case 'red_gray':
-        return palette.colors.gray.medium;
+        return palette.text.secondary;
       default:
         return palette.background.red;
     }

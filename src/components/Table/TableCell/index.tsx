@@ -2,24 +2,11 @@ import React from 'react';
 import { css } from 'styled-components';
 
 import { IconArrowDownOrder, IconArrowUpOrder } from '../../../icons';
-import { StyledComponentProps } from '../../../types/layout';
+import { TableCellProps } from '../../../types/layout';
 import { Button } from '../../Button';
-import { Typography } from '../../Typography';
 import { StyledTableCellTd, StyledTableCellTh } from './styles';
 
-interface Props extends StyledComponentProps {
-  component?: 'th' | 'td';
-  align?: 'center' | 'left' | 'right';
-  checkbox?: React.ReactNode;
-  order?: 'ASC' | 'DESC';
-  orderBy?: string;
-  orderByCb?: (key: string) => void;
-  width?: string;
-  actionCell?: boolean;
-  colSpan?: number;
-}
-
-export const TableCell: React.FC<Props> = ({
+export const TableCell: React.FC<TableCellProps> = ({
   children,
   component = 'td',
   checkbox,
@@ -29,6 +16,7 @@ export const TableCell: React.FC<Props> = ({
   width,
   actionCell,
   colSpan,
+  hasBadge,
 }) => {
   const componentsMap = {
     td: StyledTableCellTd,
@@ -75,6 +63,7 @@ export const TableCell: React.FC<Props> = ({
             flexDirection: component === 'th' ? 'row' : 'column',
             justifyContent: component === 'th' ? 'flex-start' : 'center',
             alignItems: component === 'th' ? 'center' : 'flex-start',
+            textAlign: hasBadge ? 'center' : 'left',
           }}
         >
           {children}

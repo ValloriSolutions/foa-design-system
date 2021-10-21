@@ -23,7 +23,7 @@ export const StyledBadge = styled.div<Props>`
   ${(props): FlattenSimpleInterpolation => css`
     & > span {
       font-size: ${pxToRem(13.2)};
-      font-weight: 500;
+      font-weight: 400;
       color: ${props.color};
     }
     background-color: ${props.bg};

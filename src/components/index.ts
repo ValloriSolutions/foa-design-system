@@ -12,6 +12,7 @@ import {
   RowProps,
   SelectProps,
   StepBarProps,
+  TableCellProps,
   TableProps,
   TypographyProps,
 } from '../types/layout';
@@ -81,5 +82,6 @@ export {
   SelectProps,
   StepBarProps,
   TableProps,
+  TableCellProps,
   TypographyProps,
 };

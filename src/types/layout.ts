@@ -204,3 +204,16 @@ export interface InputProps {
   badge?: string | number;
   customStyles?: CSSObject | FlattenSimpleInterpolation;
 }
+
+export interface TableCellProps extends StyledComponentProps {
+  component?: 'th' | 'td';
+  align?: 'center' | 'left' | 'right';
+  checkbox?: React.ReactNode;
+  order?: 'ASC' | 'DESC';
+  orderBy?: string;
+  orderByCb?: (key: string) => void;
+  width?: string;
+  actionCell?: boolean;
+  colSpan?: number;
+  hasBadge?: boolean;
+}
