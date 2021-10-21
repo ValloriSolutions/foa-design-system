@@ -18,6 +18,7 @@ import { TableHead } from './Table/TableHead';
 import { TableBody } from './Table/TableBody';
 import { TableEmpty } from './Table/TableEmpty';
 import { Select } from './Select';
+import { Typography } from './Typography';
 
 import {
   MenuItemsProps,
@@ -32,6 +33,7 @@ import {
   ButtonProps,
   BadgeProps,
   SelectProps,
+  TypographyProps,
 } from '../types/layout';
 
 export {
@@ -55,6 +57,7 @@ export {
   TableEmpty,
   Badge,
   Select,
+  Typography,
 };
 
 export {
@@ -70,4 +73,5 @@ export {
   TableProps,
   BadgeProps,
   SelectProps,
+  TypographyProps,
 };

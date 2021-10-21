@@ -145,3 +145,10 @@ export interface SelectProps {
   bgWhenSelected?: boolean;
   customStyles?: CSSObject;
 }
+
+export interface TypographyProps {
+  variant?: 'primary' | 'secondary' | 'disabled' | 'white';
+  as: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'p' | 'span' | 'small';
+  customStyles?: CSSObject;
+  children: React.ReactNode | string;
+}
