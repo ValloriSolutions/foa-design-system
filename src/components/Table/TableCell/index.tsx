@@ -62,7 +62,8 @@ export const TableCell: React.FC<TableCellProps> = ({
             display: 'flex',
             flexDirection: component === 'th' ? 'row' : 'column',
             justifyContent: component === 'th' ? 'flex-start' : 'center',
-            alignItems: component === 'th' ? 'center' : 'flex-start',
+            alignItems:
+              component === 'th' || hasBadge ? 'center' : 'flex-start',
             textAlign: hasBadge ? 'center' : 'left',
           }}
         >
