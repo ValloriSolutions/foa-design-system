@@ -8,12 +8,12 @@ export default createGlobalStyle`
     margin: 0;
     padding: 0;
     border: 0;
-    font-family: 'PoppinsRegular', Helvetica, Sans-Serif;
     font-size: 15px;
     color: ${colors.text.primary};
     outline: none;
     text-decoration: none;
     box-sizing: border-box;
+    font-family: PoppinsMedium, Helvetica, Sans-Serif; 
 
     & svg {
       fill: ${colors.text.primary};
