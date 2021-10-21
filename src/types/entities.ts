@@ -4,7 +4,7 @@ export enum OrderStatus {
   OPEN = 'open',
   SOLVED = 'solved',
   CANCELED = 'canceled',
-  WAITING_F = 'waiting_for_supplier',
+  WAITING_S = 'waiting_for_supplier',
   WAITING_O = 'waiting_for_operator',
 }
 
@@ -18,6 +18,7 @@ export interface ToolbarProps {
 export type AttachmentProps = Omit<ToolbarProps, 'description'>;
 
 export interface MessageProps extends ToolbarProps {
+  ticketId: string;
   when?: string;
   from?: string;
   attachments?: AttachmentProps[];
@@ -30,10 +31,9 @@ export interface TicketProps {
   subject: string;
   status: OrderStatus;
   operatorName: string;
-  providerID: string;
+  supplierName: string;
   opennedAt: Date;
   updatedAt: Date;
-  messages: MessageProps[];
 }
 
 export interface NotificationProps extends ToolbarProps {
@@ -48,6 +48,7 @@ export enum UserRole {
 }
 
 export interface UserProps {
+  id: string;
   name: string;
   email: string;
   avatar: string;
@@ -55,14 +56,12 @@ export interface UserProps {
 }
 
 export interface OperatorProps extends UserProps {
-  id: string;
   createdAt: Date;
   updatedAt: Date;
   center: string;
 }
 
 export interface SupplierProps extends UserProps {
-  id: string;
   companyName: string;
   companyRole: string;
   companyDetails: CompanyProps[];
