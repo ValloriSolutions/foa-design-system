@@ -16,7 +16,7 @@ export const Header: React.FC<HeaderProps> = ({
 }) => {
   return (
     <StyledHeader as="header">
-      <Col size={5}>
+      <Col size={5} customStyles={{ paddingTop: '1rem' }}>
         <Input
           placeholder="Digite o Número da Requisição"
           value={searchTerm}
@@ -24,7 +24,7 @@ export const Header: React.FC<HeaderProps> = ({
           customIcon={<IconSearch color={palette.colors.gray.light} />}
         />
       </Col>
-      <Col size={4} />
+      <Col size={4} collapse="md" />
       <Col>
         <Toolbar
           messages={messages}
