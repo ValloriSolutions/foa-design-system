@@ -17,14 +17,15 @@ export const Table: React.FC<TableProps> = ({
   cardCustomStyles,
 }) => (
   <FlexBox>
-    {topToolbar}
     <Card
       customStyles={css`
         border-radius: ${pxToRem(3)};
+        align-items: flex-start;
         ${tableDefaultPadding()};
         ${cardCustomStyles};
       `}
     >
+      {topToolbar}
       <StyledTable>{children}</StyledTable>
       {emptyComponent && emptyComponent({})}
     </Card>

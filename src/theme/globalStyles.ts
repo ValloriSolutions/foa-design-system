@@ -33,27 +33,27 @@ export default createGlobalStyle`
 
   h1 { 
     font-size: ${fontSizes.h1} ;
-    font-family: 'PoppinsBlack', Helvetica, Sans-Serif; 
+    font-weight: 900;
   }
   h2 { 
     font-size: ${fontSizes.h2};
-    font-family: 'PoppinsExtraBold', Helvetica, Sans-Serif; 
+    font-weight: 800;
   }
   h3 {
-    font-size: ${fontSizes.h3}; 
-    font-family: 'PoppinsMedium', Helvetica, Sans-Serif; 
+    font-size: ${fontSizes.h3};  
+    font-weight: 700;
   }
   h4 {
-     font-size: ${fontSizes.h4};
-     font-family: 'PoppinsMedium', Helvetica, Sans-Serif;  
+     font-size: ${fontSizes.h4}; 
+      font-weight: 700;
   }
   h5 {
-     font-size: ${fontSizes.h5};
-     font-family: 'PoppinsMedium', Helvetica, Sans-Serif;  
+     font-size: ${fontSizes.h5}; 
+      font-weight: 700;
     }
   h6 {
      font-size: ${fontSizes.h6};
-     font-family: 'PoppinsMedium', Helvetica, Sans-Serif;  
+      font-weight: 700;
     }
   p {
      font-size: ${fontSizes.p} 

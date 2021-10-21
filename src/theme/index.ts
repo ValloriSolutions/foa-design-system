@@ -9,6 +9,6 @@ export { default as spacing } from './spacing';
 
 export const tableDefaultPadding = (): FlattenSimpleInterpolation => {
   return css`
-    padding: ${pxToRem(12)} ${pxToRem(24)};
+    padding: 0 ${pxToRem(24)};
   `;
 };
