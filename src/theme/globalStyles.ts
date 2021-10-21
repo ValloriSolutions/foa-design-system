@@ -26,7 +26,7 @@ export default createGlobalStyle`
     height: 100vh;
     max-width: 100vw;
     max-height: 100vh;
-    overflow-x: hidden;
+    overflow: hidden;
     background: ${colors.background.default};
     font-family: 'Poppins', Helvetica, Sans-Serif; 
   }

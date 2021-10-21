@@ -5,6 +5,7 @@ import { pxToRem } from '../../utils/grid';
 export const StyledLayout = styled.main`
   width: 100vw;
   height: 100vh;
+  overflow-y: auto;
   display: flex;
   flex-direction: column;
   align-items: flex-start;

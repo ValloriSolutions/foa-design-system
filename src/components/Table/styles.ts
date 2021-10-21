@@ -24,6 +24,8 @@ export const StyledTable = styled.table<CustomProps>`
     }
   }
   width: 100%;
+  max-width: 100%;
+  overflow-x: auto;
   border-spacing: 0;
   -webkit-border-horizontal-spacing: 0px;
   -webkit-border-vertical-spacing: 0px;

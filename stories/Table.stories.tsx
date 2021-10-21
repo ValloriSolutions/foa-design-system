@@ -3,7 +3,6 @@ import { Meta, Story } from '@storybook/react';
 import {
   Badge,
   Dropdown,
-  FlexBox,
   IconThreeDots,
   Table,
   TableBody,
