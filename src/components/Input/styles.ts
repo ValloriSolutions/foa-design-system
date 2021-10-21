@@ -13,6 +13,7 @@ interface CustomStyledInputProps {
   messageError?: boolean | null;
   hasIcon?: boolean;
   customStyles?: CSSObject | FlattenSimpleInterpolation;
+  noLabel?: boolean;
 }
 
 export const StyledInput = styled.input<CustomStyledInputProps>`
@@ -79,7 +80,7 @@ export const StyledIconContainer = styled.button<CustomStyledInputProps>`
   height: ${pxToRem(48)};
   position: absolute;
   right: 0;
-  top: ${pxToRem(35)};
+  top: ${({ noLabel }): number | string => (!noLabel ? pxToRem(35) : 0)};
   width: 47px;
   background: transparent;
   border: none;

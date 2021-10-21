@@ -35,9 +35,10 @@ export const Input: React.FC<InputProps> = ({
   customInputProps,
   badge,
   label,
+  noLabel = false,
 }) => {
   const [showPassword, setShowPassword] = useState(false);
-
+  console.log('ué caraio', noLabel);
   const hasIcon = checked || showIconPassword || customIcon;
 
   function handleShowPassword(): void {
@@ -66,17 +67,19 @@ export const Input: React.FC<InputProps> = ({
 
   return (
     <StyledContainer ref={forwardRef}>
-      <Typography
-        as="label"
-        htmlFor={id}
-        customStyles={css`
-          color: ${disabled
-            ? palette.colors.gray.light
-            : palette.colors.gray.darker};
-        `}
-      >
-        {label}
-      </Typography>
+      {label ? (
+        <Typography
+          as="label"
+          htmlFor={id}
+          customStyles={css`
+            color: ${disabled
+              ? palette.colors.gray.light
+              : palette.colors.gray.darker};
+          `}
+        >
+          {label}
+        </Typography>
+      ) : null}
       <StyledInput
         id={id}
         name={name}
@@ -95,7 +98,7 @@ export const Input: React.FC<InputProps> = ({
       />
 
       {hasIcon && (
-        <StyledIconContainer onClick={handleIconClick}>
+        <StyledIconContainer onClick={handleIconClick} noLabel={noLabel}>
           {showIconPassword && (
             <div>
               {showPassword ? <Icon.IconEyeHide /> : <Icon.IconEyeShow />}

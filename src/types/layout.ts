@@ -173,6 +173,7 @@ export interface StepBarProps {
 export interface InputProps {
   id?: string;
   name?: string;
+  noLabel?: boolean;
   label?: string;
   maxLength?: number;
   type?:
@@ -186,6 +187,7 @@ export interface InputProps {
     | 'decimal'
     | 'search'
     | 'text'
+    | 'textarea'
     | undefined;
   value: string | string | number | readonly string[] | undefined;
   onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;

@@ -53,6 +53,23 @@ export const OnlyBorderError: Story<InputProps> = () => {
     />
   );
 };
+export const WithIconWithoutLabel: Story<InputProps> = () => {
+  const [inputValue, setInputValue] = useState('');
+
+  return (
+    <Input
+      noLabel
+      showIconPassword
+      placeholder="Type your password"
+      name="input"
+      value={inputValue}
+      onChange={(e: ev): void => setInputValue(e.target.value)}
+      type="password"
+      maxLength={6}
+    />
+  );
+};
+
 export const PasswordInput: Story<InputProps> = () => {
   const [inputValue, setInputValue] = useState('');
 
