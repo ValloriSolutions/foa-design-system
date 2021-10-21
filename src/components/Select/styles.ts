@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { spacing } from '../..';
+import { spacing } from '../../theme';
 import { palette } from '../../theme/colors';
 import { fontSizes } from '../../theme/fonts';
 import { flexPosition } from '../../utils/mixins';
