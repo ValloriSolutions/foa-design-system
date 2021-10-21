@@ -11,7 +11,6 @@ export const ActiveHoverStyles = (): FlattenSimpleInterpolation => css`
   background-color: ${palette.background.red};
   color: ${palette.colors.red};
   font-family: PoppinsBold;
-  font-weight: bolder;
 
   & svg,
   & path {
