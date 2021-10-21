@@ -182,7 +182,7 @@ export const fontFaces = `
 }
 
 @font-face {
-    font-family: 'PoppinsRegular';
+    font-family: 'Poppins';
     src: url(${PoppinsRegularwoff2}) format('woff2'),
         url(${PoppinsRegularwoff}) format('woff');
     font-weight: normal;

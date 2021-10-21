@@ -12,8 +12,8 @@ export const StyledAccordionItem = styled.button<CustomProps>`
   border-left: 8px solid transparent;
   width: 100%;
   padding: 0 ${pxToRem(18)};
-  height: ${pxToRem(67)};
-  text-align: left;
+  height: ${pxToRem(37)};
+  text-align: center;
   cursor: ${({ disabled }): string => (disabled ? 'not-allowed' : 'pointer')};
   background-color: white;
   ${({ active }): FlattenSimpleInterpolation | false | undefined =>

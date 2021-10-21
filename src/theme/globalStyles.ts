@@ -13,7 +13,8 @@ export default createGlobalStyle`
     outline: none;
     text-decoration: none;
     box-sizing: border-box;
-    font-family: PoppinsMedium, Helvetica, Sans-Serif; 
+    font-family: 'Poppins', Helvetica, Sans-Serif; 
+    font-weight: 500;
 
     & svg {
       fill: ${colors.text.primary};
@@ -27,31 +28,32 @@ export default createGlobalStyle`
     max-height: 100vh;
     overflow-x: hidden;
     background: ${colors.background.default};
+    font-family: 'Poppins', Helvetica, Sans-Serif; 
   }
 
   h1 { 
     font-size: ${fontSizes.h1} ;
-    font-family: PoppinsBlack, Helvetica, Sans-Serif; 
+    font-family: 'PoppinsBlack', Helvetica, Sans-Serif; 
   }
   h2 { 
     font-size: ${fontSizes.h2};
-    font-family: PoppinsExtraBold, Helvetica, Sans-Serif; 
+    font-family: 'PoppinsExtraBold', Helvetica, Sans-Serif; 
   }
   h3 {
     font-size: ${fontSizes.h3}; 
-    font-family: PoppinsMedium, Helvetica, Sans-Serif; 
+    font-family: 'PoppinsMedium', Helvetica, Sans-Serif; 
   }
   h4 {
      font-size: ${fontSizes.h4};
-     font-family: PoppinsMedium, Helvetica, Sans-Serif;  
+     font-family: 'PoppinsMedium', Helvetica, Sans-Serif;  
   }
   h5 {
      font-size: ${fontSizes.h5};
-     font-family: PoppinsMedium, Helvetica, Sans-Serif;  
+     font-family: 'PoppinsMedium', Helvetica, Sans-Serif;  
     }
   h6 {
      font-size: ${fontSizes.h6};
-     font-family: PoppinsMedium, Helvetica, Sans-Serif;  
+     font-family: 'PoppinsMedium', Helvetica, Sans-Serif;  
     }
   p {
      font-size: ${fontSizes.p} 
@@ -59,8 +61,8 @@ export default createGlobalStyle`
   small {
      font-size: ${fontSizes.small} 
   }
-  p, blockquote, span, small, li {
-    font-family: PoppinsRegular, Helvetica, Sans-Serif;
+  p, blockquote, span, small, li, button {
+    font-family: 'Poppins', Helvetica, Sans-Serif;
   }
 
   h1, h2, h3, h4, h5, h6 {
