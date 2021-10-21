@@ -20,27 +20,27 @@ const App = () => {
         menuItems={[
           {
             title: 'Página Inicial',
-            path: '/',
+            onClick: () => alert('clicked!'),
             icon: <IconDashboard />,
             active: true,
           },
           {
             title: 'Tickets',
-            path: '/',
+            onClick: () => alert('clicked!'),
             icon: <IconTicket />,
           },
           {
             title: 'Req. de Compra',
-            path: '/',
+            onClick: () => alert('clicked!'),
             icon: <IconCredit />,
             dropdownItems: [
               {
                 title: 'Sub Item 1',
-                path: '/',
+                onClick: () => alert('clicked!'),
               },
               {
                 title: 'Sub Item 2',
-                path: '/',
+                onClick: () => alert('clicked!'),
               },
             ],
           },

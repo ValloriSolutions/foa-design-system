@@ -5,14 +5,14 @@ import { NotificationProps, MessageProps, UserProps } from './entities';
 
 export interface DropdownItemProps {
   title: string;
-  path: string;
+  onClick: () => void;
   active?: boolean;
 }
 
 export interface MenuItemProps {
   title: string;
   icon: React.ReactNode;
-  path: string;
+  onClick: () => void;
   isDropdown?: boolean;
   dropdownItems?: DropdownItemProps[];
   active?: boolean;

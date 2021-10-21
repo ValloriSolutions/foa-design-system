@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { StyledMenuItem } from './styles';
-import { useHistory } from 'react-router-dom';
 import Accordion from '../Accordion';
 import { AccordionItem } from '../AccordionItem';
 import { MenuItemsProps } from '../../../../types/layout';
@@ -8,7 +7,6 @@ import { MenuItemsProps } from '../../../../types/layout';
 export const MenuItems: React.FC<MenuItemsProps> = ({
   menuItems,
 }): JSX.Element => {
-  const history = useHistory();
   const [activeAccordion, setActiveAccordion] = useState(0);
 
   const handleClick = (selected: number) => (): void => {
@@ -32,7 +30,7 @@ export const MenuItems: React.FC<MenuItemsProps> = ({
                   active={dropdownItem.active}
                   label={dropdownItem.title}
                   key={index}
-                  action={(): void => history.push(dropdownItem.path)}
+                  action={dropdownItem.onClick}
                 >
                   {dropdownItem.title}
                 </AccordionItem>
@@ -44,7 +42,7 @@ export const MenuItems: React.FC<MenuItemsProps> = ({
           <StyledMenuItem
             active={menuItem.active}
             key={index}
-            onClick={(): void => history.push(menuItem.path)}
+            onClick={menuItem.onClick}
           >
             {menuItem.icon}
             {menuItem.title}
