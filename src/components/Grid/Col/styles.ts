@@ -1,4 +1,7 @@
-import styled, { CSSObject } from 'styled-components';
+import styled, {
+  CSSObject,
+  FlattenSimpleInterpolation,
+} from 'styled-components';
 
 import { ColProps } from '../../../types/layout';
 import { respondTo } from '../../../utils/grid';
@@ -10,5 +13,6 @@ export const StyledCol = styled.div<ColProps>`
         display: none;
   `}
   flex: ${({ size = 1 }): number => size};
-  ${({ customStyles }): CSSObject => customStyles || {}}
+  ${({ customStyles }): CSSObject | FlattenSimpleInterpolation =>
+    customStyles || {}}
 `;

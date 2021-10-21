@@ -19,7 +19,8 @@ export const StyledThreeDotsButton = styled.button<DropdownProps>`
     css`
       cursor: not-allowed;
     `}
-  ${({ customStyles }): CSSObject => customStyles || {}}
+  ${({ customStyles }): CSSObject | FlattenSimpleInterpolation =>
+    customStyles || {}}
 `;
 
 export const StyledPopupActions = styled.div<DropdownProps>`
@@ -42,7 +43,8 @@ export const StyledPopupActions = styled.div<DropdownProps>`
   z-index: 1000;
   max-height: calc(50vh - 100px);
   overflow-y: auto;
-  ${({ customStyles }): CSSObject => customStyles || {}}
+  ${({ customStyles }): CSSObject | FlattenSimpleInterpolation =>
+    customStyles || {}}
 `;
 
 export const StyledArrow = styled.svg<DropdownProps>`

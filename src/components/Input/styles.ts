@@ -1,4 +1,7 @@
-import styled, { CSSObject } from 'styled-components';
+import styled, {
+  CSSObject,
+  FlattenSimpleInterpolation,
+} from 'styled-components';
 
 import { spacing } from '../../theme/';
 import borders from '../../theme/borders';
@@ -9,7 +12,7 @@ import { pxToRem } from '../../utils/grid';
 interface CustomStyledInputProps {
   messageError?: boolean | null;
   hasIcon?: boolean;
-  customStyles?: CSSObject;
+  customStyles?: CSSObject | FlattenSimpleInterpolation;
 }
 
 export const StyledInput = styled.input<CustomStyledInputProps>`
@@ -28,7 +31,8 @@ export const StyledInput = styled.input<CustomStyledInputProps>`
 
   ${({ hasIcon }): string => (hasIcon ? 'padding-right: 30px;' : '')}
 
-  ${({ customStyles }): CSSObject => customStyles || {}}
+  ${({ customStyles }): CSSObject | FlattenSimpleInterpolation =>
+    customStyles || {}}
 
 	::placeholder {
     color: ${palette.colors.gray.medium};

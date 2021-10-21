@@ -50,20 +50,20 @@ export interface DropdownProps {
   onClick?: () => void;
   threeDots?: boolean;
   disabled?: boolean;
-  customStyles?: CSSObject;
+  customStyles?: CSSObject | FlattenSimpleInterpolation;
 }
 
 export type ColProps = {
   children?: ReactNode;
   collapse?: keyof breakpointsType;
   size?: number;
-  customStyles?: CSSObject;
+  customStyles?: CSSObject | FlattenSimpleInterpolation;
 };
 
 export type RowProps = {
   children: ReactNode;
   fluid?: boolean;
-  customStyles?: CSSObject;
+  customStyles?: CSSObject | FlattenSimpleInterpolation;
 };
 
 export interface FlexBoxProps extends React.HTMLAttributes<HTMLElement> {
@@ -143,9 +143,9 @@ export interface SelectProps {
   messageError?: string;
   inputError?: boolean;
   name?: string;
-  popupCustomStyles?: CSSObject;
+  popupCustomStyles?: CSSObject | FlattenSimpleInterpolation;
   bgWhenSelected?: boolean;
-  customStyles?: CSSObject;
+  customStyles?: CSSObject | FlattenSimpleInterpolation;
 }
 
 export interface TypographyProps extends StyledComponentProps {
@@ -202,5 +202,5 @@ export interface InputProps {
   readonly?: boolean;
   customInputProps?: React.InputHTMLAttributes<HTMLInputElement>;
   badge?: string | number;
-  customStyles?: CSSObject;
+  customStyles?: CSSObject | FlattenSimpleInterpolation;
 }

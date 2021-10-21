@@ -1,4 +1,7 @@
-import styled, { CSSObject } from 'styled-components';
+import styled, {
+  CSSObject,
+  FlattenSimpleInterpolation,
+} from 'styled-components';
 
 import { pxToRem } from '../../utils/grid';
 interface CustomProps {
@@ -31,5 +34,6 @@ export const StyledTable = styled.table<CustomProps>`
   -webkit-border-horizontal-spacing: 0px;
   -webkit-border-vertical-spacing: 0px;
   border-collapse: collapse;
-  ${({ customStyles }): CSSObject => customStyles || {}}
+  ${({ customStyles }): CSSObject | FlattenSimpleInterpolation =>
+    customStyles || {}}
 `;

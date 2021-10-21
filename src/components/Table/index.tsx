@@ -5,7 +5,6 @@ import { tableDefaultPadding } from '../../theme';
 import { TableProps } from '../../types/layout';
 import { pxToRem } from '../../utils/grid';
 import { Card } from '../Card';
-import { FlexBox } from '../FlexBox';
 import { StyledTable } from './styles';
 
 export const Table: React.FC<TableProps> = ({
