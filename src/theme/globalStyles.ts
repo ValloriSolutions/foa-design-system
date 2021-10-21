@@ -3,6 +3,9 @@ import colors from './colors';
 import { fontSizes, fontFaces, lineHeights } from './fonts';
 
 export default createGlobalStyle`
+#root {
+  padding:0 !important; ;
+}
   ${fontFaces}
   * {
     margin: 0;
@@ -27,7 +30,7 @@ export default createGlobalStyle`
     max-width: 100vw;
     max-height: 100vh;
     overflow: hidden;
-    background: ${colors.background.default};
+    background: ${colors.background.paper};
     font-family: 'Poppins', Helvetica, Sans-Serif; 
   }
 

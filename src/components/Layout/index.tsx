@@ -13,7 +13,7 @@ export const LayoutWrapper: React.FC<LayoutProps> = ({
   user,
   children,
 }) => (
-  <StyledLayout>
+  <>
     <Header
       searchTerm={searchTerm}
       onChange={onChange}
@@ -22,8 +22,8 @@ export const LayoutWrapper: React.FC<LayoutProps> = ({
       notifications={notifications}
     />
     <Sidebar menuItems={menuItems} />
-    {children}
-  </StyledLayout>
+    <StyledLayout>{children}</StyledLayout>
+  </>
 );
 
 export default LayoutWrapper;

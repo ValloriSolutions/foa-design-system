@@ -9,6 +9,9 @@ export const StyledHeader = styled(Row)`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0;
+  padding: 0 0 0 ${pxToRem(30)};
   margin-bottom: ${pxToRem(30)};
+  position: fixed;
+  right: 0;
+  top: 0;
 `;

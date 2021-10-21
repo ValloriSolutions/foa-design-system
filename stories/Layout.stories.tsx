@@ -49,6 +49,7 @@ export const Default: Story<LayoutProps> = () => {
       searchTerm={term}
       onChange={(e): void => setTerm(e.target.value)}
       user={{
+        id: '1',
         name: 'Suellen Marques',
         avatar: 'https://avatars0.githubusercontent.com/u/1234?s=460&v=4',
         email: 'suellen.marques@femsa.com.br',
@@ -73,6 +74,7 @@ export const Default: Story<LayoutProps> = () => {
       messages={[
         {
           id: '1',
+          ticketId: '1',
           title: 'Novo ticket',
           description: 'Novo ticket criado',
           url: 'https://femsa.com.br',
@@ -81,6 +83,13 @@ export const Default: Story<LayoutProps> = () => {
     >
       <Card>
         <h1>Hello World</h1>
+        <h2>Hello World</h2>
+        <h3>Hello World</h3>
+        <h4>Hello World</h4>
+        <h5>Hello World</h5>
+        <h6>Hello World</h6>
+        <p>Hello World</p>
+        <span>Hello World</span>
       </Card>
     </LayoutWrapper>
   );

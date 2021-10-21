@@ -15,7 +15,7 @@ export const Header: React.FC<HeaderProps> = ({
   user,
 }) => {
   return (
-    <StyledHeader>
+    <StyledHeader as="header">
       <Col size={5}>
         <Input
           placeholder="Digite o Número da Requisição"

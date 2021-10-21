@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { palette } from '../../../theme/colors';
 import { pxToRem } from '../../../utils/grid';
 
-export const StyledSidebar = styled.div`
+export const StyledSidebar = styled.aside`
   width: ${pxToRem(280)};
   height: 100vh;
   position: fixed;
