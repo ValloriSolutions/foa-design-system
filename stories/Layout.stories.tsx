@@ -1,7 +1,21 @@
 import React, { useState } from 'react';
 import { Meta, Story } from '@storybook/react';
 import LayoutWrapper from '../src/components/Layout/';
-import { Card, IconCredit, IconDashboard, IconTicket } from '../src';
+import {
+  Badge,
+  Dropdown,
+  DropdownItem,
+  IconCredit,
+  IconDashboard,
+  IconThreeDots,
+  IconTicket,
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableRow,
+  Typography,
+} from '../src';
 import { UserRole } from '../src/types/entities';
 import { LayoutProps } from '../src/types/layout';
 
@@ -27,17 +41,16 @@ export const Default: Story<LayoutProps> = () => {
           title: 'Tickets',
           onClick: (): void => alert('clicked!'),
           icon: <IconTicket />,
+          active: true,
         },
         {
           title: 'Req. de Compra',
-          active: true,
           onClick: (): void => alert('clicked!'),
           icon: <IconCredit />,
           dropdownItems: [
             {
               title: 'Sub Item 1',
               onClick: (): void => alert('clicked!'),
-              active: true,
             },
             {
               title: 'Sub Item 2',
@@ -81,66 +94,351 @@ export const Default: Story<LayoutProps> = () => {
         },
       ]}
     >
-      <Card>
-        <h1>Hello World</h1>
-        <h2>Hello World</h2>
-        <h3>Hello World</h3>
-        <h4>Hello World</h4>
-        <h5>Hello World</h5>
-        <h6>Hello World</h6>
-        <p>Hello World</p>
-        <span>Hello World</span>
-      </Card>
-      <Card>
-        <h1>Hello World</h1>
-        <h2>Hello World</h2>
-        <h3>Hello World</h3>
-        <h4>Hello World</h4>
-        <h5>Hello World</h5>
-        <h6>Hello World</h6>
-        <p>Hello World</p>
-        <span>Hello World</span>
-      </Card>
-      <Card>
-        <h1>Hello World</h1>
-        <h2>Hello World</h2>
-        <h3>Hello World</h3>
-        <h4>Hello World</h4>
-        <h5>Hello World</h5>
-        <h6>Hello World</h6>
-        <p>Hello World</p>
-        <span>Hello World</span>
-      </Card>
-      <Card>
-        <h1>Hello World</h1>
-        <h2>Hello World</h2>
-        <h3>Hello World</h3>
-        <h4>Hello World</h4>
-        <h5>Hello World</h5>
-        <h6>Hello World</h6>
-        <p>Hello World</p>
-        <span>Hello World</span>
-      </Card>
-      <Card>
-        <h1>Hello World</h1>
-        <h2>Hello World</h2>
-        <h3>Hello World</h3>
-        <h4>Hello World</h4>
-        <h5>Hello World</h5>
-        <h6>Hello World</h6>
-        <p>Hello World</p>
-        <span>Hello World</span>
-      </Card>
-      <Card>
-        <h1>Hello World</h1>
-        <h2>Hello World</h2>
-        <h3>Hello World</h3>
-        <h4>Hello World</h4>
-        <h5>Hello World</h5>
-        <h6>Hello World</h6>
-        <p>Hello World</p>
-        <span>Hello World</span>
-      </Card>
+      <Table
+        topToolbar={
+          <Typography as="h5" customStyles={{ margin: '30px 0 10px 0' }}>
+            Tickets em aberto
+          </Typography>
+        }
+      >
+        <TableHead>
+          <TableRow>
+            <TableCell component="th" />
+            <TableCell component="th" orderBy={'name'}>
+              Fornecedor
+            </TableCell>
+            <TableCell component="th" order={'DESC'} orderBy={'cnpj'}>
+              CNPJ
+            </TableCell>
+            <TableCell component="th" order={'ASC'} orderBy={'city'}>
+              Cidade
+            </TableCell>
+            <TableCell component="th">Telefone</TableCell>
+            <TableCell component="th">Email</TableCell>
+            <TableCell component="th" orderBy={'status'}>
+              Status
+            </TableCell>
+            <TableCell component="th">Action</TableCell>
+          </TableRow>
+        </TableHead>
+        <TableBody>
+          <TableRow>
+            <TableCell />
+            <TableCell>LebonTon Lorem Ipsum</TableCell>
+            <TableCell>87.871.377/0001-02</TableCell>
+            <TableCell>Porto Alegre</TableCell>
+            <TableCell>11 - 98459-8956</TableCell>
+            <TableCell>leblonton@ind.com</TableCell>
+            <TableCell>
+              <Badge variant="green" label="Aprovado" />
+            </TableCell>
+            <TableCell actionCell>
+              <IconThreeDots />
+            </TableCell>
+          </TableRow>
+          <TableRow>
+            <TableCell />
+            <TableCell>LebonTon Lorem Ipsum</TableCell>
+            <TableCell>87.871.377/0001-02</TableCell>
+            <TableCell>Porto Alegre</TableCell>
+            <TableCell>11 - 98459-8956</TableCell>
+            <TableCell>leblonton@ind.com</TableCell>
+            <TableCell>
+              <Badge variant="green" label="Aprovado" />
+            </TableCell>
+            <TableCell actionCell>
+              <IconThreeDots />
+            </TableCell>
+          </TableRow>
+          <TableRow>
+            <TableCell />
+            <TableCell>LebonTon Lorem Ipsum</TableCell>
+            <TableCell>87.871.377/0001-02</TableCell>
+            <TableCell>Porto Alegre</TableCell>
+            <TableCell>11 - 98459-8956</TableCell>
+            <TableCell>leblonton@ind.com</TableCell>
+            <TableCell>
+              <Badge variant="green" label="Aprovado" />
+            </TableCell>
+            <TableCell actionCell>
+              <IconThreeDots />
+            </TableCell>
+          </TableRow>
+          <TableRow>
+            <TableCell />
+            <TableCell>LebonTon Lorem Ipsum</TableCell>
+            <TableCell>87.871.377/0001-02</TableCell>
+            <TableCell>Porto Alegre</TableCell>
+            <TableCell>11 - 98459-8956</TableCell>
+            <TableCell>leblonton@ind.com</TableCell>
+            <TableCell>
+              <Badge variant="green" label="Aprovado" />
+            </TableCell>
+            <TableCell actionCell>
+              <IconThreeDots />
+            </TableCell>
+          </TableRow>
+          <TableRow>
+            <TableCell />
+            <TableCell>LebonTon Lorem Ipsum</TableCell>
+            <TableCell>87.871.377/0001-02</TableCell>
+            <TableCell>Porto Alegre</TableCell>
+            <TableCell>11 - 98459-8956</TableCell>
+            <TableCell>leblonton@ind.com</TableCell>
+            <TableCell>
+              <Badge variant="green" label="Aprovado" />
+            </TableCell>
+            <TableCell actionCell>
+              <IconThreeDots />
+            </TableCell>
+          </TableRow>
+          <TableRow>
+            <TableCell />
+            <TableCell>LebonTon Lorem Ipsum</TableCell>
+            <TableCell>87.871.377/0001-02</TableCell>
+            <TableCell>Porto Alegre</TableCell>
+            <TableCell>11 - 98459-8956</TableCell>
+            <TableCell>leblonton@ind.com</TableCell>
+            <TableCell>
+              <Badge variant="green" label="Aprovado" />
+            </TableCell>
+            <TableCell actionCell>
+              <IconThreeDots />
+            </TableCell>
+          </TableRow>
+          <TableRow>
+            <TableCell />
+            <TableCell>LebonTon Lorem Ipsum</TableCell>
+            <TableCell>87.871.377/0001-02</TableCell>
+            <TableCell>Porto Alegre</TableCell>
+            <TableCell>11 - 98459-8956</TableCell>
+            <TableCell>leblonton@ind.com</TableCell>
+            <TableCell>
+              <Badge variant="green" label="Aprovado" />
+            </TableCell>
+            <TableCell actionCell>
+              <IconThreeDots />
+            </TableCell>
+          </TableRow>
+          <TableRow>
+            <TableCell />
+            <TableCell>LebonTon Lorem Ipsum</TableCell>
+            <TableCell>87.871.377/0001-02</TableCell>
+            <TableCell>Porto Alegre</TableCell>
+            <TableCell>11 - 98459-8956</TableCell>
+            <TableCell>leblonton@ind.com</TableCell>
+            <TableCell>
+              <Badge variant="green" label="Aprovado" />
+            </TableCell>
+            <TableCell actionCell>
+              <IconThreeDots />
+            </TableCell>
+          </TableRow>
+          <TableRow>
+            <TableCell />
+            <TableCell>LebonTon Lorem Ipsum</TableCell>
+            <TableCell>87.871.377/0001-02</TableCell>
+            <TableCell>Porto Alegre</TableCell>
+            <TableCell>11 - 98459-8956</TableCell>
+            <TableCell>leblonton@ind.com</TableCell>
+            <TableCell>
+              <Badge variant="green" label="Aprovado" />
+            </TableCell>
+            <TableCell actionCell>
+              <IconThreeDots />
+            </TableCell>
+          </TableRow>
+          <TableRow>
+            <TableCell />
+            <TableCell>LebonTon Lorem Ipsum</TableCell>
+            <TableCell>87.871.377/0001-02</TableCell>
+            <TableCell>Porto Alegre</TableCell>
+            <TableCell>11 - 98459-8956</TableCell>
+            <TableCell>leblonton@ind.com</TableCell>
+            <TableCell>
+              <Badge variant="green" label="Aprovado" />
+            </TableCell>
+            <TableCell actionCell>
+              <IconThreeDots />
+            </TableCell>
+          </TableRow>
+          <TableRow>
+            <TableCell />
+            <TableCell>LebonTon Lorem Ipsum</TableCell>
+            <TableCell>87.871.377/0001-02</TableCell>
+            <TableCell>Porto Alegre</TableCell>
+            <TableCell>11 - 98459-8956</TableCell>
+            <TableCell>leblonton@ind.com</TableCell>
+            <TableCell>
+              <Badge variant="green" label="Aprovado" />
+            </TableCell>
+            <TableCell actionCell>
+              <IconThreeDots />
+            </TableCell>
+          </TableRow>
+          <TableRow>
+            <TableCell />
+            <TableCell>LebonTon Lorem Ipsum</TableCell>
+            <TableCell>87.871.377/0001-02</TableCell>
+            <TableCell>Porto Alegre</TableCell>
+            <TableCell>11 - 98459-8956</TableCell>
+            <TableCell>leblonton@ind.com</TableCell>
+            <TableCell>
+              <Badge variant="green" label="Aprovado" />
+            </TableCell>
+            <TableCell actionCell>
+              <IconThreeDots />
+            </TableCell>
+          </TableRow>
+          <TableRow>
+            <TableCell />
+            <TableCell>LebonTon Lorem Ipsum</TableCell>
+            <TableCell>87.871.377/0001-02</TableCell>
+            <TableCell>Porto Alegre</TableCell>
+            <TableCell>11 - 98459-8956</TableCell>
+            <TableCell>leblonton@ind.com</TableCell>
+            <TableCell>
+              <Badge variant="green" label="Aprovado" />
+            </TableCell>
+            <TableCell actionCell>
+              <IconThreeDots />
+            </TableCell>
+          </TableRow>
+          <TableRow>
+            <TableCell />
+            <TableCell>LebonTon Lorem Ipsum</TableCell>
+            <TableCell>87.871.377/0001-02</TableCell>
+            <TableCell>Porto Alegre</TableCell>
+            <TableCell>11 - 98459-8956</TableCell>
+            <TableCell>leblonton@ind.com</TableCell>
+            <TableCell>
+              <Badge variant="green" label="Aprovado" />
+            </TableCell>
+            <TableCell actionCell>
+              <IconThreeDots />
+            </TableCell>
+          </TableRow>
+          <TableRow>
+            <TableCell />
+            <TableCell>LebonTon Lorem Ipsum</TableCell>
+            <TableCell>87.871.377/0001-02</TableCell>
+            <TableCell>Porto Alegre</TableCell>
+            <TableCell>11 - 98459-8956</TableCell>
+            <TableCell>leblonton@ind.com</TableCell>
+            <TableCell>
+              <Badge variant="green" label="Aprovado" />
+            </TableCell>
+            <TableCell actionCell>
+              <IconThreeDots />
+            </TableCell>
+          </TableRow>
+          <TableRow>
+            <TableCell />
+            <TableCell>LebonTon Lorem Ipsum</TableCell>
+            <TableCell>87.871.377/0001-02</TableCell>
+            <TableCell>Porto Alegre</TableCell>
+            <TableCell>11 - 98459-8956</TableCell>
+            <TableCell>leblonton@ind.com</TableCell>
+            <TableCell>
+              <Badge variant="green" label="Aprovado" />
+            </TableCell>
+            <TableCell actionCell>
+              <IconThreeDots />
+            </TableCell>
+          </TableRow>
+          <TableRow>
+            <TableCell />
+            <TableCell>LebonTon Lorem Ipsum</TableCell>
+            <TableCell>87.871.377/0001-02</TableCell>
+            <TableCell>Porto Alegre</TableCell>
+            <TableCell>11 - 98459-8956</TableCell>
+            <TableCell>leblonton@ind.com</TableCell>
+            <TableCell>
+              <Badge variant="green" label="Aprovado" />
+            </TableCell>
+            <TableCell actionCell>
+              <IconThreeDots />
+            </TableCell>
+          </TableRow>
+          <TableRow>
+            <TableCell />
+            <TableCell>LebonTon Lorem Ipsum</TableCell>
+            <TableCell>87.871.377/0001-02</TableCell>
+            <TableCell>Porto Alegre</TableCell>
+            <TableCell>11 - 98459-8956</TableCell>
+            <TableCell>leblonton@ind.com</TableCell>
+            <TableCell>
+              <Badge variant="green" label="Aprovado" />
+            </TableCell>
+            <TableCell actionCell>
+              <IconThreeDots />
+            </TableCell>
+          </TableRow>
+          <TableRow>
+            <TableCell />
+            <TableCell>LebonTon Lorem Ipsum</TableCell>
+            <TableCell>87.871.377/0001-02</TableCell>
+            <TableCell>Porto Alegre</TableCell>
+            <TableCell>11 - 98459-8956</TableCell>
+            <TableCell>leblonton@ind.com</TableCell>
+            <TableCell>
+              <Badge variant="green" label="Aprovado" />
+            </TableCell>
+            <TableCell actionCell>
+              <IconThreeDots />
+            </TableCell>
+          </TableRow>
+          <TableRow>
+            <TableCell />
+            <TableCell>LebonTon Lorem Ipsum</TableCell>
+            <TableCell>87.871.377/0001-02</TableCell>
+            <TableCell>Porto Alegre</TableCell>
+            <TableCell>11 - 98459-8956</TableCell>
+            <TableCell>leblonton@ind.com</TableCell>
+            <TableCell>
+              <Badge variant="green" label="Aprovado" />
+            </TableCell>
+            <TableCell actionCell>
+              <IconThreeDots />
+            </TableCell>
+          </TableRow>
+          <TableRow>
+            <TableCell />
+            <TableCell>LebonTon Lorem Ipsum</TableCell>
+            <TableCell>87.871.377/0001-02</TableCell>
+            <TableCell>Porto Alegre</TableCell>
+            <TableCell>11 - 98459-8956</TableCell>
+            <TableCell>leblonton@ind.com</TableCell>
+            <TableCell>
+              <Badge variant="green" label="Aprovado" />
+            </TableCell>
+            <TableCell actionCell>
+              <IconThreeDots />
+            </TableCell>
+          </TableRow>
+          <TableRow>
+            <TableCell />
+            <TableCell>LebonTon Lorem Ipsum</TableCell>
+            <TableCell>87.871.377/0001-02</TableCell>
+            <TableCell>Porto Alegre</TableCell>
+            <TableCell>45 - 95896-8956</TableCell>
+            <TableCell>email@example.com</TableCell>
+            <TableCell>
+              <Badge variant="red" label="Reprovado" />
+            </TableCell>
+            <TableCell actionCell>
+              <Dropdown threeDots>
+                <DropdownItem onClick={(): void => undefined}>
+                  item 01
+                </DropdownItem>
+                <DropdownItem onClick={(): void => undefined}>
+                  item 02
+                </DropdownItem>
+              </Dropdown>
+            </TableCell>
+          </TableRow>
+        </TableBody>
+      </Table>
     </LayoutWrapper>
   );
 };

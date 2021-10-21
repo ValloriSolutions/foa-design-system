@@ -13,7 +13,6 @@ export const StyledLayout = styled.main`
   align-items: flex-start;
   justify-content: flex-start;
   background-color: ${palette.background.paper};
-  padding-left: ${pxToRem(280 + 30)};
-  padding-top: ${pxToRem(110)};
+  padding: ${pxToRem(110)} ${pxToRem(30)} 0 ${pxToRem(280 + 30)};
   margin: 0;
 `;

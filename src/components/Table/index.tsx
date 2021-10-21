@@ -16,22 +16,23 @@ export const Table: React.FC<TableProps> = ({
   emptyComponent,
   cardCustomStyles,
 }) => (
-  <FlexBox fullWidth>
-    <Card
-      fullWidth
-      customStyles={css`
-        border-radius: ${pxToRem(3)};
-        align-items: flex-start;
-        ${tableDefaultPadding()};
-        ${cardCustomStyles};
-      `}
-    >
-      {topToolbar}
-      <StyledTable>{children}</StyledTable>
-      {emptyComponent && emptyComponent({})}
-    </Card>
+  <Card
+    fullWidth
+    horizontalAlign="flex-start"
+    customStyles={css`
+      border-radius: ${pxToRem(3)};
+      align-items: flex-start;
+      overflow-y: auto;
+      min-height: 500px;
+      ${tableDefaultPadding()};
+      ${cardCustomStyles};
+    `}
+  >
+    {topToolbar}
+    <StyledTable>{children}</StyledTable>
+    {emptyComponent && emptyComponent({})}
     {bottomToolbar}
-  </FlexBox>
+  </Card>
 );
 
 export default Table;

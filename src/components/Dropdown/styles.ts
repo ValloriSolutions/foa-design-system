@@ -30,7 +30,7 @@ export const StyledPopupActions = styled.div<DropdownProps>`
   right: 0;
   border-radius: ${borders.radius.button};
   box-shadow: ${box.DEFAULT_BOX_SHADOW};
-  background-color: ${colors.background.paper};
+  background-color: ${colors.colors.white};
   white-space: nowrap;
   transition: all 0.3s ease;
   ${({ active }): false | FlattenSimpleInterpolation | undefined =>
