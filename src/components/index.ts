@@ -1,6 +1,7 @@
 import {
   AccordionItemProps,
   AccordionProps,
+  AvatarProps,
   BadgeProps,
   ButtonProps,
   CardProps,
@@ -16,6 +17,7 @@ import {
   TableProps,
   TypographyProps,
 } from '../types/layout';
+import { Avatar } from './Avatar';
 import { Badge } from './Badge';
 import { Button } from './Button';
 import { Card } from './Card';
@@ -41,6 +43,7 @@ import { TableRow } from './Table/TableRow';
 import { Typography } from './Typography';
 
 export {
+  Avatar,
   Accordion,
   AccordionItem,
   Badge,
@@ -68,6 +71,7 @@ export {
 };
 
 export {
+  AvatarProps,
   AccordionProps,
   AccordionItemProps,
   BadgeProps,
