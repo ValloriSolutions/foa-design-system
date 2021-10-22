@@ -19,6 +19,7 @@ export const Header: React.FC<HeaderProps> = ({
     <StyledHeader as="header">
       <Col size={5} customStyles={{ paddingTop: '1rem' }}>
         <Input
+          noLabel
           placeholder="Digite o Número da Requisição"
           value={searchTerm}
           onChange={onChange}
