@@ -13,9 +13,11 @@ export const LayoutWrapper: React.FC<LayoutProps> = ({
   messages,
   user,
   children,
+  searchPlaceholder,
 }) => (
   <>
     <Header
+      searchPlaceholder={searchPlaceholder}
       searchTerm={searchTerm}
       onChange={onChange}
       user={user}

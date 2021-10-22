@@ -32,6 +32,7 @@ export const Default: Story<LayoutProps> = () => {
   const [term, setTerm] = useState('');
   return (
     <LayoutWrapper
+      searchPlaceholder="Search..."
       menuItems={[
         {
           title: 'Página Inicial',
