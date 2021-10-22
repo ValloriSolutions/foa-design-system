@@ -30,6 +30,7 @@ export interface HeaderProps {
   notifications?: NotificationProps[];
   messages?: MessageProps[];
   user: UserProps;
+  searchPlaceholder?: string;
 }
 
 export type LayoutProps = MenuItemsProps & HeaderProps;

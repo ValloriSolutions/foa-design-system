@@ -14,13 +14,14 @@ export const Header: React.FC<HeaderProps> = ({
   notifications,
   messages,
   user,
+  searchPlaceholder,
 }) => {
   return (
     <StyledHeader as="header">
       <Col size={5} customStyles={{ paddingTop: '1rem' }}>
         <Input
           noLabel
-          placeholder="Digite o Número da Requisição"
+          placeholder={searchPlaceholder ?? 'Digite o Número da Requisição'}
           value={searchTerm}
           onChange={onChange}
           customIcon={<IconSearch color={palette.colors.gray.light} />}
