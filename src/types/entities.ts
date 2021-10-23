@@ -1,13 +1,28 @@
 import React from 'react';
 
-export enum OrderStatus {
+export enum TicketStatus {
   OPEN = 'open',
   SOLVED = 'solved',
   CANCELED = 'canceled',
   WAITING_S = 'waiting_for_supplier',
   WAITING_O = 'waiting_for_operator',
 }
+export enum OrderStatus {
+  REQUISITION_CREATED = 'Requisição Criada',
+  ORDER_CREATED = 'Ordem Criada',
+  DRAFT = 'Rascunho',
+  REQUISITION_SENT = 'Requisição Enviada',
+  ORDER_SENT = 'Ordem Enviada',
+  ORDER_RECEIVED = 'Ordem Recebida',
+  ORDER_CANCELED = 'Ordem Cancelada',
+  ORDER_SOLVED = 'Ordem Solucionada',
+  ORDER_CLOSED = 'Ordem Fechada',
+  WAITING_CONTRACT = 'Aguardando Contrato',
+  WAITING_PAYMENT = 'Aguardando Pagamento',
+  PAUSED = 'Pausado',
+}
 
+/* TICKET & NOTIFICATIONS ----------- */
 export interface ToolbarProps {
   id: string;
   title: string;
@@ -29,7 +44,7 @@ export interface TicketProps {
   title: string;
   orderNumber: number;
   subject: string;
-  status: OrderStatus;
+  status: TicketStatus;
   operatorName: string;
   supplierName: string;
   opennedAt: Date;
@@ -55,6 +70,7 @@ export interface UserProps {
   role: UserRole;
 }
 
+/* USERS ----------- */
 export interface OperatorProps extends UserProps {
   createdAt: Date;
   updatedAt: Date;
@@ -62,13 +78,11 @@ export interface OperatorProps extends UserProps {
 }
 
 export interface SupplierProps extends UserProps {
-  companyName: string;
+  role: UserRole.SUPPLIER;
   companyRole: string;
   companyDetails: CompanyProps[];
-  createdAt: Date;
-  updatedAt: Date;
 }
-
+/* ENTITIES ----------- */
 export interface CompanyProps {
   id: string;
   name: string;
@@ -81,8 +95,24 @@ export interface CompanyProps {
 export interface ProductsProps {
   id: string;
   name: string;
+  material: string;
   description: string;
   price: number;
   quantity: number;
   image: string;
+  createdAt: Date;
+}
+/* ORDERS ----------- */
+export interface OrderRequisitionProps {
+  id: string;
+  openenedAt: string;
+  dueDate: string;
+  requestedBy: string;
+  productList: ProductsProps[];
+  center: string;
+  status: OrderStatus;
+  paymentType: string;
+  refreshList?: boolean;
+  submittedAt?: string;
+  subtotal?: number;
 }
