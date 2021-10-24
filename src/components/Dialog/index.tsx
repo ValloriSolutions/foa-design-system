@@ -33,6 +33,7 @@ const Dialog: React.FC<DialogProps> = ({
   disableBackdropClick,
   alignItems,
   customStyles,
+  children,
 }) => {
   const boxRef = useRef<HTMLDivElement>(null);
   useOutsideAlerter(boxRef, () =>
@@ -49,6 +50,7 @@ const Dialog: React.FC<DialogProps> = ({
         <div>
           <Typography as="h5">{info.title}</Typography>
           <Typography as="p">{info.subtitle}</Typography>
+          {children}
         </div>
         <StyledActions>
           {info.cancelButton && (
