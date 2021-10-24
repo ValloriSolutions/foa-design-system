@@ -1,11 +1,11 @@
 import React from 'react';
 
 export enum TicketStatus {
-  OPEN = 'open',
-  SOLVED = 'solved',
-  CANCELED = 'canceled',
-  WAITING_S = 'waiting_for_supplier',
-  WAITING_O = 'waiting_for_operator',
+  OPEN = 'Aberto',
+  SOLVED = 'Solucionado',
+  CANCELED = 'Cancelado',
+  WAITING_S = 'Aguardando Fornecedor',
+  WAITING_O = 'Respondido',
 }
 export enum OrderStatus {
   DRAFT = 'Rascunho',
