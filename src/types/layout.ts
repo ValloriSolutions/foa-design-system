@@ -97,10 +97,19 @@ export interface TableProps {
   emptyComponent?: React.FC;
   cardCustomStyles?: CSSObject | FlattenSimpleInterpolation;
 }
+export enum BadgeColors {
+  blue,
+  green,
+  light_blue,
+  yellow,
+  red,
+  gray,
+}
 export interface BadgeProps extends StyledComponentProps {
-  variant?: 'red' | 'gray' | 'gray_red' | 'green' | 'red_gray';
+  variant: keyof typeof BadgeColors;
   label: string;
   bordered?: boolean;
+  secondary?: boolean;
 }
 export interface StyledComponentProps {
   customStyles?: CSSObject | FlattenSimpleInterpolation;
@@ -219,4 +228,10 @@ export interface TableCellProps extends StyledComponentProps {
   actionCell?: boolean;
   colSpan?: number;
   hasBadge?: boolean;
+}
+export interface OrderStatusBadgesProps {
+  [key: string]: {
+    color: keyof typeof BadgeColors;
+    label: string;
+  };
 }

@@ -12,40 +12,103 @@ export default {
   },
 } as Meta;
 
-const Template: Story<BadgeProps> = (props) => <Badge {...props} />;
+export const Blue: Story<BadgeProps> = () => (
+  <>
+    <Badge variant="blue" label="blue" />
+    <br />
 
-export const Green = Template.bind({});
-Green.args = {
-  label: 'Green Badge',
-  variant: 'green',
-};
+    <Badge variant="blue" label="blue with border" bordered />
+    <br />
+    <Badge variant="blue" secondary label="blue secondary" />
+    <br />
+    <Badge
+      variant="blue"
+      bordered
+      secondary
+      label="blue secondary with border"
+    />
+  </>
+);
 
-export const Red = Template.bind({});
-Red.args = {
-  label: 'Red Badge',
-  variant: 'red',
-};
+export const Green: Story<BadgeProps> = () => (
+  <>
+    <Badge variant="green" label="green" />
+    <br />
 
-export const Gray = Template.bind({});
-Gray.args = {
-  label: 'Gray Badge',
-  variant: 'gray',
-};
+    <Badge variant="green" label="green with border" bordered />
+    <br />
+    <Badge variant="green" secondary label="green secondary" />
+    <br />
+    <Badge
+      variant="green"
+      bordered
+      secondary
+      label="green secondary with border"
+    />
+  </>
+);
 
-export const GrayRed = Template.bind({});
-GrayRed.args = {
-  label: 'Gray+Red Badge',
-  variant: 'gray_red',
-};
+export const lightBlue: Story<BadgeProps> = () => (
+  <>
+    <Badge variant="light_blue" label="light_blue" />
+    <br />
 
-export const RedGray = Template.bind({});
-RedGray.args = {
-  label: 'Red+Gray Badge',
-  variant: 'red_gray',
-};
-export const Bordered = Template.bind({});
-Bordered.args = {
-  label: 'Bordered Green Badge',
-  variant: 'green',
-  bordered: true,
-};
+    <Badge variant="light_blue" label="light_blue with border" bordered />
+    <br />
+    <Badge variant="light_blue" secondary label="light_blue secondary" />
+    <br />
+    <Badge
+      variant="light_blue"
+      bordered
+      secondary
+      label="light_blue secondary with border"
+    />
+  </>
+);
+
+export const Yellow: Story<BadgeProps> = () => (
+  <>
+    <Badge variant="yellow" label="yellow" />
+    <br />
+
+    <Badge variant="yellow" label="yellow with border" bordered />
+    <br />
+    <Badge variant="yellow" secondary label="yellow secondary" />
+    <br />
+    <Badge
+      variant="yellow"
+      bordered
+      secondary
+      label="yellow secondary with border"
+    />
+  </>
+);
+
+export const Red: Story<BadgeProps> = () => (
+  <>
+    <Badge variant="red" label="red" />
+    <br />
+
+    <Badge variant="red" label="red with border" bordered />
+    <br />
+    <Badge variant="red" secondary label="red secondary" />
+    <br />
+    <Badge variant="red" bordered secondary label="red secondary with border" />
+  </>
+);
+export const Gray: Story<BadgeProps> = () => (
+  <>
+    <Badge variant="gray" label="gray" />
+    <br />
+    <Badge variant="gray" label="gray with border" bordered />
+    <br />
+    <Badge variant="gray" secondary label="gray secondary" />
+    <br />
+    <Badge
+      variant="gray"
+      bordered
+      secondary
+      label="gray secondary with border"
+    />
+  </>
+);

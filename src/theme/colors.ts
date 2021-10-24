@@ -1,6 +1,10 @@
+import { rgba } from 'polished';
+
 import { hexToRgba } from '../utils/colors';
 import { Box, Gray, Palette } from './types';
 
+export const blue = '#4385F5';
+export const light_blue = '#33B5E7';
 export const red = '#F04343';
 export const green = '#64AA0B';
 export const yellow = '#F0CA43';
@@ -26,6 +30,8 @@ export const palette: Palette = {
     yellow,
     gray,
     white,
+    blue,
+    light_blue,
   },
   text: {
     primary: gray.darker,
@@ -79,6 +85,44 @@ export const buttons = {
   },
 };
 
+export const badgeColors = {
+  blue: {
+    background: palette.colors.blue,
+    color: palette.text.white,
+    border: '1px solid ' + palette.colors.blue,
+    opacity: hexToRgba(palette.colors.blue, 0.1),
+  },
+  green: {
+    background: palette.colors.green,
+    color: palette.text.white,
+    border: '1px solid ' + palette.colors.green,
+    opacity: hexToRgba(palette.colors.green, 0.1),
+  },
+  light_blue: {
+    background: palette.colors.light_blue,
+    color: palette.text.white,
+    border: '1px solid ' + palette.colors.light_blue,
+    opacity: hexToRgba(palette.colors.light_blue, 0.1),
+  },
+  yellow: {
+    background: palette.colors.yellow,
+    color: palette.text.white,
+    border: '1px solid ' + palette.colors.yellow,
+    opacity: hexToRgba(palette.colors.yellow, 0.1),
+  },
+  red: {
+    background: palette.colors.red,
+    color: palette.text.white,
+    border: '1px solid ' + palette.colors.red,
+    opacity: hexToRgba(palette.colors.red, 0.1),
+  },
+  gray: {
+    background: palette.colors.gray.medium,
+    color: palette.text.white,
+    border: '1px solid ' + palette.colors.gray.medium,
+    opacity: hexToRgba(palette.colors.gray.medium, 0.1),
+  },
+};
 export default {
   red,
   green,
@@ -86,4 +130,5 @@ export default {
   ...palette,
   buttons,
   box,
+  badgeColors,
 };

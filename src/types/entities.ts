@@ -8,21 +8,21 @@ export enum TicketStatus {
   WAITING_O = 'waiting_for_operator',
 }
 export enum OrderStatus {
-  REQUISITION_CREATED = 'Requisição Criada',
-  ORDER_CREATED = 'Ordem Criada',
   DRAFT = 'Rascunho',
-  REQUISITION_SENT = 'Requisição Enviada', //enviado pro senior
-  ORDER_SENT = 'Ordem Enviada', // enviado pro fornecedor
-  ORDER_RECEIVED = 'Ordem Recebida',
   ORDER_CANCELED = 'Ordem Cancelada',
-  ORDER_SOLVED = 'Ordem Concluída',
   ORDER_CLOSED = 'Ordem Fechada', //tipo PR/Mr fechada, serve pra consulta
-  WAITING_CONTRACT = 'Aguardando Contrato',
-  WAITING_PAYMENT = 'Aguardando Pagamento',
+  ORDER_CREATED = 'Ordem Criada',
+  ORDER_RECEIVED = 'Ordem Recebida',
+  ORDER_SENT = 'Ordem Enviada', // enviado pro fornecedor
+  ORDER_SOLVED = 'Ordem Concluída',
   PAUSED = 'Pausado',
   PENDING_APPROVAL = 'Aguardando Aprovação',
+  REQUISITION_CREATED = 'Requisição Criada',
+  REQUISITION_SENT = 'Requisição Enviada', //enviado pro senior
   SENIOR_APPROVED = 'Solicitação Aprovada',
   SENIOR_REPROVED = 'Solicitação Reprovada',
+  WAITING_CONTRACT = 'Aguardando Contrato',
+  WAITING_PAYMENT = 'Aguardando Pagamento',
 }
 
 export enum UserRole {

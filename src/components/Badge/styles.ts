@@ -1,14 +1,17 @@
+import { rgba } from 'polished';
 import styled, {
   css,
   CSSObject,
   FlattenSimpleInterpolation,
 } from 'styled-components';
 
+import colors, { badgeColors } from '../../theme/colors';
+import { BadgeColors } from '../../types/layout';
 import { pxToRem } from '../../utils/grid';
 
 interface Props {
-  color: string;
-  bg: string;
+  variant: keyof typeof BadgeColors;
+  secondary: boolean;
   bordered?: boolean;
   customStyles?: CSSObject | FlattenSimpleInterpolation;
 }
@@ -20,14 +23,39 @@ export const StyledBadge = styled.div<Props>`
   padding: ${pxToRem(3)} ${pxToRem(35)};
   border-radius: ${pxToRem(4)};
   width: auto;
-  ${(props): FlattenSimpleInterpolation => css`
-    & > span {
-      font-size: ${pxToRem(13.2)};
-      font-weight: 400;
-      color: ${props.color};
+  ${(props): FlattenSimpleInterpolation => {
+    const darkColor = props.secondary || props.bordered;
+    let bgColor = '';
+
+    if (props.bordered) {
+      !props.secondary
+        ? (bgColor = rgba(badgeColors[props.variant].opacity, 0.3))
+        : (bgColor = badgeColors[props.variant].opacity);
+      console.log('bordered', bgColor);
+    } else {
+      props.secondary
+        ? (bgColor = badgeColors[props.variant].opacity)
+        : (bgColor = badgeColors[props.variant].background);
+      console.log('not', bgColor);
     }
-    background-color: ${props.bg};
-    border: ${props.bordered ? `1px solid ${props.color}` : 'none'};
-    ${props.customStyles || {}}
-  `}
+
+    return css`
+      & > span {
+        font-size: ${pxToRem(13.2)};
+        font-weight: 400;
+        color: ${!darkColor
+          ? badgeColors[props.variant].color
+          : props.variant === 'yellow'
+          ? '#b38f0e'
+          : badgeColors[props.variant].background};
+      }
+
+      background-color: ${bgColor};
+      border: ${props.bordered
+        ? badgeColors[props.variant].border
+        : '1px solid' + bgColor};
+
+      ${props.customStyles || {}}
+    `;
+  }}
 `;

@@ -1,8 +1,10 @@
-export interface Palette {
+export type Palette = {
   colors: {
     red: string;
     green: string;
     yellow: string;
+    blue: string;
+    light_blue: string;
     gray: {
       darkest: string;
       darker: string;
@@ -31,7 +33,7 @@ export interface Palette {
     default: string;
     disabled: string;
   };
-}
+};
 
 export interface Gray {
   darkest: string;
