@@ -31,12 +31,10 @@ export const StyledBadge = styled.div<Props>`
       !props.secondary
         ? (bgColor = rgba(badgeColors[props.variant].opacity, 0.3))
         : (bgColor = badgeColors[props.variant].opacity);
-      console.log('bordered', bgColor);
     } else {
       props.secondary
         ? (bgColor = badgeColors[props.variant].opacity)
         : (bgColor = badgeColors[props.variant].background);
-      console.log('not', bgColor);
     }
 
     return css`

@@ -38,7 +38,6 @@ export const Input: React.FC<InputProps> = ({
   noLabel = false,
 }) => {
   const [showPassword, setShowPassword] = useState(false);
-  console.log('ué caraio', noLabel);
   const hasIcon = checked || showIconPassword || customIcon;
 
   function handleShowPassword(): void {
