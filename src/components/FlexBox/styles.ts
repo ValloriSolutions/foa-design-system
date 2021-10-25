@@ -15,8 +15,8 @@ export const StyledFlexBox = styled.div<FlexBoxProps>`
     ${props.noPadding ? 'padding: 0' : ''};
     ${props.fullHeight ? 'height: 100%;' : ''};
     ${props.fullScreen ? 'height: 100vh; width: 100vw' : ''};
+    ${!props.noPadding ? `padding: ${spacing.flexBox}` : 0};
   `};
-  padding: ${spacing.flexBox};
   ${({ customStyles }): CSSObject | FlattenSimpleInterpolation =>
     customStyles || {}}
 `;
