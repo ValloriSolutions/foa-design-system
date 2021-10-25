@@ -84,7 +84,7 @@ export interface FlexBoxProps extends React.HTMLAttributes<HTMLElement> {
     | 'space-between'
     | false
     | string;
-  direction?: 'row' | 'column';
+  direction?: 'row' | 'column' | string;
   fullWidth?: boolean;
   fullHeight?: boolean;
   fullScreen?: boolean;
