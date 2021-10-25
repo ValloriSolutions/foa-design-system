@@ -253,3 +253,23 @@ export interface DividerProps extends StyledComponentProps {
   borderColor?: string;
   fullWidth?: boolean;
 }
+
+export interface DialogProps extends FlexBoxProps {
+  isOpen: boolean;
+  setOpen: (open: boolean) => void;
+  disableBackdropClick?: boolean;
+  alignItems?: 'center' | 'flex-start' | 'flex-end';
+  width?: string;
+  info: {
+    title: string;
+    subtitle: string;
+    cancelButton?: {
+      title: string;
+      action?: () => void;
+    };
+    confirmButton: {
+      title: string;
+      action?: () => void;
+    };
+  };
+}

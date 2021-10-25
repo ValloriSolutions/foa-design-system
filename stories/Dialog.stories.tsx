@@ -2,7 +2,8 @@ import { Meta, Story } from '@storybook/react';
 import React, { useState } from 'react';
 
 import { Button } from '../src/components/Button';
-import Dialog, { DialogProps } from '../src/components/Dialog';
+import { Dialog } from '../src/components/Dialog';
+import { DialogProps } from '../src/types/layout';
 
 export default {
   title: 'Components/Dialog',

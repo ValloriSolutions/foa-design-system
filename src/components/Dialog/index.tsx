@@ -1,31 +1,12 @@
 import React, { useRef } from 'react';
 
-import { FlexBoxProps } from '../';
 import { useOutsideAlerter } from '../../hooks/useOutsideAlerter';
+import { DialogProps } from '../../types/layout';
 import { Button } from '../Button';
 import { Typography } from '../Typography';
 import { StyledActions, StyledDialogBox, StyledOverlay } from './styles';
 
-export interface DialogProps extends FlexBoxProps {
-  isOpen: boolean;
-  setOpen: (open: boolean) => void;
-  disableBackdropClick?: boolean;
-  alignItems?: 'center' | 'flex-start' | 'flex-end';
-  width?: string;
-  info: {
-    title: string;
-    subtitle: string;
-    cancelButton?: {
-      title: string;
-      action?: () => void;
-    };
-    confirmButton: {
-      title: string;
-      action?: () => void;
-    };
-  };
-}
-const Dialog: React.FC<DialogProps> = ({
+export const Dialog: React.FC<DialogProps> = ({
   isOpen,
   setOpen,
   info,
