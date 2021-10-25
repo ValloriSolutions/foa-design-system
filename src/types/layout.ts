@@ -70,8 +70,18 @@ export type RowProps = {
 export interface FlexBoxProps extends React.HTMLAttributes<HTMLElement> {
   children?: ReactNode;
   isCard?: boolean;
-  verticalAlign?: 'center' | 'flex-start' | 'flex-end' | false;
-  horizontalAlign?: 'center' | 'flex-start' | 'flex-end' | false;
+  verticalAlign?:
+    | 'center'
+    | 'flex-start'
+    | 'flex-end'
+    | 'space-between'
+    | false;
+  horizontalAlign?:
+    | 'center'
+    | 'flex-start'
+    | 'flex-end'
+    | 'space-between'
+    | false;
   direction?: 'row' | 'column';
   fullWidth?: boolean;
   fullHeight?: boolean;
