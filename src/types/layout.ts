@@ -247,3 +247,9 @@ export interface OrderStatusBadgesProps {
     label: string;
   };
 }
+
+export interface DividerProps extends StyledComponentProps {
+  margin?: string;
+  borderColor?: string;
+  fullWidth?: boolean;
+}

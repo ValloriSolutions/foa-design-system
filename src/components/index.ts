@@ -6,6 +6,7 @@ import {
   ButtonProps,
   CardProps,
   ColProps,
+  DividerProps,
   DropdownProps,
   FlexBoxProps,
   InputProps,
@@ -21,6 +22,7 @@ import { Avatar } from './Avatar';
 import { Badge } from './Badge';
 import { Button } from './Button';
 import { Card } from './Card';
+import { Divider } from './Divider';
 import { Dropdown, DropdownItem } from './Dropdown';
 import { FlexBox } from './FlexBox';
 import { Col } from './Grid/Col';
@@ -50,6 +52,7 @@ export {
   Button,
   Card,
   Col,
+  Divider,
   Dropdown,
   DropdownItem,
   FlexBox,
@@ -78,6 +81,7 @@ export {
   ButtonProps,
   CardProps,
   ColProps,
+  DividerProps,
   DropdownProps,
   FlexBoxProps,
   InputProps,
