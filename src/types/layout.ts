@@ -75,13 +75,15 @@ export interface FlexBoxProps extends React.HTMLAttributes<HTMLElement> {
     | 'flex-start'
     | 'flex-end'
     | 'space-between'
-    | false;
+    | false
+    | string;
   horizontalAlign?:
     | 'center'
     | 'flex-start'
     | 'flex-end'
     | 'space-between'
-    | false;
+    | false
+    | string;
   direction?: 'row' | 'column';
   fullWidth?: boolean;
   fullHeight?: boolean;
