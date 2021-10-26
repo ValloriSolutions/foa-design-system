@@ -28,11 +28,10 @@ export const Dialog: React.FC<DialogProps> = ({
         alignItems={alignItems}
         customStyles={customStyles}
       >
-        <div>
-          <Typography as="h5">{info.title}</Typography>
-          <Typography as="p">{info.subtitle}</Typography>
-          {children}
-        </div>
+        <Typography as="h5">{info.title}</Typography>
+        <Typography as="p">{info.subtitle}</Typography>
+        {children}
+
         <StyledActions>
           {info.cancelButton && (
             <Button
