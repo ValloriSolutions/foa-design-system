@@ -1,9 +1,14 @@
 import styled from 'styled-components';
 
+import { motion } from '../../lib/framer-motion';
 import { palette } from '../../theme/colors';
 import { pxToRem } from '../../utils/grid';
 
-export const StyledLayout = styled.main`
+type Props = {
+  collapsed?: boolean;
+};
+
+export const StyledLayout = styled(motion.main)<Props>`
   width: 100vw;
   max-width: 100vw;
   height: 100vh;

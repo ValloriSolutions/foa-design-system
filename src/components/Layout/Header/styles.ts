@@ -1,10 +1,10 @@
 import styled from 'styled-components';
 
+import { motion, MotionProps } from '../../../lib/framer-motion';
 import { palette } from '../../../theme/colors';
 import { pxToRem } from '../../../utils/grid';
-import { Row } from '../../Grid/Row';
 
-export const StyledHeader = styled(Row)`
+export const StyledHeader = styled(motion.header)<MotionProps>`
   width: calc(100vw - ${pxToRem(280)});
   height: ${pxToRem(90)};
   background-color: ${palette.background.paper};

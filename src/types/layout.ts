@@ -32,6 +32,7 @@ export interface HeaderProps {
   messages?: MessageProps[];
   user: UserProps;
   searchPlaceholder?: string;
+  collapsed?: boolean;
 }
 
 export type LayoutWrapperProps = MenuItemsProps & HeaderProps;

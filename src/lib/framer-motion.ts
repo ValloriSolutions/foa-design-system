@@ -3,6 +3,7 @@ import { createDomMotionComponent } from 'framer-motion';
 export const motion = {
   a: createDomMotionComponent('a'),
   article: createDomMotionComponent('article'),
+  main: createDomMotionComponent('main'),
   button: createDomMotionComponent('button'),
   div: createDomMotionComponent('div'),
   header: createDomMotionComponent('header'),

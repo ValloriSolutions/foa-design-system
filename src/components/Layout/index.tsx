@@ -3,6 +3,7 @@ import cookie from 'js-cookie';
 import React, { useState } from 'react';
 
 import { LayoutWrapperProps } from '../../types/layout';
+import { pxToRem } from '../../utils/grid';
 import { Header } from './Header';
 import Sidebar from './Sidebar';
 import { StyledLayout } from './styles';
@@ -41,13 +42,21 @@ export const LayoutWrapper: React.FC<LayoutWrapperProps> = ({
         user={user}
         messages={messages}
         notifications={notifications}
+        collapsed={collapsed}
       />
       <Sidebar
         menuItems={menuItems}
         collapsed={collapsed}
         setCollapsed={handleSidebar}
       />
-      <StyledLayout>{children}</StyledLayout>
+      <StyledLayout
+        initial={false}
+        animate={{ paddingLeft: collapsed ? pxToRem(120) : pxToRem(280 + 30) }}
+        transition={{ type: 'spring', bounce: 0.3, duration: 0.7, delay: 0.4 }}
+        collapsed={collapsed}
+      >
+        {children}
+      </StyledLayout>
     </>
   );
 };
