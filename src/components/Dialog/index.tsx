@@ -47,16 +47,18 @@ export const Dialog: React.FC<DialogProps> = ({
               {info.cancelButton.title}
             </Button>
           )}
-          <Button
-            small
-            onClick={(): void =>
-              info.confirmButton?.action
-                ? info.confirmButton.action()
-                : setOpen(false)
-            }
-          >
-            {info.confirmButton.title}
-          </Button>
+          {info.confirmButton && (
+            <Button
+              small
+              onClick={(): void =>
+                info.confirmButton?.action
+                  ? info.confirmButton.action()
+                  : setOpen(false)
+              }
+            >
+              {info.confirmButton?.title}
+            </Button>
+          )}
         </StyledActions>
       </StyledDialogBox>
     </StyledOverlay>

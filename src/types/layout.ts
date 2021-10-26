@@ -270,7 +270,7 @@ export interface DialogProps extends FlexBoxProps {
       title: string;
       action?: () => void;
     };
-    confirmButton: {
+    confirmButton?: {
       title: string;
       action?: () => void;
     };
