@@ -10,7 +10,7 @@ export const Dialog: React.FC<DialogProps> = ({
   isOpen,
   setOpen,
   info,
-  width = '312px',
+  width = '30vw',
   disableBackdropClick,
   alignItems,
   customStyles,
