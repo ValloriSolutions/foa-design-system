@@ -13,6 +13,7 @@ export const Accordion: React.FC<AccordionProps> = ({
   icon,
   onClick,
   children,
+  collapsed,
 }): JSX.Element => {
   const [expanded, setExpanded] = useState(false);
 
@@ -45,17 +46,19 @@ export const Accordion: React.FC<AccordionProps> = ({
           {icon}
           <Label disabled={disabled}>{label}</Label>
         </LabelContainer>
-        <Arrow
-          xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="24"
-          fill="none"
-          viewBox="0 0 24 24"
-          expanded={expanded}
-          onClick={toggleExpanded}
-        >
-          <ChevronDown />
-        </Arrow>
+        {!collapsed && (
+          <Arrow
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            fill="none"
+            viewBox="0 0 24 24"
+            expanded={expanded}
+            onClick={toggleExpanded}
+          >
+            <ChevronDown />
+          </Arrow>
+        )}
       </StyledMenuItem>
       <ContentContainer expanded={expanded}>{children}</ContentContainer>
     </>

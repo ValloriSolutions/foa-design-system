@@ -5,3 +5,4 @@ export * from './theme/fonts';
 export * from './components';
 export * from './types/entities';
 export * from './types/layout';
+export * from './lib/framer-motion';

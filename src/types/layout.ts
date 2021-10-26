@@ -22,6 +22,7 @@ export interface MenuItemProps {
 
 export interface MenuItemsProps {
   menuItems: MenuItemProps[];
+  collapsed?: boolean;
 }
 
 export interface HeaderProps {
@@ -33,7 +34,7 @@ export interface HeaderProps {
   searchPlaceholder?: string;
 }
 
-export type LayoutProps = MenuItemsProps & HeaderProps;
+export type LayoutWrapperProps = MenuItemsProps & HeaderProps;
 
 export interface AccordionProps {
   isExpanded?: boolean;
@@ -43,6 +44,7 @@ export interface AccordionProps {
   icon: React.ReactNode;
   onClick?: React.DOMAttributes<HTMLLIElement>['onClick'];
   children: React.ReactNode;
+  collapsed?: boolean;
 }
 
 export interface DropdownProps {

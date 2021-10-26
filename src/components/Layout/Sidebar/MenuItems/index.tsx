@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 import { MenuItemsProps } from '../../../../types/layout';
 import Accordion from '../Accordion';
@@ -7,12 +7,23 @@ import { StyledMenuItem } from './styles';
 
 export const MenuItems: React.FC<MenuItemsProps> = ({
   menuItems,
+  collapsed,
 }): JSX.Element => {
+  const [show, setShow] = useState(collapsed);
   const [activeAccordion, setActiveAccordion] = useState(0);
 
   const handleClick = (selected: number) => (): void => {
     setActiveAccordion(selected);
   };
+
+  useEffect(() => {
+    collapsed
+      ? setShow(false)
+      : setTimeout(() => {
+          setShow(true);
+        }, 1000);
+  }, [collapsed]);
+
   return (
     <>
       {menuItems.map((menuItem, index) => {
@@ -23,17 +34,18 @@ export const MenuItems: React.FC<MenuItemsProps> = ({
               isExpanded={activeAccordion === index}
               active={menuItem.active}
               onClick={handleClick(index)}
-              label={menuItem.title}
+              label={show ? menuItem.title : ''}
               icon={menuItem.icon}
+              collapsed={!show}
             >
               {menuItem?.dropdownItems?.map((dropdownItem, index) => (
                 <AccordionItem
                   active={dropdownItem.active}
-                  label={dropdownItem.title}
+                  label={show ? dropdownItem.title : ''}
                   key={index}
                   action={dropdownItem.onClick}
                 >
-                  {dropdownItem.title}
+                  {show ? dropdownItem.title : ''}
                 </AccordionItem>
               ))}
             </Accordion>
@@ -46,7 +58,7 @@ export const MenuItems: React.FC<MenuItemsProps> = ({
             onClick={menuItem.onClick}
           >
             {menuItem.icon}
-            {menuItem.title}
+            {show ? menuItem.title : ''}
           </StyledMenuItem>
         );
       })}
