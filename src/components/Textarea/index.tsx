@@ -3,9 +3,8 @@ import { css } from 'styled-components';
 
 import { palette } from '../../theme/colors';
 import { TextareaProps } from '../../types/layout';
-import { StyledContainer } from '../Input/styles';
 import { Typography } from '../Typography';
-import { StyledTextarea } from './styles';
+import { StyledContainer, StyledTextarea } from './styles';
 
 export const Textarea: React.FC<
   TextareaProps & React.TextareaHTMLAttributes<HTMLTextAreaElement>
@@ -36,11 +35,12 @@ export const Textarea: React.FC<
       {label ? (
         <Typography
           as="label"
-          htmlFor={id}
+          htmlFor={id || 'myTextarea'}
           customStyles={css`
             color: ${disabled
               ? palette.colors.gray.light
               : palette.colors.gray.darker};
+            margin-left: 0.2rem;
           `}
         >
           {label}
@@ -59,6 +59,7 @@ export const Textarea: React.FC<
             color: messageError
               ? palette.colors.red
               : palette.colors.gray.light,
+            marginLeft: '0.5rem',
           }}
         >
           {messageError || `${value?.toString().length} / ${limit}`}
