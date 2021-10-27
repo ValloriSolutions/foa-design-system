@@ -114,32 +114,32 @@ export interface VendorProps {
 }
 
 export interface ProductsProps extends CommonProps {
-  material: string;
-  description: string;
-  quantity: number;
-  materialGroup: string;
-  center: string;
-  deposit: string;
-  shipmentDate: string;
-  requestDate: string;
-  releaseDate: string;
-  valuationPrice: number;
-  idSupplier: string; // só pra relacionamento com a tabela de suppliers
-  contactPerson: string;
-  deliveryInfo: string;
+  material?: string;
+  description?: string;
+  quantity?: number;
+  materialGroup?: string;
+  center?: string;
+  deposit?: string;
+  shipmentDate?: string;
+  requestDate?: string;
+  releaseDate?: string;
+  valuationPrice?: number;
+  idSupplier?: string; // só pra relacionamento com a tabela de suppliers
+  contactPerson?: string;
+  deliveryInfo?: string;
 }
 
 /* ORDERS ----------- */
 export interface OrderRequisitionProps extends CommonProps {
-  type: OrderType;
-  requisitionGoal: string;
-  deliveryPlace: DeliveryPlace;
-  requestedBy: string;
-  purchaseOrganization: string; //todo: enum
-  purchaseCenter: string; //todo: enum com endereço do centro pra mostrar no detalhe da requisição
-  status: OrderStatus;
-  productList: ProductsProps[];
-  isApproved: boolean;
+  type?: OrderType;
+  requisitionGoal?: string;
+  deliveryPlace?: DeliveryPlace;
+  requestedBy?: string;
+  purchaseOrganization?: string; //todo: enum
+  purchaseCenter?: string; //todo: enum com endereço do centro pra mostrar no detalhe da requisição
+  status?: OrderStatus;
+  productList?: ProductsProps[];
+  isApproved?: boolean;
   seniorComment?: string;
   subtotal?: number;
   submittedToSenniorAt?: string;
