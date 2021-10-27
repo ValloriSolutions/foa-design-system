@@ -164,7 +164,7 @@ export interface SelectProps {
   label: string;
   placeholder: string;
   value: number | string;
-  setValue: (value: number | string) => void;
+  setValue: (e: React.ChangeEvent<HTMLSelectElement> | string | number) => void;
   options: Options[];
   messageError?: string;
   inputError?: boolean;
