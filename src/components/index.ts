@@ -17,6 +17,7 @@ import {
   StepBarProps,
   TableCellProps,
   TableProps,
+  TextareaProps,
   TypographyProps,
 } from '../types/layout';
 import { Avatar } from './Avatar';
@@ -44,6 +45,7 @@ import { TableCell } from './Table/TableCell';
 import { TableEmpty } from './Table/TableEmpty';
 import { TableHead } from './Table/TableHead';
 import { TableRow } from './Table/TableRow';
+import { Textarea } from './Textarea';
 import { Typography } from './Typography';
 
 export {
@@ -73,6 +75,7 @@ export {
   TableEmpty,
   TableHead,
   TableRow,
+  Textarea,
   Typography,
 };
 
@@ -95,5 +98,6 @@ export {
   StepBarProps,
   TableProps,
   TableCellProps,
+  TextareaProps,
   TypographyProps,
 };

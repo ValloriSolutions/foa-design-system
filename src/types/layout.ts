@@ -164,7 +164,7 @@ export interface SelectProps {
   label: string;
   placeholder: string;
   value: number | string;
-  setValue: (e: React.ChangeEvent<HTMLSelectElement> | string | number) => void;
+  setValue: (value: number | string) => void;
   options: Options[];
   messageError?: string;
   inputError?: boolean;
@@ -276,4 +276,12 @@ export interface DialogProps extends FlexBoxProps {
       action?: () => void;
     };
   };
+}
+
+export interface TextareaProps extends StyledComponentProps {
+  limit?: number;
+  messageError?: string;
+  label?: string;
+  id?: string;
+  disabled?: boolean;
 }
