@@ -135,6 +135,7 @@ export interface ButtonProps extends React.HTMLAttributes<HTMLElement> {
   disabled?: boolean;
   onClick?: () => void;
   size?: 'fluid' | 'full';
+  type?: 'button' | 'submit' | 'reset';
   buttonWidth?: number;
   icon?: ReactNode;
   children?: ReactNode | string | undefined;
