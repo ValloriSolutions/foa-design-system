@@ -49,6 +49,9 @@ export const StyledInput = styled.input<CustomStyledInputProps>`
   &:focus {
     outline: none;
   }
+  @media print {
+    display: none;
+  }
 `;
 export const StyledChip = styled.span`
   border-radius: 100%;

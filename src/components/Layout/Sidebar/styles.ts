@@ -23,6 +23,9 @@ export const StyledSidebar = styled(motion.div)`
     margin-top: ${pxToRem(33)};
     width: 99%;
   }
+  @media print {
+    display: none;
+  }
 `;
 
 export const StyledCollapseButton = styled(motion.button)`

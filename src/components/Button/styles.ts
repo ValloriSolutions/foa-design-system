@@ -83,6 +83,9 @@ export const StyledButton = styled.button<ButtonProps>`
           : palette.colors.gray.light};
       }
     `}
+  @media print {
+    display: none;
+  }
 `;
 
 export const StyledGhostButton = styled.button<Omit<ButtonProps, 'variant'>>`
