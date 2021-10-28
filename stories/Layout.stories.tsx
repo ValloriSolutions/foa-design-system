@@ -1,24 +1,9 @@
 import { Meta, Story } from '@storybook/react';
 import React, { useState } from 'react';
 
-import {
-  Badge,
-  Dropdown,
-  DropdownItem,
-  IconCredit,
-  IconDashboard,
-  IconThreeDots,
-  IconTicket,
-  Table,
-  TableBody,
-  TableCell,
-  TableHead,
-  TableRow,
-  Typography,
-} from '../src';
+import { IconCredit, IconDashboard, IconTicket } from '../src';
 import LayoutWrapper from '../src/components/Layout/';
 import ErrorBoundary from '../src/lib/error';
-import { UserRole } from '../src/types/entities';
 import { LayoutWrapperProps } from '../src/types/layout';
 
 export default {
@@ -70,7 +55,7 @@ export const Default: Story<LayoutWrapperProps> = () => {
           name: 'Suellen Marques',
           avatar: 'https://avatars0.githubusercontent.com/u/1234?s=460&v=4',
           email: 'suellen.marques@femsa.com.br',
-          role: UserRole.ADMIN,
+          role: 'Admin',
         }}
         notifications={[
           {

@@ -3,7 +3,6 @@ import React, { useState } from 'react';
 
 import { IconTicket } from '../src';
 import { Header } from '../src/components/Layout/Header';
-import { UserRole } from '../src/types/entities';
 import { HeaderProps } from '../src/types/layout';
 
 export default {
@@ -24,7 +23,7 @@ export const Default: Story<HeaderProps> = () => {
         name: 'Suellen Marques',
         avatar: 'https://avatars0.githubusercontent.com/u/1234?s=460&v=4',
         email: 'suellen.marques@femsa.com.br',
-        role: UserRole.ADMIN,
+        role: 'Admin',
       }}
       notifications={[
         {

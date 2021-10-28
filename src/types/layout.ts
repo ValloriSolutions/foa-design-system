@@ -3,7 +3,6 @@ import { ChangeEvent, ReactNode, RefObject } from 'react';
 import { CSSObject, FlattenSimpleInterpolation } from 'styled-components';
 
 import { breakpointsType } from '../utils/grid';
-import { MessageProps, NotificationProps, UserProps } from './entities';
 
 export interface DropdownItemProps {
   title: string;
@@ -28,9 +27,9 @@ export interface MenuItemsProps {
 export interface HeaderProps {
   searchTerm?: string;
   onChange: (event: ChangeEvent<HTMLInputElement>) => void;
-  notifications?: NotificationProps[];
-  messages?: MessageProps[];
-  user: UserProps;
+  notifications?: any[];
+  messages?: any[];
+  user: any;
   searchPlaceholder?: string;
   collapsed?: boolean;
 }

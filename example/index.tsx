@@ -9,7 +9,6 @@ import {
   Card,
   LayoutWrapper,
 } from '../src';
-import { UserRole } from '../src/types/entities';
 
 const App = () => {
   const [term, setTerm] = React.useState('');
@@ -51,7 +50,7 @@ const App = () => {
           name: 'Suellen Marques',
           avatar: 'https://avatars0.githubusercontent.com/u/1234?s=460&v=4',
           email: 'suellen@femsa.com.br',
-          role: UserRole.ADMIN,
+          role: 'Admin',
         }}
         notifications={[
           {

@@ -1,18 +1,14 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import React from 'react';
 
 import { IconBell, IconMail } from '../../../../icons';
-import {
-  MessageProps,
-  NotificationProps,
-  UserProps,
-} from '../../../../types/entities';
 import { Avatar } from '../../../Avatar';
 import { StyledToolbar, StyledUserBox } from './styles';
 
 export interface ToolbarProps {
-  messages?: MessageProps[];
-  notifications?: NotificationProps[];
-  user: UserProps;
+  messages?: any[];
+  notifications?: any[];
+  user: any;
 }
 
 export const Toolbar: React.FC<ToolbarProps> = ({
