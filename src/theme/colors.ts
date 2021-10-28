@@ -12,10 +12,10 @@ export const white = '#ffffff';
 
 export const gray: Gray = {
   darkest: '#1E1C2f',
-  darker: '#34323f',
+  darker: '#333333',
   dark: '#4B495f',
   medium: '#757575',
-  light: '#C9C9Cf',
+  light: '#DDDDDD',
   lighter: '#EDEDEf',
   lightest: '#F6F6FF',
 };
