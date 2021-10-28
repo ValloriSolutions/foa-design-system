@@ -9,7 +9,7 @@ import { palette } from '../../theme/colors';
 import { fontSizes } from '../../theme/fonts';
 import { pxToRem } from '../../utils/grid';
 
-interface CustomStyledInputProps {
+export interface CustomStyledInputProps {
   messageError?: boolean | null;
   hasIcon?: boolean;
   customStyles?: CSSObject | FlattenSimpleInterpolation;

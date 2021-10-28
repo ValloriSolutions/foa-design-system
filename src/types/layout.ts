@@ -1,5 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { ChangeEvent, ReactNode, RefObject } from 'react';
+import { SingleValue } from 'react-select';
 import { CSSObject, FlattenSimpleInterpolation } from 'styled-components';
 
 import { breakpointsType } from '../utils/grid';
@@ -283,4 +284,24 @@ export interface TextareaProps extends StyledComponentProps {
   label?: string;
   id?: string;
   disabled?: boolean;
+}
+
+export interface SearchSelectProps {
+  isLoading: boolean;
+  options: any[];
+  selectedValue: string;
+  setSelectedValue: (value: SingleValue<SearchSelectOptions>) => void;
+  isDisabled?: boolean;
+  name?: string;
+  className?: string;
+  customStyles?: CSSObject | FlattenSimpleInterpolation;
+  label?: string;
+  id?: string;
+  messageError?: string;
+  placeholder?: string;
+}
+
+export interface SearchSelectOptions {
+  label: string;
+  value: string;
 }

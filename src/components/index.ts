@@ -13,6 +13,7 @@ import {
   InputProps,
   MenuItemsProps,
   RowProps,
+  SearchSelectProps,
   SelectProps,
   StepBarProps,
   TableCellProps,
@@ -37,6 +38,7 @@ import { Sidebar } from './Layout/Sidebar';
 import { Accordion } from './Layout/Sidebar/Accordion';
 import { AccordionItem } from './Layout/Sidebar/AccordionItem';
 import { MenuItems } from './Layout/Sidebar/MenuItems';
+import { SearchSelect } from './SearchSelect';
 import { Select } from './Select';
 import { StepBar } from './StepBar';
 import { Table } from './Table';
@@ -77,6 +79,7 @@ export {
   TableRow,
   Textarea,
   Typography,
+  SearchSelect,
 };
 
 export {
@@ -100,4 +103,5 @@ export {
   TableCellProps,
   TextareaProps,
   TypographyProps,
+  SearchSelectProps,
 };
