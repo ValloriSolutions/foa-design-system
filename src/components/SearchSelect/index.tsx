@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/explicit-function-return-type */
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import React, { FC } from 'react';
 import { css } from 'styled-components';
@@ -8,6 +9,16 @@ import { SearchSelectProps } from '../../types/layout';
 import { StyledContainer, StyledWrapperError } from '../Input/styles';
 import { Typography } from '../Typography';
 import { StyledSearchSelect } from './styles';
+
+const customStyles = {
+  control: (provided: any, state: any) => ({
+    ...provided,
+    border: state.isFocused
+      ? '1px solid' + palette.colors.gray.light
+      : '1px solid' + palette.colors.gray.light,
+    boxShadow: 'none',
+  }),
+};
 
 export const SearchSelect: FC<SearchSelectProps> = ({
   isLoading,
@@ -45,6 +56,7 @@ export const SearchSelect: FC<SearchSelectProps> = ({
         </Typography>
       ) : null}
       <StyledSearchSelect
+        styles={customStyles}
         className={className}
         classNamePrefix="select"
         defaultValue={selectedValue}
