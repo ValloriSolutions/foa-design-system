@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import React, { useState } from 'react';
 import { css } from 'styled-components';
 
@@ -52,13 +53,17 @@ export const Input: React.FC<InputProps> = ({
     }
   }
 
-  function handleType(type: string): string {
+  function handleType(type: string | DateConstructor | any): string {
     if (type === 'password' && showPassword) {
       return 'Typography';
     }
 
     if (type === 'password' && !showPassword) {
       return 'password';
+    }
+
+    if (type === Date && !showPassword) {
+      return 'date';
     }
 
     return type;
