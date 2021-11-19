@@ -209,6 +209,8 @@ export interface InputProps {
     | 'tel'
     | 'url'
     | 'email'
+    | 'radio'
+    | 'checkbox'
     | 'numeric'
     | 'decimal'
     | 'search'
