@@ -131,7 +131,7 @@ export interface StyledComponentProps {
 }
 
 export interface ButtonProps extends React.HTMLAttributes<HTMLElement> {
-  variant?: 'primary' | 'secondary' | 'disabled';
+  variant?: 'primary' | 'secondary' | 'disabled' | 'gs';
   disabled?: boolean;
   onClick?: () => void;
   size?: 'fluid' | 'full';
