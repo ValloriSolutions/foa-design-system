@@ -53,6 +53,16 @@ export const palette: Palette = {
 };
 
 export const buttons = {
+  gs: {
+    background: palette.colors.green,
+    color: palette.text.white,
+    border: '1px solid ' + palette.colors.green,
+    hover: {
+      background: palette.colors.gray.medium,
+      color: palette.text.white,
+      border: '1px solid transparent',
+    },
+  },
   primary: {
     background: palette.colors.red,
     color: palette.text.white,
