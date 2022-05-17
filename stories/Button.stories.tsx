@@ -10,6 +10,10 @@ export default {
   component: Button,
   parameters: {
     controls: { expanded: true },
+    design: {
+      type: 'figma',
+      url: 'https://www.figma.com/file/EGcpBoyMj48jtoAYdWNvwm/storybook?node-id=1%3A15',
+    },
   },
 } as Meta;
 

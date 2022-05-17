@@ -9,6 +9,10 @@ export default {
   component: Input,
   parameters: {
     controls: { expanded: true },
+    design: {
+      type: 'figma',
+      url: 'https://www.figma.com/file/EGcpBoyMj48jtoAYdWNvwm/storybook?node-id=29%3A4',
+    },
   },
 } as Meta;
 type ev = React.ChangeEvent<HTMLInputElement>;
